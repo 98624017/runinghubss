@@ -46,3 +46,7 @@ yarn-error.log*
 next-env.d.ts
 
 /src/generated/prisma
+
+# local reference materials
+/用户原始需求输入/
+/.spec-workflow/
