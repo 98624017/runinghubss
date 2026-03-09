@@ -1,0 +1,4 @@
+  ➜  Local:   http://127.0.0.1:4173/
+12:03:01 [vite] http proxy error: /api/account/check
+Error: connect ECONNREFUSED 127.0.0.1:8787
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)

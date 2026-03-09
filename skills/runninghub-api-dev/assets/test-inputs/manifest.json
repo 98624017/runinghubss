@@ -1,0 +1,323 @@
+{
+  "generatedAt": "2026-03-08T02:12:18.833626+00:00",
+  "sourcePolicy": "优先使用 RunningHub 官方页面公开可下载的 cover 图片，再做本地裁切以构造最小验证素材。",
+  "downloadedSources": [
+    {
+      "sourceId": "missa-cover",
+      "url": "https://rh-images.xiaoyaoyou.com/3ddf9a97d6c852bee4660b883096ed34/2026-02-04/a95a11b24d4fad464cb414efc5cf28d1.png",
+      "localFilename": "raw-missa-cover.png"
+    },
+    {
+      "sourceId": "floorplan-before-after",
+      "url": "https://rh-images.xiaoyaoyou.com/b5422beb678ad265e3fc0ccd30b4156e/2025-11-28/40eb6f91cb1c6fe26582f4714a6250f0.jpg",
+      "localFilename": "raw-floorplan-before-after.jpg"
+    },
+    {
+      "sourceId": "floorplan-render",
+      "url": "https://rh-images.xiaoyaoyou.com/b5422beb678ad265e3fc0ccd30b4156e/2025-11-28/037891511291229374760cec37a2a52b.jpg",
+      "localFilename": "raw-floorplan-render.jpg"
+    },
+    {
+      "sourceId": "banana-nine-way",
+      "url": "https://rh-images.xiaoyaoyou.com/a052835e0508f253311899a0d7880d80/2025-12-24/ed75d9d3a82913377a416838c9a2df24.jpg",
+      "localFilename": "raw-banana-nine-way.jpg"
+    },
+    {
+      "sourceId": "rough-house-before-after",
+      "url": "https://rh-images.xiaoyaoyou.com/064a677842c55c3b0bc59eb437f7c4f6/2026-02-17/be06e4cdfb4f9ac79c610416358f7d60.jpg",
+      "localFilename": "raw-rough-house-before-after.jpg"
+    }
+  ],
+  "assets": [
+    {
+      "assetId": "floorplan-white-source",
+      "sourceUrl": "https://rh-images.xiaoyaoyou.com/b5422beb678ad265e3fc0ccd30b4156e/2025-11-28/40eb6f91cb1c6fe26582f4714a6250f0.jpg",
+      "sourceFilename": "raw-floorplan-before-after.jpg",
+      "localFilename": "floorplan-white-source.jpg",
+      "cropBox": [
+        475,
+        0,
+        983,
+        998
+      ],
+      "appIds": [
+        "1994388299756212225",
+        "2003678561775067138"
+      ],
+      "prompt": null,
+      "rationale": "从官方封面右半边裁出白底平面图，最贴近“上传平面白图”的输入要求。"
+    },
+    {
+      "assetId": "missa-original-render",
+      "sourceUrl": "https://rh-images.xiaoyaoyou.com/3ddf9a97d6c852bee4660b883096ed34/2026-02-04/a95a11b24d4fad464cb414efc5cf28d1.png",
+      "sourceFilename": "raw-missa-cover.png",
+      "localFilename": "missa-original-render.png",
+      "cropBox": [
+        0,
+        330,
+        600,
+        730
+      ],
+      "appIds": [
+        "1986819253754130433"
+      ],
+      "prompt": null,
+      "rationale": "裁出官方封面左上角原始建筑效果图，作为风格迁移的原始图。"
+    },
+    {
+      "assetId": "missa-style-reference",
+      "sourceUrl": "https://rh-images.xiaoyaoyou.com/3ddf9a97d6c852bee4660b883096ed34/2026-02-04/a95a11b24d4fad464cb414efc5cf28d1.png",
+      "sourceFilename": "raw-missa-cover.png",
+      "localFilename": "missa-style-reference.png",
+      "cropBox": [
+        600,
+        330,
+        1200,
+        730
+      ],
+      "appIds": [
+        "1986819253754130433"
+      ],
+      "prompt": null,
+      "rationale": "裁出官方封面右上角夜景参考图，用于提供天空、光影与色调风格。"
+    },
+    {
+      "assetId": "banana-reference-floorplan",
+      "sourceUrl": "https://rh-images.xiaoyaoyou.com/a052835e0508f253311899a0d7880d80/2025-12-24/ed75d9d3a82913377a416838c9a2df24.jpg",
+      "sourceFilename": "raw-banana-nine-way.jpg",
+      "localFilename": "banana-reference-floorplan.jpg",
+      "cropBox": [
+        840,
+        210,
+        1175,
+        700
+      ],
+      "appIds": [
+        "2003678561775067138"
+      ],
+      "prompt": "根据第1张平面图生成客厅写实效果图，按红色箭头方向取景；第2张参考沙发组合，第3张参考吊顶，第4张参考吊灯，第5张参考电视背景墙，第6张参考窗户，第7张参考地板，第8张参考沙发背景墙，第9张参考绿植。整体为现代暖木色、奶油风、自然日光。",
+      "rationale": "从官方香蕉应用封面裁出平面图区域，作为多图融合的基础布局输入。"
+    },
+    {
+      "assetId": "banana-reference-sofa",
+      "sourceUrl": "https://rh-images.xiaoyaoyou.com/a052835e0508f253311899a0d7880d80/2025-12-24/ed75d9d3a82913377a416838c9a2df24.jpg",
+      "sourceFilename": "raw-banana-nine-way.jpg",
+      "localFilename": "banana-reference-sofa.jpg",
+      "cropBox": [
+        55,
+        668,
+        332,
+        820
+      ],
+      "appIds": [
+        "2003678561775067138"
+      ],
+      "prompt": null,
+      "rationale": "裁出沙发组合参考图，用于控制主家具风格。"
+    },
+    {
+      "assetId": "banana-reference-ceiling",
+      "sourceUrl": "https://rh-images.xiaoyaoyou.com/a052835e0508f253311899a0d7880d80/2025-12-24/ed75d9d3a82913377a416838c9a2df24.jpg",
+      "sourceFilename": "raw-banana-nine-way.jpg",
+      "localFilename": "banana-reference-ceiling.jpg",
+      "cropBox": [
+        290,
+        20,
+        885,
+        155
+      ],
+      "appIds": [
+        "2003678561775067138"
+      ],
+      "prompt": null,
+      "rationale": "裁出吊顶区域，用于控制顶面灯带与层次。"
+    },
+    {
+      "assetId": "banana-reference-lamp",
+      "sourceUrl": "https://rh-images.xiaoyaoyou.com/a052835e0508f253311899a0d7880d80/2025-12-24/ed75d9d3a82913377a416838c9a2df24.jpg",
+      "sourceFilename": "raw-banana-nine-way.jpg",
+      "localFilename": "banana-reference-lamp.jpg",
+      "cropBox": [
+        972,
+        10,
+        1148,
+        145
+      ],
+      "appIds": [
+        "2003678561775067138"
+      ],
+      "prompt": null,
+      "rationale": "裁出吊灯参考图，用于控制主灯造型。"
+    },
+    {
+      "assetId": "banana-reference-tv-wall",
+      "sourceUrl": "https://rh-images.xiaoyaoyou.com/a052835e0508f253311899a0d7880d80/2025-12-24/ed75d9d3a82913377a416838c9a2df24.jpg",
+      "sourceFilename": "raw-banana-nine-way.jpg",
+      "localFilename": "banana-reference-tv-wall.jpg",
+      "cropBox": [
+        45,
+        388,
+        352,
+        558
+      ],
+      "appIds": [
+        "2003678561775067138"
+      ],
+      "prompt": null,
+      "rationale": "裁出电视与背景墙区域，用于控制客厅主视觉面。"
+    },
+    {
+      "assetId": "banana-reference-window",
+      "sourceUrl": "https://rh-images.xiaoyaoyou.com/a052835e0508f253311899a0d7880d80/2025-12-24/ed75d9d3a82913377a416838c9a2df24.jpg",
+      "sourceFilename": "raw-banana-nine-way.jpg",
+      "localFilename": "banana-reference-window.jpg",
+      "cropBox": [
+        55,
+        28,
+        208,
+        120
+      ],
+      "appIds": [
+        "2003678561775067138"
+      ],
+      "prompt": null,
+      "rationale": "裁出窗户区域，用于控制开窗比例与采光风格。"
+    },
+    {
+      "assetId": "banana-reference-floor",
+      "sourceUrl": "https://rh-images.xiaoyaoyou.com/a052835e0508f253311899a0d7880d80/2025-12-24/ed75d9d3a82913377a416838c9a2df24.jpg",
+      "sourceFilename": "raw-banana-nine-way.jpg",
+      "localFilename": "banana-reference-floor.jpg",
+      "cropBox": [
+        48,
+        235,
+        300,
+        302
+      ],
+      "appIds": [
+        "2003678561775067138"
+      ],
+      "prompt": null,
+      "rationale": "裁出木地板样式，用于约束地面材质与颜色。"
+    },
+    {
+      "assetId": "banana-reference-bg-wall",
+      "sourceUrl": "https://rh-images.xiaoyaoyou.com/a052835e0508f253311899a0d7880d80/2025-12-24/ed75d9d3a82913377a416838c9a2df24.jpg",
+      "sourceFilename": "raw-banana-nine-way.jpg",
+      "localFilename": "banana-reference-bg-wall.jpg",
+      "cropBox": [
+        458,
+        628,
+        760,
+        742
+      ],
+      "appIds": [
+        "2003678561775067138"
+      ],
+      "prompt": null,
+      "rationale": "裁出沙发背景墙参考图，用于控制墙面线条与材质。"
+    },
+    {
+      "assetId": "banana-reference-plant",
+      "sourceUrl": "https://rh-images.xiaoyaoyou.com/a052835e0508f253311899a0d7880d80/2025-12-24/ed75d9d3a82913377a416838c9a2df24.jpg",
+      "sourceFilename": "raw-banana-nine-way.jpg",
+      "localFilename": "banana-reference-plant.jpg",
+      "cropBox": [
+        825,
+        620,
+        962,
+        780
+      ],
+      "appIds": [
+        "2003678561775067138"
+      ],
+      "prompt": null,
+      "rationale": "裁出绿植参考图，用于补充软装点缀风格。"
+    },
+    {
+      "assetId": "rough-house-empty-room",
+      "sourceUrl": "https://rh-images.xiaoyaoyou.com/064a677842c55c3b0bc59eb437f7c4f6/2026-02-17/be06e4cdfb4f9ac79c610416358f7d60.jpg",
+      "sourceFilename": "raw-rough-house-before-after.jpg",
+      "localFilename": "rough-house-empty-room.jpg",
+      "cropBox": [
+        0,
+        0,
+        640,
+        435
+      ],
+      "appIds": [
+        "2023563076041183233"
+      ],
+      "prompt": "把毛坯房生成现代暖木色客厅效果图，保留窗户位置与空间结构，电视墙在左侧、浅色布艺沙发在右侧、隐藏灯带与大地毯，写实摄影质感。",
+      "rationale": "裁出官方封面左上角毛坯房照片，最接近应用的原始房间输入。"
+    },
+    {
+      "assetId": "rough-house-style-reference",
+      "sourceUrl": "https://rh-images.xiaoyaoyou.com/064a677842c55c3b0bc59eb437f7c4f6/2026-02-17/be06e4cdfb4f9ac79c610416358f7d60.jpg",
+      "sourceFilename": "raw-rough-house-before-after.jpg",
+      "localFilename": "rough-house-style-reference.jpg",
+      "cropBox": [
+        620,
+        0,
+        1779,
+        758
+      ],
+      "appIds": [
+        "2023563076041183233"
+      ],
+      "prompt": null,
+      "rationale": "裁出官方封面右侧完整成品效果图，作为风格与材质参考。"
+    }
+  ],
+  "appRuns": {
+    "1994388299756212225": {
+      "title": "室内设计平面图填色-立体版",
+      "recommendedSdk": "node",
+      "files": [
+        "floorplan-white-source.jpg"
+      ],
+      "prompt": "将该平面白图转换为现代暖木色住宅的俯视立体效果图，保留原始墙体、门窗与家具布局，写实材质与柔和灯光。",
+      "notes": "单图输入，优先用 Node SDK 做一次真实闭环，顺便覆盖 JS 封装。"
+    },
+    "1986819253754130433": {
+      "title": "Missa_建筑景观_风格迁移_效果图专用",
+      "recommendedSdk": "python",
+      "files": [
+        "missa-original-render.png",
+        "missa-style-reference.png"
+      ],
+      "prompt": null,
+      "notes": "双图风格迁移，不额外传 prompt。"
+    },
+    "2003678561775067138": {
+      "title": "🍌香蕉  2 & Pro9图任意融合",
+      "recommendedSdk": "python",
+      "files": [
+        "floorplan-white-source.jpg",
+        "banana-reference-sofa.jpg",
+        "banana-reference-ceiling.jpg",
+        "banana-reference-lamp.jpg",
+        "banana-reference-tv-wall.jpg",
+        "banana-reference-window.jpg",
+        "banana-reference-floor.jpg",
+        "banana-reference-bg-wall.jpg",
+        "banana-reference-plant.jpg"
+      ],
+      "prompt": "根据第1张平面图生成客厅写实效果图，按红色箭头方向取景；第2张参考沙发组合，第3张参考吊顶，第4张参考吊灯，第5张参考电视背景墙，第6张参考窗户，第7张参考地板，第8张参考沙发背景墙，第9张参考绿植。整体为现代暖木色、奶油风、自然日光。",
+      "notes": "九图全部来自官方封面裁切，保证题材一致且公网来源明确。"
+    },
+    "2023563076041183233": {
+      "title": "毛坯房出图-全能版",
+      "recommendedSdk": "python",
+      "files": [
+        "rough-house-empty-room.jpg",
+        "rough-house-style-reference.jpg"
+      ],
+      "prompt": "把毛坯房生成现代暖木色客厅效果图，保留窗户位置与空间结构，电视墙在左侧、浅色布艺沙发在右侧、隐藏灯带与大地毯，写实摄影质感。",
+      "nodeOverrides": {
+        "605:resolution": "1k"
+      },
+      "notes": "一张毛坯房原图 + 一张成品参考图。该应用默认 2k，但当前账号验证时第三方余额不足，降到 1k 可正常提交并完成。"
+    }
+  }
+}

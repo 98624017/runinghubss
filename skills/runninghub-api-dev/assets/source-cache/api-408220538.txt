@@ -1,0 +1,88 @@
+# 海螺-2.3-文生视频-标准
+
+## OpenAPI Specification
+
+```yaml
+openapi: 3.0.1
+info:
+  title: ''
+  description: ''
+  version: 1.0.0
+paths:
+  /openapi/v2/minimax/hailuo-2.3/t2v-standard:
+    post:
+      summary: 海螺-2.3-文生视频-标准
+      deprecated: false
+      description: ''
+      tags:
+        - 标准模型 API/视频生成/海螺AI
+      parameters:
+        - name: Authorization
+          in: header
+          description: ''
+          required: true
+          example: Bearer [Your API KEY]
+          schema:
+            type: string
+            default: Bearer [Your API KEY]
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                prompt:
+                  type: string
+                  title: 提示词
+                duration:
+                  type: string
+                  enum:
+                    - '6'
+                    - '10'
+                  x-apifox-enum:
+                    - value: '6'
+                      name: ''
+                      description: ''
+                    - value: '10'
+                      name: ''
+                      description: ''
+                  title: 时长
+                enablePromptExpansion:
+                  type: boolean
+                  title: 是否开启提示词扩展
+              x-apifox-orders:
+                - prompt
+                - duration
+                - enablePromptExpansion
+              required:
+                - prompt
+                - duration
+                - enablePromptExpansion
+            example:
+              prompt: >-
+                场景中心突然发生剧烈爆炸。玻璃碎片和金属残骸以真实的物理规律和深度感向镜头飞溅。浓烟滚滚而上，橙色火球迅速膨胀。镜头因爆炸冲击产生剧烈的真实手持抖动，随后在灰尘落下时伴有轻微的运动模糊。电影级光影，高保真。
+              enablePromptExpansion: true
+              duration: '6'
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+          x-apifox-name: 成功
+      security: []
+      x-apifox-folder: 标准模型 API/视频生成/海螺AI
+      x-apifox-status: released
+      x-run-in-apifox: https://app.apifox.com/web/project/6103976/apis/api-408220538-run
+components:
+  schemas: {}
+  securitySchemes: {}
+servers:
+  - url: https://www.runninghub.cn
+    description: runninghub.cn
+security: []
+
+```

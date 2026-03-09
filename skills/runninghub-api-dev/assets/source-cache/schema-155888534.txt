@@ -1,0 +1,45 @@
+# RWorkflowDuplicateResponse
+
+## OpenAPI Specification
+
+```yaml
+openapi: 3.0.1
+info:
+  title: ''
+  description: ''
+  version: 1.0.0
+paths: {}
+components:
+  schemas:
+    WorkflowDuplicateResponse:
+      type: object
+      properties:
+        newWorkflowId:
+          type: string
+      x-apifox-orders:
+        - newWorkflowId
+      x-apifox-folder: ''
+    RWorkflowDuplicateResponse:
+      type: object
+      properties:
+        code:
+          type: integer
+          description: 返回标记：成功标记=0，非0失败，或者是功能码
+        msg:
+          type: string
+          description: 返回信息
+        data:
+          $ref: '#/components/schemas/WorkflowDuplicateResponse'
+          description: 数据
+      x-apifox-orders:
+        - code
+        - msg
+        - data
+      x-apifox-folder: ''
+  securitySchemes: {}
+servers:
+  - url: https://www.runninghub.cn
+    description: runninghub.cn
+security: []
+
+```

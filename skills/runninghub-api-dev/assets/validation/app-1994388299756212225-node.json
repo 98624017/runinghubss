@@ -1,0 +1,220 @@
+{
+  "sdk": "node",
+  "appId": "1994388299756212225",
+  "startedAt": "2026-03-08T02:12:03Z",
+  "finishedAt": "2026-03-08T02:13:29Z",
+  "manifestPrompt": "将该平面白图转换为现代暖木色住宅的俯视立体效果图，保留原始墙体、门窗与家具布局，写实材质与柔和灯光。",
+  "manifestFiles": [
+    "floorplan-white-source.jpg"
+  ],
+  "manifestRationale": null,
+  "uploadedAssets": [
+    {
+      "localFile": "floorplan-white-source.jpg",
+      "uploadedFileName": "openapi/57c297248211916a9a2da42a879c93f1aef9cd6cd4fd7b06a0e4a2052d4b6d03.jpg",
+      "uploadResult": {
+        "code": 0,
+        "msg": "success",
+        "errorMessages": null,
+        "data": {
+          "type": "image",
+          "download_url": "https://rh-images-switch-1252422369.cos.ap-guangzhou.myqcloud.com/input/openapi/57c297248211916a9a2da42a879c93f1aef9cd6cd4fd7b06a0e4a2052d4b6d03.jpg?q-sign-algorithm=sha1&q-ak=AKIDv56FISEJUsKsMeELk0gmbNCGKTYSaZ3N&q-sign-time=1772935923%3B1773022323&q-key-time=1772935923%3B1773022323&q-header-list=host&q-url-param-list=&q-signature=8b4aa3ba023de84000e341db3221c64d52d08ac4",
+          "fileName": "openapi/57c297248211916a9a2da42a879c93f1aef9cd6cd4fd7b06a0e4a2052d4b6d03.jpg",
+          "size": "52453"
+        }
+      }
+    }
+  ],
+  "result": {
+    "payload": {
+      "webappId": "1994388299756212225",
+      "apiKey": "<RUNNINGHUB_API_KEY>",
+      "nodeInfoList": [
+        {
+          "nodeId": "257",
+          "nodeName": "LoadImage",
+          "fieldName": "image",
+          "fieldValue": "openapi/57c297248211916a9a2da42a879c93f1aef9cd6cd4fd7b06a0e4a2052d4b6d03.jpg",
+          "fieldData": "[[\"README.md\", \"dancing.jpg\", \"example.png\", \"keep_this_dic\", \"masked_dancing.png\"], {\"image_upload\": true}]",
+          "fieldType": "IMAGE",
+          "description": "上传平面白图",
+          "descriptionCn": null,
+          "descriptionEn": "Upload plain white image"
+        },
+        {
+          "nodeId": "253",
+          "nodeName": "CR Text",
+          "fieldName": "text",
+          "fieldValue": "将该平面白图转换为现代暖木色住宅的俯视立体效果图，保留原始墙体、门窗与家具布局，写实材质与柔和灯光。",
+          "fieldData": "[\"STRING\", {\"default\": \"\", \"multiline\": true}]",
+          "fieldType": "STRING",
+          "description": "提示词（可不修改，只能输入英文）",
+          "descriptionCn": null,
+          "descriptionEn": "Prompt words (can be unmodified, only English can be entered)"
+        },
+        {
+          "nodeId": "260",
+          "nodeName": "ImageResize+",
+          "fieldName": "width",
+          "fieldValue": "1600",
+          "fieldData": "[\"INT\", {\"max\": 16384, \"min\": 0, \"step\": 1, \"default\": 512}]",
+          "fieldType": "INT",
+          "description": "出图尺寸01（01和02要一致）",
+          "descriptionCn": null,
+          "descriptionEn": "Output size 01 (01 and 02 should be consistent)"
+        },
+        {
+          "nodeId": "260",
+          "nodeName": "ImageResize+",
+          "fieldName": "height",
+          "fieldValue": "1600",
+          "fieldData": "[\"INT\", {\"max\": 16384, \"min\": 0, \"step\": 1, \"default\": 512}]",
+          "fieldType": "INT",
+          "description": "出图尺寸02（01和02要一致）",
+          "descriptionCn": null,
+          "descriptionEn": "Output size 02 (01 and 02 must be consistent)"
+        }
+      ],
+      "demo": {
+        "code": 0,
+        "msg": "success",
+        "errorMessages": null,
+        "data": {
+          "descriptionEn": "<p>CAD plane white drawing coloring becomes three-dimensional</p><p>Maintain drawing consistency</p>",
+          "curl": "curl --location --request POST 'https://www.runninghub.cn/task/openapi/ai-app/run' \\\n--header 'Host: www.runninghub.cn' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"webappId\": \"null\",\n    \"apiKey\": \"<RUNNINGHUB_API_KEY>\",\n    \"nodeInfoList\": [\n        {\n            \"nodeId\": \"257\",\n            \"fieldName\": \"image\",\n            \"fieldValue\": \"fc1c483ef460f315a334d378580c78f8e753b70a6ae05495be3205b9652e8eff.jpg\",\n            \"description\": \"上传平面白图\"\n        },\n        {\n            \"nodeId\": \"253\",\n            \"fieldName\": \"text\",\n            \"fieldValue\": \"Convert the 2D floor plan into a detailed 3D view with realistic lighting effects and natural shadows, including soft ambient light from ceiling lights, directional light from window sources, and warm spotlight from table lamps, while preserving the exact room layout, architectural elements, spatial arrangement, and furniture positions. Add accurate material reflectivity to surfaces such as glass, metal, and polished wood to enhance the photorealistic quality and visual depth of the scene.\\n\",\n            \"description\": \"提示词（可不修改，只能输入英文）\"\n        },\n        {\n            \"nodeId\": \"260\",\n            \"fieldName\": \"width\",\n            \"fieldValue\": \"1600\",\n            \"description\": \"出图尺寸01（01和02要一致）\"\n        },\n        {\n            \"nodeId\": \"260\",\n            \"fieldName\": \"height\",\n            \"fieldValue\": \"1600\",\n            \"description\": \"出图尺寸02（01和02要一致）\"\n        }\n    ]\n}'",
+          "webappName": "室内设计平面图填色-立体版",
+          "description": "<p>CAD平面白图填色变立体</p><p>保持图纸一致性</p>",
+          "statisticsInfo": {
+            "likeCount": "20",
+            "downloadCount": "0",
+            "useCount": "348",
+            "pv": "0",
+            "collectCount": "54"
+          },
+          "nodeInfoList": [
+            {
+              "nodeId": "257",
+              "nodeName": "LoadImage",
+              "fieldName": "image",
+              "fieldValue": "fc1c483ef460f315a334d378580c78f8e753b70a6ae05495be3205b9652e8eff.jpg",
+              "fieldData": "[[\"README.md\", \"dancing.jpg\", \"example.png\", \"keep_this_dic\", \"masked_dancing.png\"], {\"image_upload\": true}]",
+              "fieldType": "IMAGE",
+              "description": "上传平面白图",
+              "descriptionCn": null,
+              "descriptionEn": "Upload plain white image"
+            },
+            {
+              "nodeId": "253",
+              "nodeName": "CR Text",
+              "fieldName": "text",
+              "fieldValue": "Convert the 2D floor plan into a detailed 3D view with realistic lighting effects and natural shadows, including soft ambient light from ceiling lights, directional light from window sources, and warm spotlight from table lamps, while preserving the exact room layout, architectural elements, spatial arrangement, and furniture positions. Add accurate material reflectivity to surfaces such as glass, metal, and polished wood to enhance the photorealistic quality and visual depth of the scene.\n",
+              "fieldData": "[\"STRING\", {\"default\": \"\", \"multiline\": true}]",
+              "fieldType": "STRING",
+              "description": "提示词（可不修改，只能输入英文）",
+              "descriptionCn": null,
+              "descriptionEn": "Prompt words (can be unmodified, only English can be entered)"
+            },
+            {
+              "nodeId": "260",
+              "nodeName": "ImageResize+",
+              "fieldName": "width",
+              "fieldValue": "1600",
+              "fieldData": "[\"INT\", {\"max\": 16384, \"min\": 0, \"step\": 1, \"default\": 512}]",
+              "fieldType": "INT",
+              "description": "出图尺寸01（01和02要一致）",
+              "descriptionCn": null,
+              "descriptionEn": "Output size 01 (01 and 02 should be consistent)"
+            },
+            {
+              "nodeId": "260",
+              "nodeName": "ImageResize+",
+              "fieldName": "height",
+              "fieldValue": "1600",
+              "fieldData": "[\"INT\", {\"max\": 16384, \"min\": 0, \"step\": 1, \"default\": 512}]",
+              "fieldType": "INT",
+              "description": "出图尺寸02（01和02要一致）",
+              "descriptionCn": null,
+              "descriptionEn": "Output size 02 (01 and 02 must be consistent)"
+            }
+          ],
+          "covers": [
+            {
+              "id": "1994388310300692482",
+              "objName": "b5422beb678ad265e3fc0ccd30b4156e/2025-11-28/40eb6f91cb1c6fe26582f4714a6250f0.jpg",
+              "url": "https://rh-images.xiaoyaoyou.com/b5422beb678ad265e3fc0ccd30b4156e/2025-11-28/40eb6f91cb1c6fe26582f4714a6250f0.jpg",
+              "thumbnailUri": "https://rh-images.xiaoyaoyou.com/b5422beb678ad265e3fc0ccd30b4156e/2025-11-28/40eb6f91cb1c6fe26582f4714a6250f0.jpg?imageMogr2/format/jpeg/ignore-error/1",
+              "imageWidth": "983",
+              "imageHeight": "998"
+            },
+            {
+              "id": "1994388310300692483",
+              "objName": "b5422beb678ad265e3fc0ccd30b4156e/2025-11-28/037891511291229374760cec37a2a52b.jpg",
+              "url": "https://rh-images.xiaoyaoyou.com/b5422beb678ad265e3fc0ccd30b4156e/2025-11-28/037891511291229374760cec37a2a52b.jpg",
+              "thumbnailUri": "https://rh-images.xiaoyaoyou.com/b5422beb678ad265e3fc0ccd30b4156e/2025-11-28/037891511291229374760cec37a2a52b.jpg?imageMogr2/format/jpeg/ignore-error/1",
+              "imageWidth": "897",
+              "imageHeight": "914"
+            }
+          ],
+          "tags": [
+            {
+              "id": "1871151815242543268",
+              "name": "线稿上色",
+              "nameEn": "Line Art Coloring",
+              "labels": null
+            },
+            {
+              "id": "1871151815242543244",
+              "name": "其它建筑及空间设计",
+              "nameEn": "Other Space Design",
+              "labels": null
+            },
+            {
+              "id": "1871151815242543198",
+              "name": "图生图",
+              "nameEn": "Image-to-Image",
+              "labels": null
+            }
+          ]
+        }
+      }
+    },
+    "submit": {
+      "code": 0,
+      "msg": "success",
+      "errorMessages": null,
+      "data": {
+        "netWssUrl": "wss://www.runninghub.cn:443/ws/c_instance?c_host=192.168.100.183&c_port=81&clientId=e80a082fda6e375a4a1cc2723ad80bff&workflowId=1993899754834821121&Rh-Comfy-Auth=eyJ1c2VySWQiOiI3MmMxMzUwMWI3NDM5ZmY1MWYxNDdhNWJlZjgxZjI1OSIsInNpZ25FeHBpcmUiOjE3NzM1NDA3MjMzODgsInRzIjoxNzcyOTM1OTIzMzg4LCJzaWduIjoiNzNhOTZhODc4YTIwMzk1YzVlODY4ZTczNzdhNjhjMDIifQ%3D%3D&target=http://myfj.runninghub.cn",
+        "taskId": "2030466545649590273",
+        "clientId": "e80a082fda6e375a4a1cc2723ad80bff",
+        "taskStatus": "RUNNING",
+        "promptTips": "{\"result\": true, \"error\": null, \"outputs_to_execute\": [\"261\", \"243\"], \"node_errors\": {}}"
+      }
+    },
+    "final": {
+      "taskId": "2030466545649590273",
+      "status": {
+        "code": 0,
+        "msg": "success",
+        "errorMessages": null,
+        "data": "SUCCESS"
+      },
+      "outputs": {
+        "code": 0,
+        "msg": "success",
+        "errorMessages": null,
+        "data": [
+          {
+            "fileUrl": "https://rh-images.xiaoyaoyou.com/72c13501b7439ff51f147a5bef81f259/output/ComfyUI_00001_xklor_1772936000.png",
+            "fileType": "png",
+            "taskCostTime": "79",
+            "nodeId": "261",
+            "thirdPartyConsumeMoney": null,
+            "consumeMoney": null,
+            "consumeCoins": "16"
+          }
+        ]
+      },
+      "finalState": "SUCCESS"
+    }
+  }
+}

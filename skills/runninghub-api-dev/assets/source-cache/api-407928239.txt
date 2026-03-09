@@ -1,0 +1,132 @@
+# 可灵文生视频2.6-pro
+
+## OpenAPI Specification
+
+```yaml
+openapi: 3.0.1
+info:
+  title: ''
+  description: ''
+  version: 1.0.0
+paths:
+  /openapi/v2/kling-v2.6-pro/text-to-video:
+    post:
+      summary: 可灵文生视频2.6-pro
+      deprecated: false
+      description: ''
+      tags:
+        - 标准模型 API/视频生成/可灵 2.6
+      parameters:
+        - name: Authorization
+          in: header
+          description: ''
+          required: true
+          example: Bearer [Your API KEY]
+          schema:
+            type: string
+            default: Bearer [Your API KEY]
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                prompt:
+                  type: string
+                  title: 提示词
+                negativePrompt:
+                  type: string
+                  title: 负向文本提示词
+                guidanceScale:
+                  type: number
+                  title: 生成视频的自由度
+                  description: 值越大，模型自由度越小，与用户输入的提示词相关性越强
+                  minimum: 0
+                  maximum: 1
+                  default: 0.5
+                sound:
+                  type: string
+                  title: 生成视频时是否同时生成声音
+                  enum:
+                    - 'true'
+                    - 'false'
+                  x-apifox-enum:
+                    - value: 'true'
+                      name: ''
+                      description: ''
+                    - value: 'false'
+                      name: ''
+                      description: ''
+                aspectRatio:
+                  type: string
+                  title: 画面比例
+                  enum:
+                    - '16:9'
+                    - '9:16'
+                    - '1:1'
+                  x-apifox-enum:
+                    - value: '16:9'
+                      name: ''
+                      description: ''
+                    - value: '9:16'
+                      name: ''
+                      description: ''
+                    - value: '1:1'
+                      name: ''
+                      description: ''
+                  default: '16:9'
+                duration:
+                  type: string
+                  title: 视频时长
+                  enum:
+                    - '5'
+                    - '10'
+                  x-apifox-enum:
+                    - value: '5'
+                      name: ''
+                      description: ''
+                    - value: '10'
+                      name: ''
+                      description: ''
+                  default: '5'
+              required:
+                - prompt
+              x-apifox-orders:
+                - prompt
+                - negativePrompt
+                - guidanceScale
+                - sound
+                - aspectRatio
+                - duration
+            example:
+              prompt: >-
+                一个高科技机器人厨师在下雨的赛博朋克街头市场炒面的特写。镜头从滋滋作响的炒锅缓慢平移到机器人发光的感应器。音效：
+                炒锅发出响亮且有节奏的滋滋声和爆裂声，金属铲子清脆的碰撞声，大雨打在旁边波纹金属屋顶上的啪嗒声，以及附近霓虹俱乐部传来的低沉、遥远且模糊的合成器波（Synthwave）旋律。无对话，高保真音效设计。
+              negativePrompt: ''
+              guidanceScale: 0.5
+              sound: 'true'
+              aspectRatio: '9:16'
+              duration: '5'
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+          x-apifox-name: 成功
+      security: []
+      x-apifox-folder: 标准模型 API/视频生成/可灵 2.6
+      x-apifox-status: released
+      x-run-in-apifox: https://app.apifox.com/web/project/6103976/apis/api-407928239-run
+components:
+  schemas: {}
+  securitySchemes: {}
+servers:
+  - url: https://www.runninghub.cn
+    description: runninghub.cn
+security: []
+
+```

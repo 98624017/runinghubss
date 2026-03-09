@@ -1,0 +1,28 @@
+
+> runninghub-ai-console@0.1.0 dev:server
+> npm run dev --workspace server
+
+
+> server@0.1.0 dev
+> tsx watch src/index.ts
+
+RunningHub AI Console server listening on http://localhost:8787
+11:49:40 [tsx] change in ./src/config/apps.ts Rerunning...
+cRunningHub AI Console server listening on http://localhost:8787
+11:49:52 [tsx] change in ./src/services/payloadBuilders.ts Restarting...
+cRunningHub AI Console server listening on http://localhost:8787
+11:50:05 [tsx] change in ./src/services/runninghubClient.ts Rerunning...
+cRunningHub AI Console server listening on http://localhost:8787
+11:50:21 [tsx] change in ./src/routes/tasks.ts Restarting...
+cRunningHub AI Console server listening on http://localhost:8787
+11:50:28 [tsx] change in ./src/app.ts Rerunning...
+cRunningHub AI Console server listening on http://localhost:8787
+11:52:37 [tsx] change in ./src/routes/tasks.ts Restarting...
+cRunningHub AI Console server listening on http://localhost:8787
+npm error Lifecycle script `dev` failed with error:
+npm error code 15
+npm error path /home/feng/project/runinghubs/app/server
+npm error workspace server@0.1.0
+npm error location /home/feng/project/runinghubs/app/server
+npm error command failed
+npm error command sh -c tsx watch src/index.ts

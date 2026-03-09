@@ -1,0 +1,102 @@
+{
+  "code": 0,
+  "msg": "success",
+  "errorMessages": null,
+  "data": {
+    "descriptionEn": "<p>CAD plane white drawing coloring becomes three-dimensional</p><p>Maintain drawing consistency</p>",
+    "curl": "curl --location --request POST 'https://www.runninghub.cn/task/openapi/ai-app/run' \\\n--header 'Host: www.runninghub.cn' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"webappId\": \"null\",\n    \"apiKey\": \"<RUNNINGHUB_API_KEY>\",\n    \"nodeInfoList\": [\n        {\n            \"nodeId\": \"257\",\n            \"fieldName\": \"image\",\n            \"fieldValue\": \"fc1c483ef460f315a334d378580c78f8e753b70a6ae05495be3205b9652e8eff.jpg\",\n            \"description\": \"上传平面白图\"\n        },\n        {\n            \"nodeId\": \"253\",\n            \"fieldName\": \"text\",\n            \"fieldValue\": \"Convert the 2D floor plan into a detailed 3D view with realistic lighting effects and natural shadows, including soft ambient light from ceiling lights, directional light from window sources, and warm spotlight from table lamps, while preserving the exact room layout, architectural elements, spatial arrangement, and furniture positions. Add accurate material reflectivity to surfaces such as glass, metal, and polished wood to enhance the photorealistic quality and visual depth of the scene.\\n\",\n            \"description\": \"提示词（可不修改，只能输入英文）\"\n        },\n        {\n            \"nodeId\": \"260\",\n            \"fieldName\": \"width\",\n            \"fieldValue\": \"1600\",\n            \"description\": \"出图尺寸01（01和02要一致）\"\n        },\n        {\n            \"nodeId\": \"260\",\n            \"fieldName\": \"height\",\n            \"fieldValue\": \"1600\",\n            \"description\": \"出图尺寸02（01和02要一致）\"\n        }\n    ]\n}'",
+    "webappName": "室内设计平面图填色-立体版",
+    "description": "<p>CAD平面白图填色变立体</p><p>保持图纸一致性</p>",
+    "statisticsInfo": {
+      "likeCount": "20",
+      "downloadCount": "0",
+      "useCount": "348",
+      "pv": "0",
+      "collectCount": "54"
+    },
+    "nodeInfoList": [
+      {
+        "nodeId": "257",
+        "nodeName": "LoadImage",
+        "fieldName": "image",
+        "fieldValue": "fc1c483ef460f315a334d378580c78f8e753b70a6ae05495be3205b9652e8eff.jpg",
+        "fieldData": "[[\"README.md\", \"dancing.jpg\", \"example.png\", \"keep_this_dic\", \"masked_dancing.png\"], {\"image_upload\": true}]",
+        "fieldType": "IMAGE",
+        "description": "上传平面白图",
+        "descriptionCn": null,
+        "descriptionEn": "Upload plain white image"
+      },
+      {
+        "nodeId": "253",
+        "nodeName": "CR Text",
+        "fieldName": "text",
+        "fieldValue": "Convert the 2D floor plan into a detailed 3D view with realistic lighting effects and natural shadows, including soft ambient light from ceiling lights, directional light from window sources, and warm spotlight from table lamps, while preserving the exact room layout, architectural elements, spatial arrangement, and furniture positions. Add accurate material reflectivity to surfaces such as glass, metal, and polished wood to enhance the photorealistic quality and visual depth of the scene.\n",
+        "fieldData": "[\"STRING\", {\"default\": \"\", \"multiline\": true}]",
+        "fieldType": "STRING",
+        "description": "提示词（可不修改，只能输入英文）",
+        "descriptionCn": null,
+        "descriptionEn": "Prompt words (can be unmodified, only English can be entered)"
+      },
+      {
+        "nodeId": "260",
+        "nodeName": "ImageResize+",
+        "fieldName": "width",
+        "fieldValue": "1600",
+        "fieldData": "[\"INT\", {\"max\": 16384, \"min\": 0, \"step\": 1, \"default\": 512}]",
+        "fieldType": "INT",
+        "description": "出图尺寸01（01和02要一致）",
+        "descriptionCn": null,
+        "descriptionEn": "Output size 01 (01 and 02 should be consistent)"
+      },
+      {
+        "nodeId": "260",
+        "nodeName": "ImageResize+",
+        "fieldName": "height",
+        "fieldValue": "1600",
+        "fieldData": "[\"INT\", {\"max\": 16384, \"min\": 0, \"step\": 1, \"default\": 512}]",
+        "fieldType": "INT",
+        "description": "出图尺寸02（01和02要一致）",
+        "descriptionCn": null,
+        "descriptionEn": "Output size 02 (01 and 02 must be consistent)"
+      }
+    ],
+    "covers": [
+      {
+        "id": "1994388310300692482",
+        "objName": "b5422beb678ad265e3fc0ccd30b4156e/2025-11-28/40eb6f91cb1c6fe26582f4714a6250f0.jpg",
+        "url": "https://rh-images.xiaoyaoyou.com/b5422beb678ad265e3fc0ccd30b4156e/2025-11-28/40eb6f91cb1c6fe26582f4714a6250f0.jpg",
+        "thumbnailUri": "https://rh-images.xiaoyaoyou.com/b5422beb678ad265e3fc0ccd30b4156e/2025-11-28/40eb6f91cb1c6fe26582f4714a6250f0.jpg?imageMogr2/format/jpeg/ignore-error/1",
+        "imageWidth": "983",
+        "imageHeight": "998"
+      },
+      {
+        "id": "1994388310300692483",
+        "objName": "b5422beb678ad265e3fc0ccd30b4156e/2025-11-28/037891511291229374760cec37a2a52b.jpg",
+        "url": "https://rh-images.xiaoyaoyou.com/b5422beb678ad265e3fc0ccd30b4156e/2025-11-28/037891511291229374760cec37a2a52b.jpg",
+        "thumbnailUri": "https://rh-images.xiaoyaoyou.com/b5422beb678ad265e3fc0ccd30b4156e/2025-11-28/037891511291229374760cec37a2a52b.jpg?imageMogr2/format/jpeg/ignore-error/1",
+        "imageWidth": "897",
+        "imageHeight": "914"
+      }
+    ],
+    "tags": [
+      {
+        "id": "1871151815242543268",
+        "name": "线稿上色",
+        "nameEn": "Line Art Coloring",
+        "labels": null
+      },
+      {
+        "id": "1871151815242543244",
+        "name": "其它建筑及空间设计",
+        "nameEn": "Other Space Design",
+        "labels": null
+      },
+      {
+        "id": "1871151815242543198",
+        "name": "图生图",
+        "nameEn": "Image-to-Image",
+        "labels": null
+      }
+    ]
+  }
+}

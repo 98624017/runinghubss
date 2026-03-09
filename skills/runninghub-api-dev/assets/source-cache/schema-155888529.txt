@@ -1,0 +1,31 @@
+# 获取账户信息 Request
+
+## OpenAPI Specification
+
+```yaml
+openapi: 3.0.1
+info:
+  title: ''
+  description: ''
+  version: 1.0.0
+paths: {}
+components:
+  schemas:
+    获取账户信息 Request:
+      type: object
+      properties:
+        apikey:
+          type: string
+          description: ''
+          examples:
+            - '{{apiKey}}'
+      x-apifox-orders:
+        - apikey
+      x-apifox-folder: ''
+  securitySchemes: {}
+servers:
+  - url: https://www.runninghub.cn
+    description: runninghub.cn
+security: []
+
+```

@@ -1,0 +1,72 @@
+# 海螺-2.3-文生视频-pro
+
+## OpenAPI Specification
+
+```yaml
+openapi: 3.0.1
+info:
+  title: ''
+  description: ''
+  version: 1.0.0
+paths:
+  /openapi/v2/minimax/hailuo-2.3/t2v-pro:
+    post:
+      summary: 海螺-2.3-文生视频-pro
+      deprecated: false
+      description: ''
+      tags:
+        - 标准模型 API/视频生成/海螺AI
+      parameters:
+        - name: Authorization
+          in: header
+          description: ''
+          required: true
+          example: Bearer [Your API KEY]
+          schema:
+            type: string
+            default: Bearer [Your API KEY]
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                prompt:
+                  type: string
+                  title: 提示词
+                enablePromptExpansion:
+                  type: boolean
+                  title: 是否开启提示词扩展
+              x-apifox-orders:
+                - prompt
+                - enablePromptExpansion
+              required:
+                - prompt
+                - enablePromptExpansion
+            example:
+              prompt: >-
+                专业电影级追踪镜头。在一个未来感十足的赛博朋克实验室里，一个机械臂正小心翼翼地将闪烁着蓝色荧光的液体倒入玻璃药瓶中。场景中实验室的金属表面和玻璃仪器反射出极其真实的倒影。柔和的环境光投射出深邃且逼真的阴影。随着液体的旋动，它发出细微的生物荧光，照亮了机器人复杂的机械关节。摄像机执行缓慢而稳定的推近镜头，全程保持完美的视觉连贯性与电影级调色。
+              enablePromptExpansion: true
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+          x-apifox-name: 成功
+      security: []
+      x-apifox-folder: 标准模型 API/视频生成/海螺AI
+      x-apifox-status: released
+      x-run-in-apifox: https://app.apifox.com/web/project/6103976/apis/api-408223898-run
+components:
+  schemas: {}
+  securitySchemes: {}
+servers:
+  - url: https://www.runninghub.cn
+    description: runninghub.cn
+security: []
+
+```

@@ -1,0 +1,160 @@
+{
+  "code": 0,
+  "msg": "success",
+  "errorMessages": null,
+  "data": {
+    "descriptionEn": "<p>Check the price before running, use the cost query: <a href=\"https://www.runninghub.cn/call api thirdPartyCallFeeTitle\" target=\"_blank\">https://www.runninghub.cn/call api thirdPartyCallFeeTitle</a><br/>Platform runtime is charged per second (RH coins) Third-party API single call fee (wallet balance)<br/>Platform runs standard tasks (24G VRAM): consumes 0.2 RH coins per second, platform runs Plus tasks (48G VRAM): consumes 0.4 RH coins per second<br/>This application supports the arbitrary fusion of 9 images, currently offering 5 usage opportunities per day for experience. For specific prices, check the link above. Banana is not open-sourced at the moment, the price is relatively high but it is quite useful.</p><p>Benefit! Click the avatar and fill in my invitation code jyprlu70! You can get 500 points! The system also gives 100 points every day! Come and take advantage!</p>",
+    "curl": "curl --location --request POST 'https://www.runninghub.cn/task/openapi/ai-app/run' \\\n--header 'Host: www.runninghub.cn' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"webappId\": \"null\",\n    \"apiKey\": \"<RUNNINGHUB_API_KEY>\",\n    \"nodeInfoList\": [\n        {\n            \"nodeId\": \"2\",\n            \"fieldName\": \"prompt\",\n            \"fieldValue\": \"根据第一张平面图的平面布置生成一个效果图，按照红色箭头所指的方向生成，沙发参考图片二，吊顶参考图片3，电视和电视背景墙参考图片4，吊灯参考图片5，窗户参考图片6，地板参考图片7，沙发背景参考图片8，植物参考图片9\",\n            \"description\": \"prompt\"\n        },\n        {\n            \"nodeId\": \"3\",\n            \"fieldName\": \"image\",\n            \"fieldValue\": \"b5b95f09fefb6b612e78a7e170c3da8719bf9cd4436fd6beede80c6666af405e.png\",\n            \"description\": \"image\"\n        },\n        {\n            \"nodeId\": \"7\",\n            \"fieldName\": \"image\",\n            \"fieldValue\": \"573bfb866edb98f3b470b8cdd60344e82ead93d63f01c91a33155438bf7bc9bd.png\",\n            \"description\": \"image\"\n        },\n        {\n            \"nodeId\": \"8\",\n            \"fieldName\": \"image\",\n            \"fieldValue\": \"9d768b6e486a446147c012fdcc1acca2e72728b79e54c4cc6f77c60866163a24.png\",\n            \"description\": \"image\"\n        },\n        {\n            \"nodeId\": \"11\",\n            \"fieldName\": \"image\",\n            \"fieldValue\": \"a2fa8993009b6654257d6cc6bcaf40558f4d65e35718bab472b649cb15daf13c.png\",\n            \"description\": \"image\"\n        },\n        {\n            \"nodeId\": \"12\",\n            \"fieldName\": \"image\",\n            \"fieldValue\": \"93bd0c2ba49da3885639c4643588037f38652e5c8cb575ddbcc7f35fde055c1d.png\",\n            \"description\": \"image\"\n        },\n        {\n            \"nodeId\": \"13\",\n            \"fieldName\": \"image\",\n            \"fieldValue\": \"ad2f9bb327033839556ce9bc91f5d7087eef96829ecc42c85d0d9aa2d57cb1b8.png\",\n            \"description\": \"image\"\n        },\n        {\n            \"nodeId\": \"14\",\n            \"fieldName\": \"image\",\n            \"fieldValue\": \"0102772cc3cd1f48e77ff4932b6e9742fe950d797c76a1613a27abb716ee9456.png\",\n            \"description\": \"image\"\n        },\n        {\n            \"nodeId\": \"15\",\n            \"fieldName\": \"image\",\n            \"fieldValue\": \"44aebaa77c10fde818416cf463366cb6660fad59dab706a3b7feab3cb1ccb2c1.png\",\n            \"description\": \"image\"\n        },\n        {\n            \"nodeId\": \"18\",\n            \"fieldName\": \"image\",\n            \"fieldValue\": \"7a7a23f347863b87031b35f27a00a2356157479ee55b6ad88b0a5eac3953adf3.png\",\n            \"description\": \"image\"\n        }\n    ]\n}'",
+    "webappName": "🍌香蕉  2 & Pro9图任意融合",
+    "description": "<p>先看价格再运行，用费用查询：<a href=\"https://www.runninghub.cn/call-api#thirdPartyCallFeeTitle\" target=\"_blank\">https://www.runninghub.cn/call-api#thirdPartyCallFeeTitle</a><br/>平台运行时间按秒计费（RH币）+ 三方API 单次调用费用（钱包余额）<br/>平台运行标准任务（24G显存）：每秒消耗0.2个RH币，平台运行Plus任务 （48G显存）：每秒消耗0.4个RH币<br/>这个应用支持9张图任意融合，目前每天有5次适用机会，可以体验一下，具体价格关注上方链接，香蕉目前未开源，价格比较贵，但是比较好用</p><p>利福利！点击头像填写我的邀请码jyprlu70！可以送500积分哦！每天系统还会送100积分！薅羊毛来！</p>",
+    "statisticsInfo": {
+      "likeCount": "5",
+      "downloadCount": "0",
+      "useCount": "197",
+      "pv": "0",
+      "collectCount": "38"
+    },
+    "nodeInfoList": [
+      {
+        "nodeId": "2",
+        "nodeName": "RH_Nano_Banana2_Image2Image",
+        "fieldName": "prompt",
+        "fieldValue": "根据第一张平面图的平面布置生成一个效果图，按照红色箭头所指的方向生成，沙发参考图片二，吊顶参考图片3，电视和电视背景墙参考图片4，吊灯参考图片5，窗户参考图片6，地板参考图片7，沙发背景参考图片8，植物参考图片9",
+        "fieldData": "[\"STRING\", {\"multiline\": true}]",
+        "fieldType": "STRING",
+        "description": "prompt",
+        "descriptionCn": null,
+        "descriptionEn": "prompt"
+      },
+      {
+        "nodeId": "3",
+        "nodeName": "LoadImage",
+        "fieldName": "image",
+        "fieldValue": "b5b95f09fefb6b612e78a7e170c3da8719bf9cd4436fd6beede80c6666af405e.png",
+        "fieldData": "[[\"bike.webp\", \"cannon.webp\", \"example.png\", \"keep_this_dic\", \"t_logo.png\"], {\"image_upload\": true}]",
+        "fieldType": "IMAGE",
+        "description": "image",
+        "descriptionCn": null,
+        "descriptionEn": "image"
+      },
+      {
+        "nodeId": "7",
+        "nodeName": "LoadImage",
+        "fieldName": "image",
+        "fieldValue": "573bfb866edb98f3b470b8cdd60344e82ead93d63f01c91a33155438bf7bc9bd.png",
+        "fieldData": "[[\"bike.webp\", \"cannon.webp\", \"example.png\", \"keep_this_dic\", \"t_logo.png\"], {\"image_upload\": true}]",
+        "fieldType": "IMAGE",
+        "description": "image",
+        "descriptionCn": null,
+        "descriptionEn": "image"
+      },
+      {
+        "nodeId": "8",
+        "nodeName": "LoadImage",
+        "fieldName": "image",
+        "fieldValue": "9d768b6e486a446147c012fdcc1acca2e72728b79e54c4cc6f77c60866163a24.png",
+        "fieldData": "[[\"bike.webp\", \"cannon.webp\", \"example.png\", \"keep_this_dic\", \"t_logo.png\"], {\"image_upload\": true}]",
+        "fieldType": "IMAGE",
+        "description": "image",
+        "descriptionCn": null,
+        "descriptionEn": "image"
+      },
+      {
+        "nodeId": "11",
+        "nodeName": "LoadImage",
+        "fieldName": "image",
+        "fieldValue": "a2fa8993009b6654257d6cc6bcaf40558f4d65e35718bab472b649cb15daf13c.png",
+        "fieldData": "[[\"bike.webp\", \"cannon.webp\", \"example.png\", \"keep_this_dic\", \"t_logo.png\"], {\"image_upload\": true}]",
+        "fieldType": "IMAGE",
+        "description": "image",
+        "descriptionCn": null,
+        "descriptionEn": "image"
+      },
+      {
+        "nodeId": "12",
+        "nodeName": "LoadImage",
+        "fieldName": "image",
+        "fieldValue": "93bd0c2ba49da3885639c4643588037f38652e5c8cb575ddbcc7f35fde055c1d.png",
+        "fieldData": "[[\"bike.webp\", \"cannon.webp\", \"example.png\", \"keep_this_dic\", \"t_logo.png\"], {\"image_upload\": true}]",
+        "fieldType": "IMAGE",
+        "description": "image",
+        "descriptionCn": null,
+        "descriptionEn": "image"
+      },
+      {
+        "nodeId": "13",
+        "nodeName": "LoadImage",
+        "fieldName": "image",
+        "fieldValue": "ad2f9bb327033839556ce9bc91f5d7087eef96829ecc42c85d0d9aa2d57cb1b8.png",
+        "fieldData": "[[\"bike.webp\", \"cannon.webp\", \"example.png\", \"keep_this_dic\", \"t_logo.png\"], {\"image_upload\": true}]",
+        "fieldType": "IMAGE",
+        "description": "image",
+        "descriptionCn": null,
+        "descriptionEn": "image"
+      },
+      {
+        "nodeId": "14",
+        "nodeName": "LoadImage",
+        "fieldName": "image",
+        "fieldValue": "0102772cc3cd1f48e77ff4932b6e9742fe950d797c76a1613a27abb716ee9456.png",
+        "fieldData": "[[\"bike.webp\", \"cannon.webp\", \"example.png\", \"keep_this_dic\", \"t_logo.png\"], {\"image_upload\": true}]",
+        "fieldType": "IMAGE",
+        "description": "image",
+        "descriptionCn": null,
+        "descriptionEn": "image"
+      },
+      {
+        "nodeId": "15",
+        "nodeName": "LoadImage",
+        "fieldName": "image",
+        "fieldValue": "44aebaa77c10fde818416cf463366cb6660fad59dab706a3b7feab3cb1ccb2c1.png",
+        "fieldData": "[[\"bike.webp\", \"cannon.webp\", \"example.png\", \"keep_this_dic\", \"t_logo.png\"], {\"image_upload\": true}]",
+        "fieldType": "IMAGE",
+        "description": "image",
+        "descriptionCn": null,
+        "descriptionEn": "image"
+      },
+      {
+        "nodeId": "18",
+        "nodeName": "LoadImage",
+        "fieldName": "image",
+        "fieldValue": "7a7a23f347863b87031b35f27a00a2356157479ee55b6ad88b0a5eac3953adf3.png",
+        "fieldData": "[[\"bike.webp\", \"cannon.webp\", \"example.png\", \"keep_this_dic\", \"t_logo.png\"], {\"image_upload\": true}]",
+        "fieldType": "IMAGE",
+        "description": "image",
+        "descriptionCn": null,
+        "descriptionEn": "image"
+      }
+    ],
+    "covers": [
+      {
+        "id": "2003678565663186945",
+        "objName": "a052835e0508f253311899a0d7880d80/2025-12-24/ed75d9d3a82913377a416838c9a2df24.jpg",
+        "url": "https://rh-images.xiaoyaoyou.com/a052835e0508f253311899a0d7880d80/2025-12-24/ed75d9d3a82913377a416838c9a2df24.jpg",
+        "thumbnailUri": "https://rh-images.xiaoyaoyou.com/a052835e0508f253311899a0d7880d80/2025-12-24/ed75d9d3a82913377a416838c9a2df24.jpg?imageMogr2/format/jpeg/ignore-error/1",
+        "imageWidth": "1200",
+        "imageHeight": "896"
+      }
+    ],
+    "tags": [
+      {
+        "id": "1875941016195787306",
+        "name": "写实",
+        "nameEn": "Realistic",
+        "labels": null
+      },
+      {
+        "id": "1871151815242543198",
+        "name": "图生图",
+        "nameEn": "Image-to-Image",
+        "labels": null
+      },
+      {
+        "id": "1871151815242543240",
+        "name": "毛坯房一键改造",
+        "nameEn": "Room Makeover",
+        "labels": null
+      }
+    ]
+  }
+}

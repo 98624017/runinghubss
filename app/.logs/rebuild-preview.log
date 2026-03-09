@@ -1,0 +1,6 @@
+
+> server@0.1.0 start
+> node dist/index.js
+
+RunningHub AI Console server listening on http://localhost:8787
+Admin path: /admin-console

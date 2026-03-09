@@ -1,0 +1,1434 @@
+[
+  {
+    "index": 1,
+    "type": "doc",
+    "page_id": "7997222",
+    "title": "开始",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/doc-7997222.md",
+    "category": "未分类",
+    "category_chain": [
+      "未分类"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 2,
+    "type": "doc",
+    "page_id": "7348569",
+    "title": "更新日志",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/doc-7348569.md",
+    "category": "未分类",
+    "category_chain": [
+      "未分类"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 3,
+    "type": "doc",
+    "page_id": "6332955",
+    "title": "关于nodeInfoList",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/doc-6332955.md",
+    "category": "指引",
+    "category_chain": [
+      "指引"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 4,
+    "type": "doc",
+    "page_id": "6768545",
+    "title": "原生ComfyUI接口支持",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/doc-6768545.md",
+    "category": "指引",
+    "category_chain": [
+      "指引"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 5,
+    "type": "doc",
+    "page_id": "6913922",
+    "title": "接口错误码说明",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/doc-6913922.md",
+    "category": "指引",
+    "category_chain": [
+      "指引"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 6,
+    "type": "doc",
+    "page_id": "7525194",
+    "title": "AI应用完整接入示例",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/doc-7525194.md",
+    "category": "接入示例",
+    "category_chain": [
+      "接入示例"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 7,
+    "type": "doc",
+    "page_id": "7527911",
+    "title": "AI应用完整接入示例高阶版",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/doc-7527911.md",
+    "category": "接入示例",
+    "category_chain": [
+      "接入示例"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 8,
+    "type": "doc",
+    "page_id": "7533195",
+    "title": "任务进度显示示例",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/doc-7533195.md",
+    "category": "接入示例",
+    "category_chain": [
+      "接入示例"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 9,
+    "type": "doc",
+    "page_id": "7534195",
+    "title": "工作流完整接入示例",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/doc-7534195.md",
+    "category": "接入示例",
+    "category_chain": [
+      "接入示例"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 10,
+    "type": "doc",
+    "page_id": "7314488",
+    "title": "关于快捷创作调用",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/doc-7314488.md",
+    "category": "快捷创作",
+    "category_chain": [
+      "快捷创作"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 11,
+    "type": "api",
+    "page_id": "408241882",
+    "title": "全能视频S-角色上传",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-408241882.md",
+    "category": "标准模型 API > 视频生成 > 全能视频 S",
+    "category_chain": [
+      "标准模型 API",
+      "视频生成",
+      "全能视频 S"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 12,
+    "type": "api",
+    "page_id": "407727815",
+    "title": "全能视频S-官方-文生视频",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-407727815.md",
+    "category": "标准模型 API > 视频生成 > 全能视频 S",
+    "category_chain": [
+      "标准模型 API",
+      "视频生成",
+      "全能视频 S"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 13,
+    "type": "api",
+    "page_id": "407729959",
+    "title": "全能视频S-官方-文生视频-pro",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-407729959.md",
+    "category": "标准模型 API > 视频生成 > 全能视频 S",
+    "category_chain": [
+      "标准模型 API",
+      "视频生成",
+      "全能视频 S"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 14,
+    "type": "api",
+    "page_id": "402596999",
+    "title": "全能视频S-文生视频-pro",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-402596999.md",
+    "category": "标准模型 API > 视频生成 > 全能视频 S",
+    "category_chain": [
+      "标准模型 API",
+      "视频生成",
+      "全能视频 S"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 15,
+    "type": "api",
+    "page_id": "402603035",
+    "title": "全能视频S-图生视频-pro",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-402603035.md",
+    "category": "标准模型 API > 视频生成 > 全能视频 S",
+    "category_chain": [
+      "标准模型 API",
+      "视频生成",
+      "全能视频 S"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 16,
+    "type": "api",
+    "page_id": "402596877",
+    "title": "全能视频S-图生视频",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-402596877.md",
+    "category": "标准模型 API > 视频生成 > 全能视频 S",
+    "category_chain": [
+      "标准模型 API",
+      "视频生成",
+      "全能视频 S"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 17,
+    "type": "api",
+    "page_id": "407725706",
+    "title": "全能视频S-官方-图生视频",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-407725706.md",
+    "category": "标准模型 API > 视频生成 > 全能视频 S",
+    "category_chain": [
+      "标准模型 API",
+      "视频生成",
+      "全能视频 S"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 18,
+    "type": "api",
+    "page_id": "407736182",
+    "title": "全能视频S-官方-图生视频-pro",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-407736182.md",
+    "category": "标准模型 API > 视频生成 > 全能视频 S",
+    "category_chain": [
+      "标准模型 API",
+      "视频生成",
+      "全能视频 S"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 19,
+    "type": "api",
+    "page_id": "402608271",
+    "title": "全能视频S-官方-图生视频-支持真人",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-402608271.md",
+    "category": "标准模型 API > 视频生成 > 全能视频 S",
+    "category_chain": [
+      "标准模型 API",
+      "视频生成",
+      "全能视频 S"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 20,
+    "type": "api",
+    "page_id": "402607591",
+    "title": "全能视频S-文生视频",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-402607591.md",
+    "category": "标准模型 API > 视频生成 > 全能视频 S",
+    "category_chain": [
+      "标准模型 API",
+      "视频生成",
+      "全能视频 S"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 21,
+    "type": "api",
+    "page_id": "402609378",
+    "title": "全能视频V3.1-fast-图生视频",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-402609378.md",
+    "category": "标准模型 API > 视频生成 > 全能视频 V",
+    "category_chain": [
+      "标准模型 API",
+      "视频生成",
+      "全能视频 V"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 22,
+    "type": "api",
+    "page_id": "402608928",
+    "title": "全能视频V3.1-fast-文生视频",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-402608928.md",
+    "category": "标准模型 API > 视频生成 > 全能视频 V",
+    "category_chain": [
+      "标准模型 API",
+      "视频生成",
+      "全能视频 V"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 23,
+    "type": "api",
+    "page_id": "402610533",
+    "title": "全能视频V3.1-pro-文生视频",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-402610533.md",
+    "category": "标准模型 API > 视频生成 > 全能视频 V",
+    "category_chain": [
+      "标准模型 API",
+      "视频生成",
+      "全能视频 V"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 24,
+    "type": "api",
+    "page_id": "407928239",
+    "title": "可灵文生视频2.6-pro",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-407928239.md",
+    "category": "标准模型 API > 视频生成 > 可灵 2.6",
+    "category_chain": [
+      "标准模型 API",
+      "视频生成",
+      "可灵 2.6"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 25,
+    "type": "api",
+    "page_id": "408093144",
+    "title": "可灵图生视频2.6-pro",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-408093144.md",
+    "category": "标准模型 API > 视频生成 > 可灵 2.6",
+    "category_chain": [
+      "标准模型 API",
+      "视频生成",
+      "可灵 2.6"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 26,
+    "type": "api",
+    "page_id": "408110289",
+    "title": "万相2.6-文生视频",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-408110289.md",
+    "category": "标准模型 API > 视频生成 > 万象 2.6",
+    "category_chain": [
+      "标准模型 API",
+      "视频生成",
+      "万象 2.6"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 27,
+    "type": "api",
+    "page_id": "408124606",
+    "title": "万相2.6-图生视频",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-408124606.md",
+    "category": "标准模型 API > 视频生成 > 万象 2.6",
+    "category_chain": [
+      "标准模型 API",
+      "视频生成",
+      "万象 2.6"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 28,
+    "type": "api",
+    "page_id": "408131509",
+    "title": "万相2.6-图生视频Flash",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-408131509.md",
+    "category": "标准模型 API > 视频生成 > 万象 2.6",
+    "category_chain": [
+      "标准模型 API",
+      "视频生成",
+      "万象 2.6"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 29,
+    "type": "api",
+    "page_id": "422326015",
+    "title": "万相2.6-参考生视频Flash",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-422326015.md",
+    "category": "标准模型 API > 视频生成 > 万象 2.6",
+    "category_chain": [
+      "标准模型 API",
+      "视频生成",
+      "万象 2.6"
+    ],
+    "summary": "万相2.6-参考生视频Flash是阿里通义万相2.6系列的快速参考生视频模型，支持上传最多5张参考图像，基于参考图的角色身份、风格和场景布局生成新视频。该版本生成速度更快，支持720P/1080P两种分辨率，视频时长可选5秒或10秒，可生成带音频或无声视频，支持单镜头和多镜头叙事模式。"
+  },
+  {
+    "index": 30,
+    "type": "api",
+    "page_id": "422326303",
+    "title": "万相2.6-参考生视频",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-422326303.md",
+    "category": "标准模型 API > 视频生成 > 万象 2.6",
+    "category_chain": [
+      "标准模型 API",
+      "视频生成",
+      "万象 2.6"
+    ],
+    "summary": "万相2.6-参考生视频是阿里通义万相2.6系列的参考生视频模型，支持多模态输入（文本/图像/视频）。支持720P/1080P分辨率，支持外部音频输入用于声画对齐。模型可基于参考图像或视频还原角色形象，并参考音色，支持单人表演或多角色互动，同时具备多镜头智能调度能力。"
+  },
+  {
+    "index": 31,
+    "type": "api",
+    "page_id": "408148153",
+    "title": "Vidu-文生视频-q2",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-408148153.md",
+    "category": "标准模型 API > 视频生成 > Vidu",
+    "category_chain": [
+      "标准模型 API",
+      "视频生成",
+      "Vidu"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 32,
+    "type": "api",
+    "page_id": "408154316",
+    "title": "Vidu-图生视频-q2-pro",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-408154316.md",
+    "category": "标准模型 API > 视频生成 > Vidu",
+    "category_chain": [
+      "标准模型 API",
+      "视频生成",
+      "Vidu"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 33,
+    "type": "api",
+    "page_id": "408156563",
+    "title": "Vidu-图生视频-q2-turbo",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-408156563.md",
+    "category": "标准模型 API > 视频生成 > Vidu",
+    "category_chain": [
+      "标准模型 API",
+      "视频生成",
+      "Vidu"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 34,
+    "type": "api",
+    "page_id": "408162666",
+    "title": "可灵文生视频2.5-turbo-pro",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-408162666.md",
+    "category": "标准模型 API > 视频生成 > 可灵 2.5",
+    "category_chain": [
+      "标准模型 API",
+      "视频生成",
+      "可灵 2.5"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 35,
+    "type": "api",
+    "page_id": "408163529",
+    "title": "可灵图生视频2.5-turbo-pro",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-408163529.md",
+    "category": "标准模型 API > 视频生成 > 可灵 2.5",
+    "category_chain": [
+      "标准模型 API",
+      "视频生成",
+      "可灵 2.5"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 36,
+    "type": "api",
+    "page_id": "408166065",
+    "title": "可灵图生视频2.5-turbo-std",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-408166065.md",
+    "category": "标准模型 API > 视频生成 > 可灵 2.5",
+    "category_chain": [
+      "标准模型 API",
+      "视频生成",
+      "可灵 2.5"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 37,
+    "type": "api",
+    "page_id": "408187333",
+    "title": "可灵文生视频o1",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-408187333.md",
+    "category": "标准模型 API > 视频生成 > 可灵 o1",
+    "category_chain": [
+      "标准模型 API",
+      "视频生成",
+      "可灵 o1"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 38,
+    "type": "api",
+    "page_id": "408189001",
+    "title": "可灵图生视频o1",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-408189001.md",
+    "category": "标准模型 API > 视频生成 > 可灵 o1",
+    "category_chain": [
+      "标准模型 API",
+      "视频生成",
+      "可灵 o1"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 39,
+    "type": "api",
+    "page_id": "408192584",
+    "title": "可灵首尾帧生视频o1",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-408192584.md",
+    "category": "标准模型 API > 视频生成 > 可灵 o1",
+    "category_chain": [
+      "标准模型 API",
+      "视频生成",
+      "可灵 o1"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 40,
+    "type": "api",
+    "page_id": "408196005",
+    "title": "可灵参考生视频o1",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-408196005.md",
+    "category": "标准模型 API > 视频生成 > 可灵 o1",
+    "category_chain": [
+      "标准模型 API",
+      "视频生成",
+      "可灵 o1"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 41,
+    "type": "api",
+    "page_id": "408197709",
+    "title": "可灵视频编辑o1",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-408197709.md",
+    "category": "标准模型 API > 视频生成 > 可灵 o1",
+    "category_chain": [
+      "标准模型 API",
+      "视频生成",
+      "可灵 o1"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 42,
+    "type": "api",
+    "page_id": "408219241",
+    "title": "海螺-02-文生视频-标准",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-408219241.md",
+    "category": "标准模型 API > 视频生成 > 海螺AI",
+    "category_chain": [
+      "标准模型 API",
+      "视频生成",
+      "海螺AI"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 43,
+    "type": "api",
+    "page_id": "408224256",
+    "title": "海螺-02-文生视频-pro",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-408224256.md",
+    "category": "标准模型 API > 视频生成 > 海螺AI",
+    "category_chain": [
+      "标准模型 API",
+      "视频生成",
+      "海螺AI"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 44,
+    "type": "api",
+    "page_id": "408220673",
+    "title": "海螺-02-图生视频-标准",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-408220673.md",
+    "category": "标准模型 API > 视频生成 > 海螺AI",
+    "category_chain": [
+      "标准模型 API",
+      "视频生成",
+      "海螺AI"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 45,
+    "type": "api",
+    "page_id": "408224304",
+    "title": "海螺-02-标准",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-408224304.md",
+    "category": "标准模型 API > 视频生成 > 海螺AI",
+    "category_chain": [
+      "标准模型 API",
+      "视频生成",
+      "海螺AI"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 46,
+    "type": "api",
+    "page_id": "408224405",
+    "title": "海螺-02-pro",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-408224405.md",
+    "category": "标准模型 API > 视频生成 > 海螺AI",
+    "category_chain": [
+      "标准模型 API",
+      "视频生成",
+      "海螺AI"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 47,
+    "type": "api",
+    "page_id": "408224487",
+    "title": "海螺-02-fast",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-408224487.md",
+    "category": "标准模型 API > 视频生成 > 海螺AI",
+    "category_chain": [
+      "标准模型 API",
+      "视频生成",
+      "海螺AI"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 48,
+    "type": "api",
+    "page_id": "408224098",
+    "title": "海螺-02-图生视频-pro",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-408224098.md",
+    "category": "标准模型 API > 视频生成 > 海螺AI",
+    "category_chain": [
+      "标准模型 API",
+      "视频生成",
+      "海螺AI"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 49,
+    "type": "api",
+    "page_id": "408222351",
+    "title": "海螺-2.3-图生视频-标准",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-408222351.md",
+    "category": "标准模型 API > 视频生成 > 海螺AI",
+    "category_chain": [
+      "标准模型 API",
+      "视频生成",
+      "海螺AI"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 50,
+    "type": "api",
+    "page_id": "408222640",
+    "title": "海螺-2.3-fast-图生视频",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-408222640.md",
+    "category": "标准模型 API > 视频生成 > 海螺AI",
+    "category_chain": [
+      "标准模型 API",
+      "视频生成",
+      "海螺AI"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 51,
+    "type": "api",
+    "page_id": "408223267",
+    "title": "海螺-2.3-fast-pro-图生视频",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-408223267.md",
+    "category": "标准模型 API > 视频生成 > 海螺AI",
+    "category_chain": [
+      "标准模型 API",
+      "视频生成",
+      "海螺AI"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 52,
+    "type": "api",
+    "page_id": "408223446",
+    "title": "海螺-2.3-图生视频-pro",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-408223446.md",
+    "category": "标准模型 API > 视频生成 > 海螺AI",
+    "category_chain": [
+      "标准模型 API",
+      "视频生成",
+      "海螺AI"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 53,
+    "type": "api",
+    "page_id": "408220538",
+    "title": "海螺-2.3-文生视频-标准",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-408220538.md",
+    "category": "标准模型 API > 视频生成 > 海螺AI",
+    "category_chain": [
+      "标准模型 API",
+      "视频生成",
+      "海螺AI"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 54,
+    "type": "api",
+    "page_id": "408223898",
+    "title": "海螺-2.3-文生视频-pro",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-408223898.md",
+    "category": "标准模型 API > 视频生成 > 海螺AI",
+    "category_chain": [
+      "标准模型 API",
+      "视频生成",
+      "海螺AI"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 55,
+    "type": "api",
+    "page_id": "402548497",
+    "title": "全能图片PRO-官方-文生图",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-402548497.md",
+    "category": "标准模型 API > 图片生成 > 全能图片",
+    "category_chain": [
+      "标准模型 API",
+      "图片生成",
+      "全能图片"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 56,
+    "type": "api",
+    "page_id": "402580909",
+    "title": "全能图片PRO-文生图",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-402580909.md",
+    "category": "标准模型 API > 图片生成 > 全能图片",
+    "category_chain": [
+      "标准模型 API",
+      "图片生成",
+      "全能图片"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 57,
+    "type": "api",
+    "page_id": "402574588",
+    "title": "全能图片V1-文生图",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-402574588.md",
+    "category": "标准模型 API > 图片生成 > 全能图片",
+    "category_chain": [
+      "标准模型 API",
+      "图片生成",
+      "全能图片"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 58,
+    "type": "api",
+    "page_id": "402566952",
+    "title": "全能图片PRO-官方-图生图",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-402566952.md",
+    "category": "标准模型 API > 图片生成 > 全能图片",
+    "category_chain": [
+      "标准模型 API",
+      "图片生成",
+      "全能图片"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 59,
+    "type": "api",
+    "page_id": "402583598",
+    "title": "全能图片PRO-图生图",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-402583598.md",
+    "category": "标准模型 API > 图片生成 > 全能图片",
+    "category_chain": [
+      "标准模型 API",
+      "图片生成",
+      "全能图片"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 60,
+    "type": "api",
+    "page_id": "402575889",
+    "title": "全能图片V1-图生图",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-402575889.md",
+    "category": "标准模型 API > 图片生成 > 全能图片",
+    "category_chain": [
+      "标准模型 API",
+      "图片生成",
+      "全能图片"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 61,
+    "type": "api",
+    "page_id": "402595775",
+    "title": "全能图片G-1.5-文生图",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-402595775.md",
+    "category": "标准模型 API > 图片生成 > 全能图片 G",
+    "category_chain": [
+      "标准模型 API",
+      "图片生成",
+      "全能图片 G"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 62,
+    "type": "api",
+    "page_id": "402593934",
+    "title": "全能图片G-1.5-图生图",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-402593934.md",
+    "category": "标准模型 API > 图片生成 > 全能图片 G",
+    "category_chain": [
+      "标准模型 API",
+      "图片生成",
+      "全能图片 G"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 63,
+    "type": "api",
+    "page_id": "408103823",
+    "title": "seedream-v4.5-文生图",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-408103823.md",
+    "category": "标准模型 API > 图片生成 > seedream",
+    "category_chain": [
+      "标准模型 API",
+      "图片生成",
+      "seedream"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 64,
+    "type": "api",
+    "page_id": "408105506",
+    "title": "seedream-v4-文生图",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-408105506.md",
+    "category": "标准模型 API > 图片生成 > seedream",
+    "category_chain": [
+      "标准模型 API",
+      "图片生成",
+      "seedream"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 65,
+    "type": "api",
+    "page_id": "408103923",
+    "title": "seedream-v4.5-图生图",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-408103923.md",
+    "category": "标准模型 API > 图片生成 > seedream",
+    "category_chain": [
+      "标准模型 API",
+      "图片生成",
+      "seedream"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 66,
+    "type": "api",
+    "page_id": "408105799",
+    "title": "seedream-v4-图生图",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-408105799.md",
+    "category": "标准模型 API > 图片生成 > seedream",
+    "category_chain": [
+      "标准模型 API",
+      "图片生成",
+      "seedream"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 67,
+    "type": "api",
+    "page_id": "402637109",
+    "title": "查询任务生成结果 V2",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-402637109.md",
+    "category": "标准模型 API",
+    "category_chain": [
+      "标准模型 API"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 68,
+    "type": "api",
+    "page_id": "279098421",
+    "title": "发起AI应用任务",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-279098421.md",
+    "category": "AI 应用",
+    "category_chain": [
+      "AI 应用"
+    ],
+    "summary": "在AI应用详情页中可查看示例nodeInfoList"
+  },
+  {
+    "index": 69,
+    "type": "api",
+    "page_id": "335439604",
+    "title": "获取AI应用API调用示例",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-335439604.md",
+    "category": "AI 应用",
+    "category_chain": [
+      "AI 应用"
+    ],
+    "summary": "提供AI应用接口请求调用示例demo，可以参考示例快速发起接口调用"
+  },
+  {
+    "index": 70,
+    "type": "api",
+    "page_id": "276613248",
+    "title": "发起ComfyUI任务1-简易",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-276613248.md",
+    "category": "ComfyUI 工作流",
+    "category_chain": [
+      "ComfyUI 工作流"
+    ],
+    "summary": "该方式运行 workflow，相当于在不改变原有workflow的任何参数的情况下，直接点了一下\"运行\"按钮。"
+  },
+  {
+    "index": 71,
+    "type": "api",
+    "page_id": "276613249",
+    "title": "发起ComfyUI任务2-高级",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-276613249.md",
+    "category": "ComfyUI 工作流",
+    "category_chain": [
+      "ComfyUI 工作流"
+    ],
+    "summary": "# 发起 ComfyUI 任务（高级）"
+  },
+  {
+    "index": 72,
+    "type": "api",
+    "page_id": "276613251",
+    "title": "获取工作流Json",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-276613251.md",
+    "category": "ComfyUI 工作流",
+    "category_chain": [
+      "ComfyUI 工作流"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 73,
+    "type": "api",
+    "page_id": "276613254",
+    "title": "取消ComfyUI任务",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-276613254.md",
+    "category": "ComfyUI 工作流",
+    "category_chain": [
+      "ComfyUI 工作流"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 74,
+    "type": "api",
+    "page_id": "342821543",
+    "title": "获取快捷创作-模型库风格参数数据",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-342821543.md",
+    "category": "快捷创作",
+    "category_chain": [
+      "快捷创作"
+    ],
+    "summary": "该接口用于快捷创作菜单下的文生图模块，目的是获取模型库风格数据，用于调用快捷创作API接口时候的参数填充"
+  },
+  {
+    "index": 75,
+    "type": "api",
+    "page_id": "342830715",
+    "title": "发起快捷创作任务",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-342830715.md",
+    "category": "快捷创作",
+    "category_chain": [
+      "快捷创作"
+    ],
+    "summary": "在快捷创作菜单下选择需要调用的模块页中点击调用API可查看示例，可以获取到webappId、quickCreateCode、nodeInfoList等入参信息，详细请看“关于快捷创作调用”说明"
+  },
+  {
+    "index": 76,
+    "type": "api",
+    "page_id": "276613252",
+    "title": "查询任务状态",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-276613252.md",
+    "category": "任务查询 & webhook",
+    "category_chain": [
+      "任务查询 & webhook"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 77,
+    "type": "api",
+    "page_id": "276613253",
+    "title": "查询任务生成结果",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-276613253.md",
+    "category": "任务查询 & webhook",
+    "category_chain": [
+      "任务查询 & webhook"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 78,
+    "type": "api",
+    "page_id": "276613258",
+    "title": "获取webhook事件详情",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-276613258.md",
+    "category": "任务查询 & webhook",
+    "category_chain": [
+      "任务查询 & webhook"
+    ],
+    "summary": "此接口旨在帮助调试用户的webhook，通过taskId查询到当前webhook事件的详细状态，拿到事件的id后可以发起重试"
+  },
+  {
+    "index": 79,
+    "type": "api",
+    "page_id": "276613259",
+    "title": "重新发送指定webhook事件",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-276613259.md",
+    "category": "任务查询 & webhook",
+    "category_chain": [
+      "任务查询 & webhook"
+    ],
+    "summary": "webhookId 为 获取webhook事件详情中返回的id"
+  },
+  {
+    "index": 80,
+    "type": "api",
+    "page_id": "402615348",
+    "title": "文件上传",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-402615348.md",
+    "category": "资源上传",
+    "category_chain": [
+      "资源上传"
+    ],
+    "summary": "# 资源文件上传说明"
+  },
+  {
+    "index": 81,
+    "type": "api",
+    "page_id": "369298135",
+    "title": "上传资源（弃用）",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-369298135.md",
+    "category": "资源上传",
+    "category_chain": [
+      "资源上传"
+    ],
+    "summary": "# RunningHub 资源上传说明（图片、音视、视频、压缩包）"
+  },
+  {
+    "index": 82,
+    "type": "api",
+    "page_id": "276613257",
+    "title": "上传Lora-获取Lora上传地址",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-276613257.md",
+    "category": "资源上传",
+    "category_chain": [
+      "资源上传"
+    ],
+    "summary": "# RHLoraLoader 专用 LoRA 上传接口说明"
+  },
+  {
+    "index": 83,
+    "type": "api",
+    "page_id": "276613255",
+    "title": "获取账户信息",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/api-276613255.md",
+    "category": "未分类",
+    "category_chain": [
+      "未分类"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 84,
+    "type": "schema",
+    "page_id": "157370975",
+    "title": "RTaskCreateResponse",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/schema-157370975.md",
+    "category": "未分类",
+    "category_chain": [
+      "未分类"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 85,
+    "type": "schema",
+    "page_id": "155888520",
+    "title": "获取工作流Json Request",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888520.md",
+    "category": "未分类",
+    "category_chain": [
+      "未分类"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 86,
+    "type": "schema",
+    "page_id": "155888521",
+    "title": "获取工作流Json Response",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888521.md",
+    "category": "未分类",
+    "category_chain": [
+      "未分类"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 87,
+    "type": "schema",
+    "page_id": "157370976",
+    "title": "TaskRunWebappByKeyRequest",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/schema-157370976.md",
+    "category": "未分类",
+    "category_chain": [
+      "未分类"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 88,
+    "type": "schema",
+    "page_id": "155888522",
+    "title": "发起ComfyUI任务 Request 1",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888522.md",
+    "category": "未分类",
+    "category_chain": [
+      "未分类"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 89,
+    "type": "schema",
+    "page_id": "157370977",
+    "title": "NodeInfo",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/schema-157370977.md",
+    "category": "未分类",
+    "category_chain": [
+      "未分类"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 90,
+    "type": "schema",
+    "page_id": "155888523",
+    "title": "发起ComfyUI任务 Request 2",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888523.md",
+    "category": "未分类",
+    "category_chain": [
+      "未分类"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 91,
+    "type": "schema",
+    "page_id": "155888524",
+    "title": "发起ComfyUI任务 Request-webhook",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888524.md",
+    "category": "未分类",
+    "category_chain": [
+      "未分类"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 92,
+    "type": "schema",
+    "page_id": "155888525",
+    "title": "发起ComfyUI任务 Response",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888525.md",
+    "category": "未分类",
+    "category_chain": [
+      "未分类"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 93,
+    "type": "schema",
+    "page_id": "155888526",
+    "title": "TaskCreateResponse",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888526.md",
+    "category": "未分类",
+    "category_chain": [
+      "未分类"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 94,
+    "type": "schema",
+    "page_id": "155888527",
+    "title": "查询任务状态 Request",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888527.md",
+    "category": "未分类",
+    "category_chain": [
+      "未分类"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 95,
+    "type": "schema",
+    "page_id": "155888528",
+    "title": "节点输入信息",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888528.md",
+    "category": "未分类",
+    "category_chain": [
+      "未分类"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 96,
+    "type": "schema",
+    "page_id": "155888529",
+    "title": "获取账户信息 Request",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888529.md",
+    "category": "未分类",
+    "category_chain": [
+      "未分类"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 97,
+    "type": "schema",
+    "page_id": "155888530",
+    "title": "上传资源Request",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888530.md",
+    "category": "未分类",
+    "category_chain": [
+      "未分类"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 98,
+    "type": "schema",
+    "page_id": "155888531",
+    "title": "获取webhook事件详情Request",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888531.md",
+    "category": "未分类",
+    "category_chain": [
+      "未分类"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 99,
+    "type": "schema",
+    "page_id": "155888532",
+    "title": "重新发送指定webhook Request",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888532.md",
+    "category": "未分类",
+    "category_chain": [
+      "未分类"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 100,
+    "type": "schema",
+    "page_id": "155888533",
+    "title": "R?",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888533.md",
+    "category": "未分类",
+    "category_chain": [
+      "未分类"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 101,
+    "type": "schema",
+    "page_id": "155888534",
+    "title": "RWorkflowDuplicateResponse",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888534.md",
+    "category": "未分类",
+    "category_chain": [
+      "未分类"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 102,
+    "type": "schema",
+    "page_id": "155888535",
+    "title": "RAccountStatusResponse",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888535.md",
+    "category": "未分类",
+    "category_chain": [
+      "未分类"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 103,
+    "type": "schema",
+    "page_id": "155888536",
+    "title": "WorkflowDuplicateResponse",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888536.md",
+    "category": "未分类",
+    "category_chain": [
+      "未分类"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 104,
+    "type": "schema",
+    "page_id": "155888537",
+    "title": "AccountStatusResponse",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888537.md",
+    "category": "未分类",
+    "category_chain": [
+      "未分类"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 105,
+    "type": "schema",
+    "page_id": "155888538",
+    "title": "WorkflowDuplicateRequest",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888538.md",
+    "category": "未分类",
+    "category_chain": [
+      "未分类"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 106,
+    "type": "schema",
+    "page_id": "155888539",
+    "title": "ApiUploadLoraRequest",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888539.md",
+    "category": "未分类",
+    "category_chain": [
+      "未分类"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 107,
+    "type": "schema",
+    "page_id": "155888540",
+    "title": "RString",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888540.md",
+    "category": "未分类",
+    "category_chain": [
+      "未分类"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 108,
+    "type": "schema",
+    "page_id": "155888541",
+    "title": "RTaskUploadResponse",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888541.md",
+    "category": "未分类",
+    "category_chain": [
+      "未分类"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 109,
+    "type": "schema",
+    "page_id": "155888542",
+    "title": "TaskUploadResponse",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888542.md",
+    "category": "未分类",
+    "category_chain": [
+      "未分类"
+    ],
+    "summary": ""
+  },
+  {
+    "index": 110,
+    "type": "schema",
+    "page_id": "236725850",
+    "title": "生成任务提交结果",
+    "url": "https://www.runninghub.cn/runninghub-api-doc-cn/schema-236725850.md",
+    "category": "未分类",
+    "category_chain": [
+      "未分类"
+    ],
+    "summary": ""
+  }
+]

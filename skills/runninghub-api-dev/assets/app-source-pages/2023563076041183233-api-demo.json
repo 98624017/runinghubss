@@ -1,0 +1,116 @@
+{
+  "code": 0,
+  "msg": "success",
+  "errorMessages": null,
+  "data": {
+    "descriptionEn": "<p>One-click generation of decoration renderings</p>",
+    "curl": "curl --location --request POST 'https://www.runninghub.cn/task/openapi/ai-app/run' \\\n--header 'Host: www.runninghub.cn' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"webappId\": \"null\",\n    \"apiKey\": \"<RUNNINGHUB_API_KEY>\",\n    \"nodeInfoList\": [\n        {\n            \"nodeId\": \"541\",\n            \"fieldName\": \"image\",\n            \"fieldValue\": \"pasted/bedaafca67786e71afe1292b3067bd3f60d4979aa63bd1c7e28d2cfa5a081d28.png\",\n            \"description\": \"上传毛坯照片\"\n        },\n        {\n            \"nodeId\": \"538\",\n            \"fieldName\": \"image\",\n            \"fieldValue\": \"1a292d797df9cd57ad34be74b7a84a997f7154957d9db7e084928967f6dbf2b3.jpeg\",\n            \"description\": \"上传风格参考\"\n        },\n        {\n            \"nodeId\": \"558\",\n            \"fieldName\": \"text\",\n            \"fieldValue\": \"现代风格客厅，左侧是电视背景墙，右侧是沙发\",\n            \"description\": \"提示词（描述装修风格及家具布局）\"\n        },\n        {\n            \"nodeId\": \"605\",\n            \"fieldName\": \"aspectRatio\",\n            \"fieldData\": \"[{\\\"name\\\":\\\"auto\\\",\\\"index\\\":\\\"auto\\\",\\\"description\\\":\\\"自动\\\",\\\"fastIndex\\\":1.0,\\\"descriptionEn\\\":\\\"Automatic\\\"},{\\\"name\\\":\\\"1:1\\\",\\\"index\\\":\\\"1:1\\\",\\\"description\\\":\\\"\\\",\\\"fastIndex\\\":2.0},{\\\"name\\\":\\\"2:3\\\",\\\"index\\\":\\\"2:3\\\",\\\"description\\\":\\\"\\\",\\\"fastIndex\\\":3.0},{\\\"name\\\":\\\"3:2\\\",\\\"index\\\":\\\"3:2\\\",\\\"description\\\":\\\"\\\",\\\"fastIndex\\\":4.0},{\\\"name\\\":\\\"3:4\\\",\\\"index\\\":\\\"3:4\\\",\\\"description\\\":\\\"\\\",\\\"fastIndex\\\":5.0},{\\\"name\\\":\\\"4:3\\\",\\\"index\\\":\\\"4:3\\\",\\\"description\\\":\\\"\\\",\\\"fastIndex\\\":6.0},{\\\"name\\\":\\\"4:5\\\",\\\"index\\\":\\\"4:5\\\",\\\"description\\\":\\\"\\\",\\\"fastIndex\\\":7.0},{\\\"name\\\":\\\"5:4\\\",\\\"index\\\":\\\"5:4\\\",\\\"description\\\":\\\"\\\",\\\"fastIndex\\\":8.0},{\\\"name\\\":\\\"9:16\\\",\\\"index\\\":\\\"9:16\\\",\\\"description\\\":\\\"\\\",\\\"fastIndex\\\":9.0},{\\\"name\\\":\\\"16:9\\\",\\\"index\\\":\\\"16:9\\\",\\\"description\\\":\\\"\\\",\\\"fastIndex\\\":10.0},{\\\"name\\\":\\\"21:9\\\",\\\"index\\\":\\\"21:9\\\",\\\"description\\\":\\\"\\\",\\\"fastIndex\\\":11.0}]\",\n            \"fieldValue\": \"auto\",\n            \"description\": \"出图比例\"\n        },\n        {\n            \"nodeId\": \"605\",\n            \"fieldName\": \"resolution\",\n            \"fieldData\": \"[{\\\"name\\\":\\\"1k\\\",\\\"index\\\":\\\"1k\\\",\\\"description\\\":\\\"\\\",\\\"fastIndex\\\":1.0},{\\\"name\\\":\\\"2k\\\",\\\"index\\\":\\\"2k\\\",\\\"description\\\":\\\"\\\",\\\"fastIndex\\\":2.0},{\\\"name\\\":\\\"4k\\\",\\\"index\\\":\\\"4k\\\",\\\"description\\\":\\\"\\\",\\\"fastIndex\\\":3.0},{\\\"name\\\":\\\"8k (Official only)\\\",\\\"index\\\":\\\"8k (Official only)\\\",\\\"description\\\":\\\"\\\",\\\"fastIndex\\\":4.0}]\",\n            \"fieldValue\": \"2k\",\n            \"description\": \"出图分辨率\"\n        },\n        {\n            \"nodeId\": \"605\",\n            \"fieldName\": \"channel\",\n            \"fieldData\": \"[{\\\"name\\\":\\\"Third-party\\\",\\\"index\\\":\\\"Third-party\\\",\\\"description\\\":\\\"第三方（便宜）\\\",\\\"fastIndex\\\":1.0,\\\"descriptionEn\\\":\\\"Third party (cheap)\\\"},{\\\"name\\\":\\\"Official\\\",\\\"index\\\":\\\"Official\\\",\\\"description\\\":\\\"官方（贵）\\\",\\\"fastIndex\\\":2.0,\\\"descriptionEn\\\":\\\"Official (expensive)\\\"}]\",\n            \"fieldValue\": \"Third-party\",\n            \"description\": \"渠道选择\"\n        }\n    ]\n}'",
+    "webappName": "毛坯房出图-全能版",
+    "description": "<p>一键生成装修效果图</p>",
+    "statisticsInfo": {
+      "likeCount": "0",
+      "downloadCount": "0",
+      "useCount": "5",
+      "pv": "0",
+      "collectCount": "0"
+    },
+    "nodeInfoList": [
+      {
+        "nodeId": "541",
+        "nodeName": "LoadImage",
+        "fieldName": "image",
+        "fieldValue": "pasted/bedaafca67786e71afe1292b3067bd3f60d4979aa63bd1c7e28d2cfa5a081d28.png",
+        "fieldData": "[[\"example.png\", \"keep_this_dic\"], {\"image_upload\": true}]",
+        "fieldType": "IMAGE",
+        "description": "上传毛坯照片",
+        "descriptionCn": null,
+        "descriptionEn": "Upload raw photos"
+      },
+      {
+        "nodeId": "538",
+        "nodeName": "LoadImage",
+        "fieldName": "image",
+        "fieldValue": "1a292d797df9cd57ad34be74b7a84a997f7154957d9db7e084928967f6dbf2b3.jpeg",
+        "fieldData": "[[\"example.png\", \"keep_this_dic\"], {\"image_upload\": true}]",
+        "fieldType": "IMAGE",
+        "description": "上传风格参考",
+        "descriptionCn": null,
+        "descriptionEn": "Upload style reference"
+      },
+      {
+        "nodeId": "558",
+        "nodeName": "ttN text",
+        "fieldName": "text",
+        "fieldValue": "现代风格客厅，左侧是电视背景墙，右侧是沙发",
+        "fieldData": "[\"STRING\", {\"default\": \"\", \"multiline\": true, \"dynamicPrompts\": true}]",
+        "fieldType": "STRING",
+        "description": "提示词（描述装修风格及家具布局）",
+        "descriptionCn": null,
+        "descriptionEn": "Prompt words (describe decoration style and furniture layout)"
+      },
+      {
+        "nodeId": "605",
+        "nodeName": "RH_Nano_Banana2_Image2Image",
+        "fieldName": "aspectRatio",
+        "fieldValue": "auto",
+        "fieldData": "[{\"name\":\"auto\",\"index\":\"auto\",\"description\":\"自动\",\"fastIndex\":1.0,\"descriptionEn\":\"Automatic\"},{\"name\":\"1:1\",\"index\":\"1:1\",\"description\":\"\",\"fastIndex\":2.0},{\"name\":\"2:3\",\"index\":\"2:3\",\"description\":\"\",\"fastIndex\":3.0},{\"name\":\"3:2\",\"index\":\"3:2\",\"description\":\"\",\"fastIndex\":4.0},{\"name\":\"3:4\",\"index\":\"3:4\",\"description\":\"\",\"fastIndex\":5.0},{\"name\":\"4:3\",\"index\":\"4:3\",\"description\":\"\",\"fastIndex\":6.0},{\"name\":\"4:5\",\"index\":\"4:5\",\"description\":\"\",\"fastIndex\":7.0},{\"name\":\"5:4\",\"index\":\"5:4\",\"description\":\"\",\"fastIndex\":8.0},{\"name\":\"9:16\",\"index\":\"9:16\",\"description\":\"\",\"fastIndex\":9.0},{\"name\":\"16:9\",\"index\":\"16:9\",\"description\":\"\",\"fastIndex\":10.0},{\"name\":\"21:9\",\"index\":\"21:9\",\"description\":\"\",\"fastIndex\":11.0}]",
+        "fieldType": "LIST",
+        "description": "出图比例",
+        "descriptionCn": null,
+        "descriptionEn": "Output ratio"
+      },
+      {
+        "nodeId": "605",
+        "nodeName": "RH_Nano_Banana2_Image2Image",
+        "fieldName": "resolution",
+        "fieldValue": "2k",
+        "fieldData": "[{\"name\":\"1k\",\"index\":\"1k\",\"description\":\"\",\"fastIndex\":1.0},{\"name\":\"2k\",\"index\":\"2k\",\"description\":\"\",\"fastIndex\":2.0},{\"name\":\"4k\",\"index\":\"4k\",\"description\":\"\",\"fastIndex\":3.0},{\"name\":\"8k (Official only)\",\"index\":\"8k (Official only)\",\"description\":\"\",\"fastIndex\":4.0}]",
+        "fieldType": "LIST",
+        "description": "出图分辨率",
+        "descriptionCn": null,
+        "descriptionEn": "Output resolution"
+      },
+      {
+        "nodeId": "605",
+        "nodeName": "RH_Nano_Banana2_Image2Image",
+        "fieldName": "channel",
+        "fieldValue": "Third-party",
+        "fieldData": "[{\"name\":\"Third-party\",\"index\":\"Third-party\",\"description\":\"第三方（便宜）\",\"fastIndex\":1.0,\"descriptionEn\":\"Third party (cheap)\"},{\"name\":\"Official\",\"index\":\"Official\",\"description\":\"官方（贵）\",\"fastIndex\":2.0,\"descriptionEn\":\"Official (expensive)\"}]",
+        "fieldType": "LIST",
+        "description": "渠道选择",
+        "descriptionCn": null,
+        "descriptionEn": "Channel selection"
+      }
+    ],
+    "covers": [
+      {
+        "id": "2023563081305034754",
+        "objName": "064a677842c55c3b0bc59eb437f7c4f6/2026-02-17/be06e4cdfb4f9ac79c610416358f7d60.jpg",
+        "url": "https://rh-images.xiaoyaoyou.com/064a677842c55c3b0bc59eb437f7c4f6/2026-02-17/be06e4cdfb4f9ac79c610416358f7d60.jpg",
+        "thumbnailUri": "https://rh-images.xiaoyaoyou.com/064a677842c55c3b0bc59eb437f7c4f6/2026-02-17/be06e4cdfb4f9ac79c610416358f7d60.jpg?imageMogr2/format/jpeg/ignore-error/1",
+        "imageWidth": "1779",
+        "imageHeight": "758"
+      }
+    ],
+    "tags": [
+      {
+        "id": "1871151815242543198",
+        "name": "图生图",
+        "nameEn": "Image-to-Image",
+        "labels": null
+      },
+      {
+        "id": "1871151815242543241",
+        "name": "装修风格变换",
+        "nameEn": "Style Changes",
+        "labels": null
+      },
+      {
+        "id": "1871151815242543240",
+        "name": "毛坯房一键改造",
+        "nameEn": "Room Makeover",
+        "labels": null
+      }
+    ]
+  }
+}

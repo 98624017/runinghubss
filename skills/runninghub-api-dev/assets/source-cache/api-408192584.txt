@@ -1,0 +1,132 @@
+# 可灵首尾帧生视频o1
+
+## OpenAPI Specification
+
+```yaml
+openapi: 3.0.1
+info:
+  title: ''
+  description: ''
+  version: 1.0.0
+paths:
+  /openapi/v2/kling-video-o1/start-to-end:
+    post:
+      summary: 可灵首尾帧生视频o1
+      deprecated: false
+      description: ''
+      tags:
+        - 标准模型 API/视频生成/可灵 o1
+      parameters:
+        - name: Authorization
+          in: header
+          description: ''
+          required: true
+          example: Bearer [Your API KEY]
+          schema:
+            type: string
+            default: Bearer [Your API KEY]
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                prompt:
+                  type: string
+                  title: 提示词
+                aspectRatio:
+                  type: string
+                  title: 画面比例
+                  enum:
+                    - '16:9'
+                    - '9:16'
+                    - '1:1'
+                  x-apifox-enum:
+                    - value: '16:9'
+                      name: ''
+                      description: ''
+                    - value: '9:16'
+                      name: ''
+                      description: ''
+                    - value: '1:1'
+                      name: ''
+                      description: ''
+                  default: '16:9'
+                duration:
+                  type: string
+                  title: 视频时长
+                  enum:
+                    - '5'
+                    - '10'
+                  x-apifox-enum:
+                    - value: '5'
+                      name: ''
+                      description: ''
+                    - value: '10'
+                      name: ''
+                      description: ''
+                  default: '5'
+                mod:
+                  type: string
+                  enum:
+                    - std
+                    - pro
+                  x-apifox-enum:
+                    - value: std
+                      name: ''
+                      description: ''
+                    - value: pro
+                      name: ''
+                      description: ''
+                  title: 模式
+                firstImageUrl:
+                  type: string
+                  title: 首帧图片
+                lastImageUrl:
+                  type: string
+                  title: 尾帧图片
+              required:
+                - prompt
+                - mod
+                - firstImageUrl
+                - lastImageUrl
+              x-apifox-orders:
+                - prompt
+                - aspectRatio
+                - duration
+                - mod
+                - firstImageUrl
+                - lastImageUrl
+            example:
+              prompt: >-
+                衔接提供的首帧和尾帧。书页开始像被魔法风吹动一样快速翻动，边缘溢出金色火星。随后发生剧烈的光芒爆发，书页演变成尾帧中所见的火焰凤凰羽翼。摄像机执行平滑的拉远镜头以捕捉完整的转化过程。保持桌面背景的一致性与专业电影级光影。
+              aspectRatio: '9:16'
+              duration: '5'
+              firstImageUrl: >-
+                https://www.runninghub.cn/view?filename=1518761923043e2382fc7c86c33d034fc8e5d9dd3447cf27682b86087f52de0f.jpg&type=input&subfolder=&Rh-Comfy-Auth=eyJ1c2VySWQiOiIzZjY1MTNlNWEwNjY1N2I4OGYyNjU5NTEzYmU3ZDM0YyIsInNpZ25FeHBpcmUiOjE3NjkyMzc3OTAxMjYsInRzIjoxNzY4NjMyOTkwMTI2LCJzaWduIjoiODRiYWE5YmFjYmRhOTA5N2YwNmExMTY3M2UzMTIyMzUifQ==&Rh-Identify=3f6513e5a06657b88f2659513be7d34c&rand=0.5734588178612448
+              lastImageUrl: >-
+                https://www.runninghub.cn/view?filename=9be292b2ff59987c400e41fd56d1a79154e6361930a8920eb04e497662074e7e.jpg&type=input&subfolder=&Rh-Comfy-Auth=eyJ1c2VySWQiOiIzZjY1MTNlNWEwNjY1N2I4OGYyNjU5NTEzYmU3ZDM0YyIsInNpZ25FeHBpcmUiOjE3NjkyMzc3OTAxMjYsInRzIjoxNzY4NjMyOTkwMTI2LCJzaWduIjoiODRiYWE5YmFjYmRhOTA5N2YwNmExMTY3M2UzMTIyMzUifQ==&Rh-Identify=3f6513e5a06657b88f2659513be7d34c&rand=0.4928345448568886
+              mode: std
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+          x-apifox-name: 成功
+      security: []
+      x-apifox-folder: 标准模型 API/视频生成/可灵 o1
+      x-apifox-status: released
+      x-run-in-apifox: https://app.apifox.com/web/project/6103976/apis/api-408192584-run
+components:
+  schemas: {}
+  securitySchemes: {}
+servers:
+  - url: https://www.runninghub.cn
+    description: runninghub.cn
+security: []
+
+```

@@ -1,0 +1,43 @@
+# 发起ComfyUI任务 Request 1
+
+## OpenAPI Specification
+
+```yaml
+openapi: 3.0.1
+info:
+  title: ''
+  description: ''
+  version: 1.0.0
+paths: {}
+components:
+  schemas:
+    发起ComfyUI任务 Request 1:
+      type: object
+      properties:
+        workflowId:
+          type: string
+          examples:
+            - '1904136902449209346'
+        apiKey:
+          type: string
+          description: ''
+          examples:
+            - '{{apiKey}}'
+        addMetadata:
+          type: boolean
+          description: ''
+      x-apifox-orders:
+        - apiKey
+        - workflowId
+        - addMetadata
+      required:
+        - workflowId
+        - apiKey
+      x-apifox-folder: ''
+  securitySchemes: {}
+servers:
+  - url: https://www.runninghub.cn
+    description: runninghub.cn
+security: []
+
+```

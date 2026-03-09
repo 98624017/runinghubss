@@ -1,0 +1,95 @@
+# 海螺-2.3-图生视频-标准
+
+## OpenAPI Specification
+
+```yaml
+openapi: 3.0.1
+info:
+  title: ''
+  description: ''
+  version: 1.0.0
+paths:
+  /openapi/v2/minimax/hailuo-2.3/i2v-standard:
+    post:
+      summary: 海螺-2.3-图生视频-标准
+      deprecated: false
+      description: ''
+      tags:
+        - 标准模型 API/视频生成/海螺AI
+      parameters:
+        - name: Authorization
+          in: header
+          description: ''
+          required: true
+          example: Bearer [Your API KEY]
+          schema:
+            type: string
+            default: Bearer [Your API KEY]
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                prompt:
+                  type: string
+                  title: 提示词
+                duration:
+                  type: string
+                  enum:
+                    - '6'
+                    - '10'
+                  x-apifox-enum:
+                    - value: '6'
+                      name: ''
+                      description: ''
+                    - value: '10'
+                      name: ''
+                      description: ''
+                  title: 时长
+                enablePromptExpansion:
+                  type: boolean
+                  title: 是否开启提示词扩展
+                imageUrl:
+                  type: string
+                  title: 参考图
+              x-apifox-orders:
+                - prompt
+                - duration
+                - enablePromptExpansion
+                - imageUrl
+              required:
+                - prompt
+                - duration
+                - enablePromptExpansion
+                - imageUrl
+            example:
+              prompt: >-
+                电影级特写镜头，聚焦于人物面部。人物表现出细腻的微表情，包括缓慢的眨眼和一抹温柔、会心的微笑。真实的反射光在眼睛和皮肤纹理上闪烁，随着摄像机执行极其缓慢且稳定的推近镜头，光影有机地推移。高保真画质，角色身份高度一致，动作行云流水且无画面闪烁。
+              enablePromptExpansion: true
+              imageUrl: >-
+                https://www.runninghub.cn/view?filename=4d61f88ec47af21bde31c1a4e0414561b2ba4e5e5efe6a36a20a3fe47f82a541.jpg&type=input&subfolder=&Rh-Comfy-Auth=eyJ1c2VySWQiOiIzZjY1MTNlNWEwNjY1N2I4OGYyNjU5NTEzYmU3ZDM0YyIsInNpZ25FeHBpcmUiOjE3NjkxNTY4ODA4NzksInRzIjoxNzY4NTUyMDgwODc5LCJzaWduIjoiY2IwMzA3ZTEyMmNkNTRlZDIxNmQwOGEzZmNmZWQ4MzAifQ==&Rh-Identify=3f6513e5a06657b88f2659513be7d34c&rand=0.8176779108089935
+              duration: '6'
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+          x-apifox-name: 成功
+      security: []
+      x-apifox-folder: 标准模型 API/视频生成/海螺AI
+      x-apifox-status: released
+      x-run-in-apifox: https://app.apifox.com/web/project/6103976/apis/api-408222351-run
+components:
+  schemas: {}
+  securitySchemes: {}
+servers:
+  - url: https://www.runninghub.cn
+    description: runninghub.cn
+security: []
+
+```

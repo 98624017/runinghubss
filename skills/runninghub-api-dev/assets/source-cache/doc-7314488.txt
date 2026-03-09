@@ -1,0 +1,266 @@
+# 关于快捷创作调用
+
+## 一、查看API调用示例
+**登录RH平台，进入下图快捷创作菜单**
+
+![image.png](https://api.apifox.com/api/v1/projects/877857/resources/568081/image-preview)
+
+## 二、创建任务接口
+**可以根据上图页面获取各个模块api调用实例**
+
+**请求地址**
+
+```
+POST https://www.runninghub.cn/task/openapi/quick-ai-app/run
+```
+
+---
+
+**请求方式**
+
+`POST`，请求体格式为 `application/json`
+
+---
+
+**请求头部**
+
+| Header          | 是否必填 | 示例值                 | 说明                       |
+|-----------------|----------|------------------------|----------------------------|
+| `Host`          | 是       | `www.runninghub.cn`    | API 域名，必须精确填写     |
+| `Content-Type`  | 是       | `application/json`     | 请求体类型                 |
+
+> ⚠️ 注意：某些 HTTP 客户端可能会自动添加 `Host` 头，但建议在接口测试或 SDK 实现时手动确认。
+
+---
+
+**请求参数**
+
+#### 基础参数（必填）
+
+| 参数名         | 类型     | 是否必填 | 说明 |
+|----------------|----------|----------|------|
+| `apiKey`       | string   | 是       | 用户的 API 密钥，用于身份认证 |
+| `webappId`   | string   | 是       | AI应用ID，可通过页面api示例获得 |
+| `quickCreateCode`   | string   | 是       | 快捷创作模块code，可通过页面api示例获得 |
+| `nodeInfoList` | array    | 是       | 节点列表，用于在执行前替换默认参数 |
+
+#### nodeInfoList 结构说明
+
+每项表示一个节点参数的修改：
+
+| 字段         | 类型     | 说明 |
+|--------------|----------|------|
+| `nodeId`     | string   | 节点的唯一编号，来源于工作流 JSON 文件 |
+| `nodeName`     | string   | 节点的名称 |
+| `fieldName`  | string   | 要修改的字段名，例如 `text`、`seed`、`steps` |
+| `fieldType`  | string   | 字段类型 |
+| `fieldValue` | any      | 替换后的新值，需与原字段类型一致 |
+| `description`  | string   | 描述 |
+
+#### 示例请求体
+
+```json
+{
+    "webappId": "196********290",
+    "apiKey": "*********************",
+    "quickCreateCode": "***",
+    "nodeInfoList": [
+        {
+            "nodeId": "2",
+            "nodeName": "LoadImage",
+            "fieldName": "image",
+            "fieldType": "IMAGE",
+            "fieldValue": "61a52873b2f16cf3734dad1d20f704d32ca5f1d77896847f27a1e1ee72eb626d.jpg",
+            "description": "上传图像"
+        },
+        {
+            "nodeId": "16",
+            "nodeName": "RH_Translator",
+            "fieldName": "prompt",
+            "fieldType": "STRING",
+            "fieldValue": "图中人物的1/7比例商业模型已制作完成，其风格写实，环境逼真。模型放置在带有圆形透明亚克力底座的电脑桌上。底座上没有任何文字。电脑屏幕上显示着模型的ZBrush建模过程。电脑屏幕旁边是一个BANDAI风格的玩具盒，上面印着原画。",
+            "description": "输入文本"
+        }
+    ]
+}
+```
+
+## 三、查询任务其他相关信息，详情见基础接口
+如：
+[查询任务状态接口](https://www.runninghub.cn/runninghub-api-doc-cn/api-276613252)
+[取消ComfyUI任务接口](https://www.runninghub.cn/runninghub-api-doc-cn/api-276613254)
+[上传资源（图片、视频、音频、压缩包）](https://www.runninghub.cn/runninghub-api-doc-cn/api-276613256)
+
+# 其他说明
+**文生图如何选择风格**
+*第一步：查询API调用示例，文成图如下：*
+```json
+curl --location --request POST 'https://www.runninghub.cn/task/openapi/quick-ai-app/run' \
+--header 'Host: www.runninghub.cn' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "webappId": "1957344152277151746",
+    "apiKey": "******************",
+    "quickCreateCode": "001",
+    "nodeInfoList": [
+        {
+            "nodeId": "41",
+            "nodeName": "EmptyLatentImage",
+            "fieldName": "batch_size",
+            "fieldType": "INT",
+            "fieldValue": "4",
+            "description": "生成张数"
+        },
+        {
+            "nodeId": "101",
+            "nodeName": "ImpactSwitch",
+            "fieldName": "select",
+            "fieldType": "SWITCH",
+            "fieldValue": "2",
+            "description": "设置比例"
+        },
+        {
+            "nodeId": "56",
+            "nodeName": "NunchakuFluxLoraLoader",
+            "fieldName": "lora_name",
+            "fieldType": "LORA",
+            "fieldValue": "EVA初号机 透明机体 彩透机甲unit-01_v1.0.safetensors",
+            "description": "LoRA1"
+        },
+        {
+            "nodeId": "56",
+            "nodeName": "NunchakuFluxLoraLoader",
+            "fieldName": "lora_strength",
+            "fieldType": "STRING",
+            "fieldValue": "0.5000000000000001",
+            "description": "LoRA1_strength"
+        },
+        {
+            "nodeId": "73",
+            "nodeName": "NunchakuFluxLoraLoader",
+            "fieldName": "lora_name",
+            "fieldType": "LORA",
+            "fieldValue": "光环风格机甲 _ 硬机械_F.1.safetensors",
+            "description": "LoRA2"
+        },
+        {
+            "nodeId": "73",
+            "nodeName": "NunchakuFluxLoraLoader",
+            "fieldName": "lora_strength",
+            "fieldType": "STRING",
+            "fieldValue": "0.7000000000000002",
+            "description": "LoRA2_strength"
+        },
+        {
+            "nodeId": "57",
+            "nodeName": "JjkText",
+            "fieldName": "text",
+            "fieldType": "STRING",
+            "fieldValue": "mecha，in the sci-fi world Halo，EVA01，机甲，未来，机械，科幻，",
+            "description": "触发词"
+        },
+        {
+            "nodeId": "45",
+            "nodeName": "JjkText",
+            "fieldName": "text",
+            "fieldType": "STRING",
+            "fieldValue": "戴头盔穿机甲，硬核机械感机甲，简单背景，",
+            "description": "用户输入文本框"
+        }
+    ]
+}'
+```
+*第二步：先获取模型库风格参数数据，详情见获取快捷创作-[模型风格参数数据接口](https://www.runninghub.cn/runninghub-api-doc-cn/api-342821543)
+，结果详情字段如下：*
+```json
+{
+    "code": 0,
+    "msg": "success",
+    "data": [
+        {
+            "id": "1",
+            "type": 2,
+            "webappId": "********",
+            "modelCategory": 1,
+            "modelName": "【游戏】美漫画风",
+            "modelKey": "input1",
+            "modelPreviewUrl": "https://rh-images.xiaoyaoyou.com/system/1.png",
+            "content": "粉色头发，黑色裙子，白色袜子，粉色运动鞋，彩色补丁，粉色夹克，黑色颈链，各种带子，多个扣环自信站立，白色背景",
+            "modelTrigger": "Character concept design，hand painting style",
+            "modelLoar1FileName": "F.1_陌no_美漫画风_V1.0.safetensors",
+            "modelLoar1Weight": 0.7,
+            "modelLoar2FileName": "F.1_陌no_美漫画风_V1.0.safetensors",
+            "modelLoar2Weight": 0
+        }
+    ]
+}
+```
+*第三步：如选择“【游戏】美漫画风”，根据“模型库风格参数数据”同步修改文成图API调用中nodeInfoList以下节点信息*
+```json
+   "nodeInfoList": [
+        {
+            "nodeId": "41",
+            "nodeName": "EmptyLatentImage",
+            "fieldName": "batch_size",
+            "fieldType": "INT",
+            "fieldValue": "4",
+            "description": "生成张数"
+        },
+        {
+            "nodeId": "101",
+            "nodeName": "ImpactSwitch",
+            "fieldName": "select",
+            "fieldType": "SWITCH",
+            "fieldValue": "2",
+            "description": "设置比例"
+        },
+        {
+            "nodeId": "56",
+            "nodeName": "NunchakuFluxLoraLoader",
+            "fieldName": "lora_name",
+            "fieldType": "LORA",
+            "fieldValue": "EVA初号机 透明机体 彩透机甲unit-01_v1.0.safetensors",###对应模型风格modelLoar1FileName字段###
+            "description": "LoRA1"
+        },
+        {
+            "nodeId": "56",
+            "nodeName": "NunchakuFluxLoraLoader",
+            "fieldName": "lora_strength",
+            "fieldType": "STRING",
+            "fieldValue": "0.5",###对应模型风格modelLoar1Weight字段###
+            "description": "LoRA1_strength"
+        },
+        {
+            "nodeId": "73",
+            "nodeName": "NunchakuFluxLoraLoader",
+            "fieldName": "lora_name",
+            "fieldType": "LORA",
+            "fieldValue": "光环风格机甲 _ 硬机械_F.1.safetensors",###对应模型风格modelLoar2FileName字段###
+            "description": "LoRA2"
+        },
+        {
+            "nodeId": "73",
+            "nodeName": "NunchakuFluxLoraLoader",
+            "fieldName": "lora_strength",
+            "fieldType": "STRING",
+            "fieldValue": "0.7",###对应模型风格modelLoar2Weight字段###
+            "description": "LoRA2_strength"
+        },
+        {
+            "nodeId": "57",
+            "nodeName": "JjkText",
+            "fieldName": "text",
+            "fieldType": "STRING",
+            "fieldValue": "mecha，in the sci-fi world Halo，EVA01，机甲，未来，机械，科幻，",###对应模型风格modelTrigger字段###
+            "description": "触发词"
+        },
+        {
+            "nodeId": "45",
+            "nodeName": "JjkText",
+            "fieldName": "text",
+            "fieldType": "STRING",
+            "fieldValue": "戴头盔穿机甲，硬核机械感机甲，简单背景，",###对应模型风格content字段，也可自定义###
+            "description": "用户输入文本框"
+        }
+    ]
+```

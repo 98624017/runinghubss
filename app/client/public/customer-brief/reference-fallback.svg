@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" fill="none">
+  <rect width="640" height="400" rx="28" fill="#0F172A"/>
+  <rect x="24" y="24" width="592" height="352" rx="20" fill="#111C33" stroke="#2D3F66"/>
+  <rect x="72" y="84" width="496" height="180" rx="16" fill="url(#panel)"/>
+  <path d="M156 220L244 148L314 206L390 138L484 220" stroke="#8BC5FF" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="228" cy="132" r="24" fill="#C7E6FF"/>
+  <text x="72" y="314" fill="#EAF3FF" font-size="28" font-family="Inter, Arial, sans-serif">参考图加载失败</text>
+  <text x="72" y="350" fill="#8FA7C7" font-size="18" font-family="Inter, Arial, sans-serif">请检查图片地址，或重新上传参考图</text>
+  <defs>
+    <linearGradient id="panel" x1="72" y1="84" x2="568" y2="264" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1F3256"/>
+      <stop offset="1" stop-color="#16253F"/>
+    </linearGradient>
+  </defs>
+</svg>

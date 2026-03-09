@@ -1,0 +1,359 @@
+# RunningHub 官网页面总索引
+
+- [交叉整理] 本页按 `llms.txt` 全量生成，用于确认官网页面在本地知识库中的归宿。
+- [官网明确] 页面总数：`110`
+- [官网明确] API 页：`73`
+- [官网明确] 文档页：`10`
+- [官网明确] Schema 页：`27`
+
+## 文档页
+
+- [官网明确] `开始` → `references/docs/7997222-开始.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/doc-7997222.md`
+  - 分类：`未分类`
+- [官网明确] `更新日志` → `references/docs/7348569-更新日志.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/doc-7348569.md`
+  - 分类：`未分类`
+- [官网明确] `关于nodeInfoList` → `references/docs/6332955-关于nodeInfoList.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/doc-6332955.md`
+  - 分类：`指引`
+- [官网明确] `原生ComfyUI接口支持` → `references/docs/6768545-原生ComfyUI接口支持.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/doc-6768545.md`
+  - 分类：`指引`
+- [官网明确] `接口错误码说明` → `references/docs/6913922-接口错误码说明.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/doc-6913922.md`
+  - 分类：`指引`
+- [官网明确] `AI应用完整接入示例` → `references/docs/7525194-AI应用完整接入示例.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/doc-7525194.md`
+  - 分类：`接入示例`
+- [官网明确] `AI应用完整接入示例高阶版` → `references/docs/7527911-AI应用完整接入示例高阶版.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/doc-7527911.md`
+  - 分类：`接入示例`
+- [官网明确] `任务进度显示示例` → `references/docs/7533195-任务进度显示示例.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/doc-7533195.md`
+  - 分类：`接入示例`
+- [官网明确] `工作流完整接入示例` → `references/docs/7534195-工作流完整接入示例.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/doc-7534195.md`
+  - 分类：`接入示例`
+- [官网明确] `关于快捷创作调用` → `references/docs/7314488-关于快捷创作调用.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/doc-7314488.md`
+  - 分类：`快捷创作`
+
+## API 页
+
+- [官网明确] `全能视频S-角色上传` → `references/endpoints/408241882-全能视频S-角色上传.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-408241882.md`
+  - 分类：`标准模型 API > 视频生成 > 全能视频 S`
+- [官网明确] `全能视频S-官方-文生视频` → `references/endpoints/407727815-全能视频S-官方-文生视频.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-407727815.md`
+  - 分类：`标准模型 API > 视频生成 > 全能视频 S`
+- [官网明确] `全能视频S-官方-文生视频-pro` → `references/endpoints/407729959-全能视频S-官方-文生视频-pro.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-407729959.md`
+  - 分类：`标准模型 API > 视频生成 > 全能视频 S`
+- [官网明确] `全能视频S-文生视频-pro` → `references/endpoints/402596999-全能视频S-文生视频-pro.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-402596999.md`
+  - 分类：`标准模型 API > 视频生成 > 全能视频 S`
+- [官网明确] `全能视频S-图生视频-pro` → `references/endpoints/402603035-全能视频S-图生视频-pro.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-402603035.md`
+  - 分类：`标准模型 API > 视频生成 > 全能视频 S`
+- [官网明确] `全能视频S-图生视频` → `references/endpoints/402596877-全能视频S-图生视频.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-402596877.md`
+  - 分类：`标准模型 API > 视频生成 > 全能视频 S`
+- [官网明确] `全能视频S-官方-图生视频` → `references/endpoints/407725706-全能视频S-官方-图生视频.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-407725706.md`
+  - 分类：`标准模型 API > 视频生成 > 全能视频 S`
+- [官网明确] `全能视频S-官方-图生视频-pro` → `references/endpoints/407736182-全能视频S-官方-图生视频-pro.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-407736182.md`
+  - 分类：`标准模型 API > 视频生成 > 全能视频 S`
+- [官网明确] `全能视频S-官方-图生视频-支持真人` → `references/endpoints/402608271-全能视频S-官方-图生视频-支持真人.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-402608271.md`
+  - 分类：`标准模型 API > 视频生成 > 全能视频 S`
+- [官网明确] `全能视频S-文生视频` → `references/endpoints/402607591-全能视频S-文生视频.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-402607591.md`
+  - 分类：`标准模型 API > 视频生成 > 全能视频 S`
+- [官网明确] `全能视频V3.1-fast-图生视频` → `references/endpoints/402609378-全能视频V3.1-fast-图生视频.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-402609378.md`
+  - 分类：`标准模型 API > 视频生成 > 全能视频 V`
+- [官网明确] `全能视频V3.1-fast-文生视频` → `references/endpoints/402608928-全能视频V3.1-fast-文生视频.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-402608928.md`
+  - 分类：`标准模型 API > 视频生成 > 全能视频 V`
+- [官网明确] `全能视频V3.1-pro-文生视频` → `references/endpoints/402610533-全能视频V3.1-pro-文生视频.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-402610533.md`
+  - 分类：`标准模型 API > 视频生成 > 全能视频 V`
+- [官网明确] `可灵文生视频2.6-pro` → `references/endpoints/407928239-可灵文生视频2.6-pro.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-407928239.md`
+  - 分类：`标准模型 API > 视频生成 > 可灵 2.6`
+- [官网明确] `可灵图生视频2.6-pro` → `references/endpoints/408093144-可灵图生视频2.6-pro.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-408093144.md`
+  - 分类：`标准模型 API > 视频生成 > 可灵 2.6`
+- [官网明确] `万相2.6-文生视频` → `references/endpoints/408110289-万相2.6-文生视频.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-408110289.md`
+  - 分类：`标准模型 API > 视频生成 > 万象 2.6`
+- [官网明确] `万相2.6-图生视频` → `references/endpoints/408124606-万相2.6-图生视频.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-408124606.md`
+  - 分类：`标准模型 API > 视频生成 > 万象 2.6`
+- [官网明确] `万相2.6-图生视频Flash` → `references/endpoints/408131509-万相2.6-图生视频Flash.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-408131509.md`
+  - 分类：`标准模型 API > 视频生成 > 万象 2.6`
+- [官网明确] `万相2.6-参考生视频Flash` → `references/endpoints/422326015-万相2.6-参考生视频Flash.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-422326015.md`
+  - 分类：`标准模型 API > 视频生成 > 万象 2.6`
+  - 摘要：万相2.6-参考生视频Flash是阿里通义万相2.6系列的快速参考生视频模型，支持上传最多5张参考图像，基于参考图的角色身份、风格和场景布局生成新视频。该版本生成速度更快，支持720P/1080P两种分辨率，视频时长可选5秒或10秒，可生成带音频或无声视频，支持单镜头和多镜头叙事模式。
+- [官网明确] `万相2.6-参考生视频` → `references/endpoints/422326303-万相2.6-参考生视频.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-422326303.md`
+  - 分类：`标准模型 API > 视频生成 > 万象 2.6`
+  - 摘要：万相2.6-参考生视频是阿里通义万相2.6系列的参考生视频模型，支持多模态输入（文本/图像/视频）。支持720P/1080P分辨率，支持外部音频输入用于声画对齐。模型可基于参考图像或视频还原角色形象，并参考音色，支持单人表演或多角色互动，同时具备多镜头智能调度能力。
+- [官网明确] `Vidu-文生视频-q2` → `references/endpoints/408148153-Vidu-文生视频-q2.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-408148153.md`
+  - 分类：`标准模型 API > 视频生成 > Vidu`
+- [官网明确] `Vidu-图生视频-q2-pro` → `references/endpoints/408154316-Vidu-图生视频-q2-pro.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-408154316.md`
+  - 分类：`标准模型 API > 视频生成 > Vidu`
+- [官网明确] `Vidu-图生视频-q2-turbo` → `references/endpoints/408156563-Vidu-图生视频-q2-turbo.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-408156563.md`
+  - 分类：`标准模型 API > 视频生成 > Vidu`
+- [官网明确] `可灵文生视频2.5-turbo-pro` → `references/endpoints/408162666-可灵文生视频2.5-turbo-pro.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-408162666.md`
+  - 分类：`标准模型 API > 视频生成 > 可灵 2.5`
+- [官网明确] `可灵图生视频2.5-turbo-pro` → `references/endpoints/408163529-可灵图生视频2.5-turbo-pro.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-408163529.md`
+  - 分类：`标准模型 API > 视频生成 > 可灵 2.5`
+- [官网明确] `可灵图生视频2.5-turbo-std` → `references/endpoints/408166065-可灵图生视频2.5-turbo-std.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-408166065.md`
+  - 分类：`标准模型 API > 视频生成 > 可灵 2.5`
+- [官网明确] `可灵文生视频o1` → `references/endpoints/408187333-可灵文生视频o1.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-408187333.md`
+  - 分类：`标准模型 API > 视频生成 > 可灵 o1`
+- [官网明确] `可灵图生视频o1` → `references/endpoints/408189001-可灵图生视频o1.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-408189001.md`
+  - 分类：`标准模型 API > 视频生成 > 可灵 o1`
+- [官网明确] `可灵首尾帧生视频o1` → `references/endpoints/408192584-可灵首尾帧生视频o1.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-408192584.md`
+  - 分类：`标准模型 API > 视频生成 > 可灵 o1`
+- [官网明确] `可灵参考生视频o1` → `references/endpoints/408196005-可灵参考生视频o1.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-408196005.md`
+  - 分类：`标准模型 API > 视频生成 > 可灵 o1`
+- [官网明确] `可灵视频编辑o1` → `references/endpoints/408197709-可灵视频编辑o1.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-408197709.md`
+  - 分类：`标准模型 API > 视频生成 > 可灵 o1`
+- [官网明确] `海螺-02-文生视频-标准` → `references/endpoints/408219241-海螺-02-文生视频-标准.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-408219241.md`
+  - 分类：`标准模型 API > 视频生成 > 海螺AI`
+- [官网明确] `海螺-02-文生视频-pro` → `references/endpoints/408224256-海螺-02-文生视频-pro.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-408224256.md`
+  - 分类：`标准模型 API > 视频生成 > 海螺AI`
+- [官网明确] `海螺-02-图生视频-标准` → `references/endpoints/408220673-海螺-02-图生视频-标准.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-408220673.md`
+  - 分类：`标准模型 API > 视频生成 > 海螺AI`
+- [官网明确] `海螺-02-标准` → `references/endpoints/408224304-海螺-02-标准.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-408224304.md`
+  - 分类：`标准模型 API > 视频生成 > 海螺AI`
+- [官网明确] `海螺-02-pro` → `references/endpoints/408224405-海螺-02-pro.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-408224405.md`
+  - 分类：`标准模型 API > 视频生成 > 海螺AI`
+- [官网明确] `海螺-02-fast` → `references/endpoints/408224487-海螺-02-fast.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-408224487.md`
+  - 分类：`标准模型 API > 视频生成 > 海螺AI`
+- [官网明确] `海螺-02-图生视频-pro` → `references/endpoints/408224098-海螺-02-图生视频-pro.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-408224098.md`
+  - 分类：`标准模型 API > 视频生成 > 海螺AI`
+- [官网明确] `海螺-2.3-图生视频-标准` → `references/endpoints/408222351-海螺-2.3-图生视频-标准.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-408222351.md`
+  - 分类：`标准模型 API > 视频生成 > 海螺AI`
+- [官网明确] `海螺-2.3-fast-图生视频` → `references/endpoints/408222640-海螺-2.3-fast-图生视频.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-408222640.md`
+  - 分类：`标准模型 API > 视频生成 > 海螺AI`
+- [官网明确] `海螺-2.3-fast-pro-图生视频` → `references/endpoints/408223267-海螺-2.3-fast-pro-图生视频.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-408223267.md`
+  - 分类：`标准模型 API > 视频生成 > 海螺AI`
+- [官网明确] `海螺-2.3-图生视频-pro` → `references/endpoints/408223446-海螺-2.3-图生视频-pro.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-408223446.md`
+  - 分类：`标准模型 API > 视频生成 > 海螺AI`
+- [官网明确] `海螺-2.3-文生视频-标准` → `references/endpoints/408220538-海螺-2.3-文生视频-标准.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-408220538.md`
+  - 分类：`标准模型 API > 视频生成 > 海螺AI`
+- [官网明确] `海螺-2.3-文生视频-pro` → `references/endpoints/408223898-海螺-2.3-文生视频-pro.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-408223898.md`
+  - 分类：`标准模型 API > 视频生成 > 海螺AI`
+- [官网明确] `全能图片PRO-官方-文生图` → `references/endpoints/402548497-全能图片PRO-官方-文生图.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-402548497.md`
+  - 分类：`标准模型 API > 图片生成 > 全能图片`
+- [官网明确] `全能图片PRO-文生图` → `references/endpoints/402580909-全能图片PRO-文生图.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-402580909.md`
+  - 分类：`标准模型 API > 图片生成 > 全能图片`
+- [官网明确] `全能图片V1-文生图` → `references/endpoints/402574588-全能图片V1-文生图.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-402574588.md`
+  - 分类：`标准模型 API > 图片生成 > 全能图片`
+- [官网明确] `全能图片PRO-官方-图生图` → `references/endpoints/402566952-全能图片PRO-官方-图生图.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-402566952.md`
+  - 分类：`标准模型 API > 图片生成 > 全能图片`
+- [官网明确] `全能图片PRO-图生图` → `references/endpoints/402583598-全能图片PRO-图生图.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-402583598.md`
+  - 分类：`标准模型 API > 图片生成 > 全能图片`
+- [官网明确] `全能图片V1-图生图` → `references/endpoints/402575889-全能图片V1-图生图.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-402575889.md`
+  - 分类：`标准模型 API > 图片生成 > 全能图片`
+- [官网明确] `全能图片G-1.5-文生图` → `references/endpoints/402595775-全能图片G-1.5-文生图.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-402595775.md`
+  - 分类：`标准模型 API > 图片生成 > 全能图片 G`
+- [官网明确] `全能图片G-1.5-图生图` → `references/endpoints/402593934-全能图片G-1.5-图生图.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-402593934.md`
+  - 分类：`标准模型 API > 图片生成 > 全能图片 G`
+- [官网明确] `seedream-v4.5-文生图` → `references/endpoints/408103823-seedream-v4.5-文生图.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-408103823.md`
+  - 分类：`标准模型 API > 图片生成 > seedream`
+- [官网明确] `seedream-v4-文生图` → `references/endpoints/408105506-seedream-v4-文生图.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-408105506.md`
+  - 分类：`标准模型 API > 图片生成 > seedream`
+- [官网明确] `seedream-v4.5-图生图` → `references/endpoints/408103923-seedream-v4.5-图生图.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-408103923.md`
+  - 分类：`标准模型 API > 图片生成 > seedream`
+- [官网明确] `seedream-v4-图生图` → `references/endpoints/408105799-seedream-v4-图生图.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-408105799.md`
+  - 分类：`标准模型 API > 图片生成 > seedream`
+- [官网明确] `查询任务生成结果 V2` → `references/endpoints/402637109-查询任务生成结果-V2.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-402637109.md`
+  - 分类：`标准模型 API`
+- [官网明确] `发起AI应用任务` → `references/endpoints/279098421-发起AI应用任务.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-279098421.md`
+  - 分类：`AI 应用`
+  - 摘要：在AI应用详情页中可查看示例nodeInfoList
+- [官网明确] `获取AI应用API调用示例` → `references/endpoints/335439604-获取AI应用API调用示例.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-335439604.md`
+  - 分类：`AI 应用`
+  - 摘要：提供AI应用接口请求调用示例demo，可以参考示例快速发起接口调用
+- [官网明确] `发起ComfyUI任务1-简易` → `references/endpoints/276613248-发起ComfyUI任务1-简易.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-276613248.md`
+  - 分类：`ComfyUI 工作流`
+  - 摘要：该方式运行 workflow，相当于在不改变原有workflow的任何参数的情况下，直接点了一下"运行"按钮。
+- [官网明确] `发起ComfyUI任务2-高级` → `references/endpoints/276613249-发起ComfyUI任务2-高级.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-276613249.md`
+  - 分类：`ComfyUI 工作流`
+  - 摘要：# 发起 ComfyUI 任务（高级）
+- [官网明确] `获取工作流Json` → `references/endpoints/276613251-获取工作流Json.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-276613251.md`
+  - 分类：`ComfyUI 工作流`
+- [官网明确] `取消ComfyUI任务` → `references/endpoints/276613254-取消ComfyUI任务.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-276613254.md`
+  - 分类：`ComfyUI 工作流`
+- [官网明确] `获取快捷创作-模型库风格参数数据` → `references/endpoints/342821543-获取快捷创作-模型库风格参数数据.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-342821543.md`
+  - 分类：`快捷创作`
+  - 摘要：该接口用于快捷创作菜单下的文生图模块，目的是获取模型库风格数据，用于调用快捷创作API接口时候的参数填充
+- [官网明确] `发起快捷创作任务` → `references/endpoints/342830715-发起快捷创作任务.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-342830715.md`
+  - 分类：`快捷创作`
+  - 摘要：在快捷创作菜单下选择需要调用的模块页中点击调用API可查看示例，可以获取到webappId、quickCreateCode、nodeInfoList等入参信息，详细请看“关于快捷创作调用”说明
+- [官网明确] `查询任务状态` → `references/endpoints/276613252-查询任务状态.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-276613252.md`
+  - 分类：`任务查询 & webhook`
+- [官网明确] `查询任务生成结果` → `references/endpoints/276613253-查询任务生成结果.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-276613253.md`
+  - 分类：`任务查询 & webhook`
+- [官网明确] `获取webhook事件详情` → `references/endpoints/276613258-获取webhook事件详情.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-276613258.md`
+  - 分类：`任务查询 & webhook`
+  - 摘要：此接口旨在帮助调试用户的webhook，通过taskId查询到当前webhook事件的详细状态，拿到事件的id后可以发起重试
+- [官网明确] `重新发送指定webhook事件` → `references/endpoints/276613259-重新发送指定webhook事件.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-276613259.md`
+  - 分类：`任务查询 & webhook`
+  - 摘要：webhookId 为 获取webhook事件详情中返回的id
+- [官网明确] `文件上传` → `references/endpoints/402615348-文件上传.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-402615348.md`
+  - 分类：`资源上传`
+  - 摘要：# 资源文件上传说明
+- [官网明确] `上传资源（弃用）` → `references/endpoints/369298135-上传资源（弃用）.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-369298135.md`
+  - 分类：`资源上传`
+  - 摘要：# RunningHub 资源上传说明（图片、音视、视频、压缩包）
+- [官网明确] `上传Lora-获取Lora上传地址` → `references/endpoints/276613257-上传Lora-获取Lora上传地址.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-276613257.md`
+  - 分类：`资源上传`
+  - 摘要：# RHLoraLoader 专用 LoRA 上传接口说明
+- [官网明确] `获取账户信息` → `references/endpoints/276613255-获取账户信息.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/api-276613255.md`
+  - 分类：`未分类`
+
+## Schema 页
+
+- [官网明确] `RTaskCreateResponse` → `references/schemas/157370975-RTaskCreateResponse.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/schema-157370975.md`
+  - 分类：`未分类`
+- [官网明确] `获取工作流Json Request` → `references/schemas/155888520-获取工作流Json-Request.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888520.md`
+  - 分类：`未分类`
+- [官网明确] `获取工作流Json Response` → `references/schemas/155888521-获取工作流Json-Response.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888521.md`
+  - 分类：`未分类`
+- [官网明确] `TaskRunWebappByKeyRequest` → `references/schemas/157370976-TaskRunWebappByKeyRequest.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/schema-157370976.md`
+  - 分类：`未分类`
+- [官网明确] `发起ComfyUI任务 Request 1` → `references/schemas/155888522-发起ComfyUI任务-Request-1.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888522.md`
+  - 分类：`未分类`
+- [官网明确] `NodeInfo` → `references/schemas/157370977-NodeInfo.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/schema-157370977.md`
+  - 分类：`未分类`
+- [官网明确] `发起ComfyUI任务 Request 2` → `references/schemas/155888523-发起ComfyUI任务-Request-2.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888523.md`
+  - 分类：`未分类`
+- [官网明确] `发起ComfyUI任务 Request-webhook` → `references/schemas/155888524-发起ComfyUI任务-Request-webhook.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888524.md`
+  - 分类：`未分类`
+- [官网明确] `发起ComfyUI任务 Response` → `references/schemas/155888525-发起ComfyUI任务-Response.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888525.md`
+  - 分类：`未分类`
+- [官网明确] `TaskCreateResponse` → `references/schemas/155888526-TaskCreateResponse.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888526.md`
+  - 分类：`未分类`
+- [官网明确] `查询任务状态 Request` → `references/schemas/155888527-查询任务状态-Request.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888527.md`
+  - 分类：`未分类`
+- [官网明确] `节点输入信息` → `references/schemas/155888528-节点输入信息.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888528.md`
+  - 分类：`未分类`
+- [官网明确] `获取账户信息 Request` → `references/schemas/155888529-获取账户信息-Request.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888529.md`
+  - 分类：`未分类`
+- [官网明确] `上传资源Request` → `references/schemas/155888530-上传资源Request.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888530.md`
+  - 分类：`未分类`
+- [官网明确] `获取webhook事件详情Request` → `references/schemas/155888531-获取webhook事件详情Request.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888531.md`
+  - 分类：`未分类`
+- [官网明确] `重新发送指定webhook Request` → `references/schemas/155888532-重新发送指定webhook-Request.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888532.md`
+  - 分类：`未分类`
+- [官网明确] `R?` → `references/schemas/155888533-R.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888533.md`
+  - 分类：`未分类`
+- [官网明确] `RWorkflowDuplicateResponse` → `references/schemas/155888534-RWorkflowDuplicateResponse.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888534.md`
+  - 分类：`未分类`
+- [官网明确] `RAccountStatusResponse` → `references/schemas/155888535-RAccountStatusResponse.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888535.md`
+  - 分类：`未分类`
+- [官网明确] `WorkflowDuplicateResponse` → `references/schemas/155888536-WorkflowDuplicateResponse.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888536.md`
+  - 分类：`未分类`
+- [官网明确] `AccountStatusResponse` → `references/schemas/155888537-AccountStatusResponse.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888537.md`
+  - 分类：`未分类`
+- [官网明确] `WorkflowDuplicateRequest` → `references/schemas/155888538-WorkflowDuplicateRequest.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888538.md`
+  - 分类：`未分类`
+- [官网明确] `ApiUploadLoraRequest` → `references/schemas/155888539-ApiUploadLoraRequest.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888539.md`
+  - 分类：`未分类`
+- [官网明确] `RString` → `references/schemas/155888540-RString.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888540.md`
+  - 分类：`未分类`
+- [官网明确] `RTaskUploadResponse` → `references/schemas/155888541-RTaskUploadResponse.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888541.md`
+  - 分类：`未分类`
+- [官网明确] `TaskUploadResponse` → `references/schemas/155888542-TaskUploadResponse.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888542.md`
+  - 分类：`未分类`
+- [官网明确] `生成任务提交结果` → `references/schemas/236725850-生成任务提交结果.md`
+  - 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/schema-236725850.md`
+  - 分类：`未分类`

@@ -1,0 +1,27 @@
+
+> runninghub-ai-console@0.1.0 dev
+> npm-run-all --parallel dev:server dev:client
+
+
+> runninghub-ai-console@0.1.0 dev:server
+> npm run dev --workspace server
+
+
+> runninghub-ai-console@0.1.0 dev:client
+> npm run dev --workspace client
+
+
+> client@0.1.0 dev
+> vite
+
+
+> server@0.1.0 dev
+> tsx watch src/index.ts
+
+14:11:10 [vite] (client) Re-optimizing dependencies because lockfile has changed
+
+  VITE v7.3.1  ready in 143 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+RunningHub AI Console server listening on http://localhost:8787

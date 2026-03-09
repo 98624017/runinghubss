@@ -1,0 +1,72 @@
+{
+  "code": 0,
+  "msg": "success",
+  "errorMessages": null,
+  "data": {
+    "descriptionEn": "<p>这是一款面向建筑可视化与景观表现的<strong>智能风格提取应用，</strong><br/>\n它能够从参考图中精准识别并提取 <strong>天空与植被的色调、光影氛围与整体视觉风格</strong>，<br/>\n用于生成具有一致环境调性的渲染、概念图或设计延展方案。</p><p>\n</p><p>该版本针对 <strong>效果图工作流</strong> 优化，<br/>\n仅保留 <strong>色彩、光感与氛围特征</strong> 的抽象捕捉，使模型能更稳定地迁移真实自然场景的情绪与光线特质。</p><p><font color=\"#c24f4a\">2026/02/09提高了出图分辨率</font></p>",
+    "curl": "curl --location --request POST 'https://www.runninghub.cn/task/openapi/ai-app/run' \\\n--header 'Host: www.runninghub.cn' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"webappId\": \"null\",\n    \"apiKey\": \"<RUNNINGHUB_API_KEY>\",\n    \"nodeInfoList\": [\n        {\n            \"nodeId\": \"1\",\n            \"fieldName\": \"image\",\n            \"fieldValue\": \"87782ae60c2d92db29a4ec6eab1a9105c446e1c1ceee08010b1233ab87341e16.jpg\",\n            \"description\": \"上传你的原始图像\"\n        },\n        {\n            \"nodeId\": \"403\",\n            \"fieldName\": \"image\",\n            \"fieldValue\": \"d30b2e194c455b92d6396c79c4ee8969643a5a7ab3431fad5ebd0fcb0f72265a.jpg\",\n            \"description\": \"上传你想要提取风格的意向图\"\n        }\n    ]\n}'",
+    "webappName": "Missa_建筑景观_风格迁移_效果图专用",
+    "description": "<p>这是一款面向建筑可视化与景观表现的<strong>智能风格提取应用，</strong><br/>\n它能够从参考图中精准识别并提取 <strong>天空与植被的色调、光影氛围与整体视觉风格</strong>，<br/>\n用于生成具有一致环境调性的渲染、概念图或设计延展方案。</p><p>\n</p><p>该版本针对 <strong>效果图工作流</strong> 优化，<br/>\n仅保留 <strong>色彩、光感与氛围特征</strong> 的抽象捕捉，使模型能更稳定地迁移真实自然场景的情绪与光线特质。</p><p><font color=\"#c24f4a\">2026/02/09提高了出图分辨率</font></p>",
+    "statisticsInfo": {
+      "likeCount": "30",
+      "downloadCount": "0",
+      "useCount": "614",
+      "pv": "0",
+      "collectCount": "84"
+    },
+    "nodeInfoList": [
+      {
+        "nodeId": "1",
+        "nodeName": "LoadImage",
+        "fieldName": "image",
+        "fieldValue": "87782ae60c2d92db29a4ec6eab1a9105c446e1c1ceee08010b1233ab87341e16.jpg",
+        "fieldData": "[[\"example.png\", \"keep_this_dic\"], {\"image_upload\": true}]",
+        "fieldType": "IMAGE",
+        "description": "上传你的原始图像",
+        "descriptionCn": null,
+        "descriptionEn": "Upload your original image"
+      },
+      {
+        "nodeId": "403",
+        "nodeName": "LoadImage",
+        "fieldName": "image",
+        "fieldValue": "d30b2e194c455b92d6396c79c4ee8969643a5a7ab3431fad5ebd0fcb0f72265a.jpg",
+        "fieldData": "[[\"example.png\", \"keep_this_dic\"], {\"image_upload\": true}]",
+        "fieldType": "IMAGE",
+        "description": "上传你想要提取风格的意向图",
+        "descriptionCn": null,
+        "descriptionEn": "Upload the reference image of the style you want to extract."
+      }
+    ],
+    "covers": [
+      {
+        "id": "2018966975539585025",
+        "objName": "3ddf9a97d6c852bee4660b883096ed34/2026-02-04/a95a11b24d4fad464cb414efc5cf28d1.png",
+        "url": "https://rh-images.xiaoyaoyou.com/3ddf9a97d6c852bee4660b883096ed34/2026-02-04/a95a11b24d4fad464cb414efc5cf28d1.png",
+        "thumbnailUri": "https://rh-images.xiaoyaoyou.com/3ddf9a97d6c852bee4660b883096ed34/2026-02-04/a95a11b24d4fad464cb414efc5cf28d1.png?imageMogr2/format/jpg/ignore-error/1",
+        "imageWidth": "1200",
+        "imageHeight": "1600"
+      }
+    ],
+    "tags": [
+      {
+        "id": "1871151815242543220",
+        "name": "风格迁移",
+        "nameEn": "Style transfer",
+        "labels": null
+      },
+      {
+        "id": "1871151815242543244",
+        "name": "其它建筑及空间设计",
+        "nameEn": "Other Space Design",
+        "labels": null
+      },
+      {
+        "id": "1871151815242543198",
+        "name": "图生图",
+        "nameEn": "Image-to-Image",
+        "labels": null
+      }
+    ]
+  }
+}

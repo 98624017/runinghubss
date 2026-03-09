@@ -1,0 +1,12 @@
+
+> client@0.1.0 preview
+> vite preview --host 127.0.0.1 --port 4173 --strictPort
+
+  ➜  Local:   http://127.0.0.1:4173/
+npm error Lifecycle script `preview` failed with error:
+npm error code 143
+npm error path /home/feng/project/runinghubs/app/client
+npm error workspace client@0.1.0
+npm error location /home/feng/project/runinghubs/app/client
+npm error command failed
+npm error command sh -c vite preview --host 127.0.0.1 --port 4173 --strictPort

@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "<stdin>", line 60, in <module>
+  File "/home/feng/project/runinghubs/skills/runninghub-api-dev/assets/sdk/python/quick_create_client.py", line 170, in run_and_wait
+    raise RunningHubTaskFailure(
+quick_create_client.RunningHubTaskFailure: 任务 unknown 执行失败 | code=421 msg=TASK_QUEUE_MAXED

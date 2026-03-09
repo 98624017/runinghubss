@@ -1,0 +1,107 @@
+{
+  "runCount": 5,
+  "distinctAppCount": 4,
+  "coveredAppIds": [
+    "1986819253754130433",
+    "1994388299756212225",
+    "2003678561775067138",
+    "2023563076041183233"
+  ],
+  "runsByApp": {
+    "1986819253754130433": [
+      {
+        "file": "app-1986819253754130433-python.json",
+        "sdk": "python",
+        "taskId": "2030472866847399938",
+        "finalState": "SUCCESS",
+        "outputCount": 2
+      }
+    ],
+    "1994388299756212225": [
+      {
+        "file": "app-1994388299756212225-node.json",
+        "sdk": "node",
+        "taskId": "2030466545649590273",
+        "finalState": "SUCCESS",
+        "outputCount": 1
+      },
+      {
+        "file": "app-1994388299756212225-python.json",
+        "sdk": "python",
+        "taskId": "2030465625113104385",
+        "finalState": "SUCCESS",
+        "outputCount": 1
+      }
+    ],
+    "2003678561775067138": [
+      {
+        "file": "app-2003678561775067138-python.json",
+        "sdk": "python",
+        "taskId": "2030466557397835777",
+        "finalState": "SUCCESS",
+        "outputCount": 1
+      }
+    ],
+    "2023563076041183233": [
+      {
+        "file": "app-2023563076041183233-python.json",
+        "sdk": "python",
+        "taskId": "2030475511414792193",
+        "finalState": "SUCCESS",
+        "outputCount": 1
+      }
+    ]
+  },
+  "entries": [
+    {
+      "file": "app-1986819253754130433-python.json",
+      "sdk": "python",
+      "appId": "1986819253754130433",
+      "taskId": "2030472866847399938",
+      "startedAt": "2026-03-08T02:37:10+00:00",
+      "finishedAt": "2026-03-08T02:45:31+00:00",
+      "finalState": "SUCCESS",
+      "outputCount": 2
+    },
+    {
+      "file": "app-1994388299756212225-node.json",
+      "sdk": "node",
+      "appId": "1994388299756212225",
+      "taskId": "2030466545649590273",
+      "startedAt": "2026-03-08T02:12:03Z",
+      "finishedAt": "2026-03-08T02:13:29Z",
+      "finalState": "SUCCESS",
+      "outputCount": 1
+    },
+    {
+      "file": "app-1994388299756212225-python.json",
+      "sdk": "python",
+      "appId": "1994388299756212225",
+      "taskId": "2030465625113104385",
+      "startedAt": "2026-03-08T02:08:23+00:00",
+      "finishedAt": "2026-03-08T02:12:15+00:00",
+      "finalState": "SUCCESS",
+      "outputCount": 1
+    },
+    {
+      "file": "app-2003678561775067138-python.json",
+      "sdk": "python",
+      "appId": "2003678561775067138",
+      "taskId": "2030466557397835777",
+      "startedAt": "2026-03-08T02:12:05+00:00",
+      "finishedAt": "2026-03-08T02:12:55+00:00",
+      "finalState": "SUCCESS",
+      "outputCount": 1
+    },
+    {
+      "file": "app-2023563076041183233-python.json",
+      "sdk": "python",
+      "appId": "2023563076041183233",
+      "taskId": "2030475511414792193",
+      "startedAt": "2026-03-08T02:47:40+00:00",
+      "finishedAt": "2026-03-08T02:48:42+00:00",
+      "finalState": "SUCCESS",
+      "outputCount": 1
+    }
+  ]
+}

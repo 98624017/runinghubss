@@ -1,0 +1,61 @@
+
+> client@0.1.0 dev
+> vite --host 127.0.0.1 --port 5173
+
+
+  VITE v7.3.1  ready in 108 ms
+
+  ➜  Local:   http://127.0.0.1:5173/
+10:17:39 [vite] (client) hmr update /src/App.tsx
+10:18:03 [vite] (client) hmr update /src/pages/HomePage.tsx
+10:21:05 [vite] (client) hmr update /src/pages/admin/AdminLoginPage.tsx, /src/pages/admin/AdminDashboardPage.tsx, /src/pages/admin/AdminTasksPage.tsx, /src/pages/admin/AdminAppsPage.tsx
+10:21:05 [vite] (client) hmr update /src/router.tsx
+10:21:05 [vite] (client) hmr update /src/layouts/AdminLayout.tsx
+10:21:05 [vite] (client) hmr update /src/pages/admin/AdminDashboardPage.tsx
+10:21:51 [vite] (client) hmr update /src/pages/HomePage.tsx
+10:21:51 [vite] (client) hmr update /src/styles/global.css
+10:23:08 [vite] (client) hmr update /src/pages/HomePage.tsx
+10:23:19 [vite] (client) hmr update /src/pages/admin/AdminLoginPage.tsx, /src/pages/admin/AdminDashboardPage.tsx, /src/pages/admin/AdminTasksPage.tsx, /src/pages/admin/AdminAppsPage.tsx
+10:24:35 [vite] (client) hmr update /src/App.tsx
+10:24:35 [vite] (client) hmr update /src/pages/admin/AdminLoginPage.tsx, /src/pages/admin/AdminDashboardPage.tsx, /src/pages/admin/AdminTasksPage.tsx, /src/pages/admin/AdminAppsPage.tsx
+10:24:56 [vite] (client) hmr update /src/pages/admin/AdminDashboardPage.tsx
+10:25:29 [vite] (client) hmr update /src/pages/admin/AdminLoginPage.tsx, /src/pages/admin/AdminDashboardPage.tsx, /src/pages/admin/AdminTasksPage.tsx, /src/pages/admin/AdminAppsPage.tsx
+10:25:32 [vite] (client) hmr update /src/App.tsx
+10:26:22 [vite] (client) hmr update /src/features/dashboard/CustomerBriefSection.tsx
+10:26:35 [vite] (client) hmr update /src/styles/global.css
+10:29:52 [vite] (client) hmr update /src/pages/admin/AdminSitePage.tsx
+10:43:04 [vite] (client) hmr update /src/pages/admin/AdminSitePage.tsx
+10:43:39 [vite] (client) hmr update /src/pages/admin/AdminDashboardPage.tsx
+10:49:51 [vite] (client) hmr update /src/pages/admin/AdminDashboardPage.tsx
+10:50:01 [vite] (client) hmr update /src/pages/admin/AdminSitePage.tsx
+11:46:36 [vite] (client) hmr update /src/pages/admin/AdminLoginPage.tsx, /src/pages/admin/AdminDashboardPage.tsx, /src/pages/admin/AdminTasksPage.tsx, /src/pages/admin/AdminAppsPage.tsx, /src/pages/admin/AdminSitePage.tsx
+11:46:45 [vite] (client) hmr update /src/features/dashboard/CustomerBriefSection.tsx
+11:47:07 [vite] (client) hmr update /src/pages/admin/AdminSitePage.tsx
+11:47:28 [vite] (client) hmr update /src/pages/admin/AdminSitePage.tsx
+11:47:36 [vite] (client) hmr update /src/styles/global.css
+12:01:17 [vite] (client) hmr update /src/pages/admin/AdminLoginPage.tsx, /src/pages/admin/AdminDashboardPage.tsx, /src/pages/admin/AdminTasksPage.tsx, /src/pages/admin/AdminAppsPage.tsx, /src/pages/admin/AdminSitePage.tsx
+12:01:59 [vite] (client) hmr update /src/layouts/AdminLayout.tsx
+12:02:06 [vite] (client) hmr update /src/router.tsx
+12:02:31 [vite] (client) hmr update /src/styles/global.css
+13:41:35 [vite] (client) hmr update /src/pages/admin/AdminLoginPage.tsx, /src/pages/admin/AdminDashboardPage.tsx, /src/pages/admin/AdminTasksPage.tsx, /src/pages/admin/AdminAppsPage.tsx, /src/pages/admin/AdminSitePage.tsx, /src/pages/admin/AdminSecurityPage.tsx
+13:42:11 [vite] (client) hmr update /src/router.tsx
+13:42:11 [vite] (client) hmr invalidate /src/router.tsx Could not Fast Refresh ("usePublicAppContext" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+13:42:11 [vite] (client) hmr update /src/App.tsx, /src/pages/AppsPage.tsx, /src/pages/HomePage.tsx, /src/pages/KeyCenterPage.tsx, /src/pages/WorkspacePage.tsx, /src/pages/AssetsPage.tsx, /src/pages/HistoryPage.tsx
+13:43:39 [vite] (client) hmr update /src/pages/admin/AdminMultipliersPage.tsx
+13:44:00 [vite] (client) hmr update /src/pages/admin/AdminMultipliersPage.tsx
+13:46:24 [vite] (client) hmr update /src/pages/KeyCenterPage.tsx
+13:47:26 [vite] (client) hmr update /src/App.tsx
+13:47:26 [vite] (client) hmr update /src/App.tsx, /src/pages/admin/AdminLoginPage.tsx, /src/pages/admin/AdminDashboardPage.tsx, /src/pages/admin/AdminTasksPage.tsx, /src/pages/admin/AdminAppsPage.tsx, /src/pages/admin/AdminSitePage.tsx, /src/pages/admin/AdminSecurityPage.tsx, /src/pages/admin/AdminMultipliersPage.tsx
+13:47:26 [vite] (client) hmr update /src/features/console/ConsoleSidebar.tsx
+13:47:26 [vite] (client) hmr update /src/features/dashboard/DashboardHero.tsx
+13:48:10 [vite] (client) hmr update /src/features/console/ConsoleTopbar.tsx
+13:49:22 [vite] (client) hmr update /src/features/workspace/WorkspaceShell.tsx
+13:49:22 [vite] (client) hmr update /src/pages/WorkspacePage.tsx
+13:49:22 [vite] (client) hmr update /src/layouts/AdminLayout.tsx
+13:49:51 [vite] (client) hmr update /src/styles/global.css
+13:50:35 [vite] (client) hmr update /src/features/apps/DynamicAppForm.tsx
+13:50:53 [vite] (client) hmr invalidate /src/router.tsx Could not Fast Refresh ("usePublicAppContext" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+13:50:53 [vite] (client) hmr update /src/App.tsx, /src/pages/AppsPage.tsx, /src/pages/HomePage.tsx, /src/pages/KeyCenterPage.tsx, /src/pages/WorkspacePage.tsx, /src/pages/AssetsPage.tsx, /src/pages/HistoryPage.tsx
+13:51:23 [vite] (client) hmr update /src/styles/global.css
+15:27:55 [vite] (client) hmr update /src/pages/WorkspacePage.tsx
+15:29:14 [vite] (client) hmr update /src/styles/global.css

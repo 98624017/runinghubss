@@ -1,0 +1,75 @@
+# 获取工作流Json Response
+
+- [官网明确] 页面类型：Schema
+- [官网明确] 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888521.md`
+- [官网明确] 页面编号：`155888521`
+- [官网明确] Schema 名称：`获取工作流Json Response`
+
+## 字段摘要
+
+- [官网明确] `code`：`integer` 返回标记：成功标记=0，非0失败，或者是功能码
+- [官网明确] `msg`：`string` 返回信息
+- [官网明确] `data`：`object` 数据
+
+## 原始 Schema 归档
+
+```yaml
+openapi: 3.0.1
+info:
+  title: ''
+  description: ''
+  version: 1.0.0
+paths: {}
+components:
+  schemas:
+    获取工作流Json Response:
+      type: object
+      properties:
+        code:
+          type: integer
+          description: 返回标记：成功标记=0，非0失败，或者是功能码
+          examples:
+            - 0
+        msg:
+          type: string
+          description: 返回信息
+          examples:
+            - success
+        data:
+          type: object
+          properties:
+            prompt:
+              type: string
+              examples:
+                - >-
+                  {\"3\":{\"class_type\":\"KSampler\",\"inputs\":{\"scheduler\":\"karras\",\"negative\":[\"7\",0],\"denoise\":1,\"latent_image\":[\"5\",0],\"seed\":669816362794144,\"cfg\":8,\"sampler_name\":\"dpmpp_2m\",\"model\":[\"4\",0],\"positive\":[\"6\",0],\"steps\":20},\"_meta\":{\"title\":\"KSampler\"}},\"4\":{\"class_type\":\"CheckpointLoaderSimple\",\"inputs\":{\"ckpt_name\":\"MR
+                  3DQ _SDXL V0.2.safetensors\"},\"_meta\":{\"title\":\"Load
+                  Checkpoint\"}},\"37\":{\"class_type\":\"VAEDecode\",\"inputs\":{\"vae\":[\"4\",2],\"samples\":[\"3\",0]},\"_meta\":{\"title\":\"VAE
+                  Decode\"}},\"5\":{\"class_type\":\"EmptyLatentImage\",\"inputs\":{\"batch_size\":1,\"width\":512,\"height\":512},\"_meta\":{\"title\":\"Empty
+                  Latent
+                  Image\"}},\"6\":{\"class_type\":\"CLIPTextEncode\",\"inputs\":{\"speak_and_recognation\":{\"__value__\":[false,true]},\"text\":\"DreamWork
+                  3D Style, a cute panda holding a bamboo in hands at sunset,
+                  highly detailed, ultra-high resolutions, 32K UHD, best
+                  quality, masterpiece,
+                  \",\"clip\":[\"4\",1]},\"_meta\":{\"title\":\"CLIP Text Encode
+                  (Prompt)\"}},\"7\":{\"class_type\":\"CLIPTextEncode\",\"inputs\":{\"speak_and_recognation\":{\"__value__\":[false,true]},\"text\":\"\",\"clip\":[\"4\",1]},\"_meta\":{\"title\":\"CLIP
+                  Text Encode
+                  (Prompt)\"}},\"9\":{\"class_type\":\"SaveImage\",\"inputs\":{\"filename_prefix\":\"ComfyUI\",\"images\":[\"37\",0]},\"_meta\":{\"title\":\"Save
+                  Image\"}}}
+          x-apifox-orders:
+            - prompt
+          description: 数据
+      x-apifox-orders:
+        - code
+        - msg
+        - data
+      required:
+        - code
+        - msg
+      x-apifox-folder: ''
+  securitySchemes: {}
+servers:
+  - url: https://www.runninghub.cn
+    description: runninghub.cn
+security: []
+```

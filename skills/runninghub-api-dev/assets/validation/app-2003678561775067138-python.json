@@ -1,0 +1,472 @@
+{
+  "sdk": "python",
+  "appId": "2003678561775067138",
+  "startedAt": "2026-03-08T02:12:05+00:00",
+  "finishedAt": "2026-03-08T02:12:55+00:00",
+  "manifestPrompt": "根据第1张平面图生成客厅写实效果图，按红色箭头方向取景；第2张参考沙发组合，第3张参考吊顶，第4张参考吊灯，第5张参考电视背景墙，第6张参考窗户，第7张参考地板，第8张参考沙发背景墙，第9张参考绿植。整体为现代暖木色、奶油风、自然日光。",
+  "manifestFiles": [
+    "floorplan-white-source.jpg",
+    "banana-reference-sofa.jpg",
+    "banana-reference-ceiling.jpg",
+    "banana-reference-lamp.jpg",
+    "banana-reference-tv-wall.jpg",
+    "banana-reference-window.jpg",
+    "banana-reference-floor.jpg",
+    "banana-reference-bg-wall.jpg",
+    "banana-reference-plant.jpg"
+  ],
+  "manifestRationale": null,
+  "uploadedAssets": [
+    {
+      "localFile": "floorplan-white-source.jpg",
+      "uploadedFileName": "openapi/57c297248211916a9a2da42a879c93f1aef9cd6cd4fd7b06a0e4a2052d4b6d03.jpg",
+      "uploadResult": {
+        "code": 0,
+        "msg": "success",
+        "errorMessages": null,
+        "data": {
+          "type": "image",
+          "download_url": "https://rh-images-switch-1252422369.cos.ap-guangzhou.myqcloud.com/input/openapi/57c297248211916a9a2da42a879c93f1aef9cd6cd4fd7b06a0e4a2052d4b6d03.jpg?q-sign-algorithm=sha1&q-ak=AKIDv56FISEJUsKsMeELk0gmbNCGKTYSaZ3N&q-sign-time=1772935923%3B1773022323&q-key-time=1772935923%3B1773022323&q-header-list=host&q-url-param-list=&q-signature=8b4aa3ba023de84000e341db3221c64d52d08ac4",
+          "fileName": "openapi/57c297248211916a9a2da42a879c93f1aef9cd6cd4fd7b06a0e4a2052d4b6d03.jpg",
+          "size": "52453"
+        }
+      }
+    },
+    {
+      "localFile": "banana-reference-sofa.jpg",
+      "uploadedFileName": "openapi/17dedd31692c65c20d64377fb2ae159391ded71743470af34d5c19c7db38a349.jpg",
+      "uploadResult": {
+        "code": 0,
+        "msg": "success",
+        "errorMessages": null,
+        "data": {
+          "type": "image",
+          "download_url": "https://rh-images-switch-1252422369.cos.ap-guangzhou.myqcloud.com/input/openapi/17dedd31692c65c20d64377fb2ae159391ded71743470af34d5c19c7db38a349.jpg?q-sign-algorithm=sha1&q-ak=AKIDv56FISEJUsKsMeELk0gmbNCGKTYSaZ3N&q-sign-time=1772935923%3B1773022323&q-key-time=1772935923%3B1773022323&q-header-list=host&q-url-param-list=&q-signature=111037b381bf41f83dadc7202a47799f1448d20e",
+          "fileName": "openapi/17dedd31692c65c20d64377fb2ae159391ded71743470af34d5c19c7db38a349.jpg",
+          "size": "8689"
+        }
+      }
+    },
+    {
+      "localFile": "banana-reference-ceiling.jpg",
+      "uploadedFileName": "openapi/a56cb4b80f7b6e48ad084416ce876375bfcb96fa0f2b20eff33589d2bafc1e10.jpg",
+      "uploadResult": {
+        "code": 0,
+        "msg": "success",
+        "errorMessages": null,
+        "data": {
+          "type": "image",
+          "download_url": "https://rh-images-switch-1252422369.cos.ap-guangzhou.myqcloud.com/input/openapi/a56cb4b80f7b6e48ad084416ce876375bfcb96fa0f2b20eff33589d2bafc1e10.jpg?q-sign-algorithm=sha1&q-ak=AKIDv56FISEJUsKsMeELk0gmbNCGKTYSaZ3N&q-sign-time=1772935923%3B1773022323&q-key-time=1772935923%3B1773022323&q-header-list=host&q-url-param-list=&q-signature=5a681c07e075a076520414a2865c3cf589176ee7",
+          "fileName": "openapi/a56cb4b80f7b6e48ad084416ce876375bfcb96fa0f2b20eff33589d2bafc1e10.jpg",
+          "size": "7795"
+        }
+      }
+    },
+    {
+      "localFile": "banana-reference-lamp.jpg",
+      "uploadedFileName": "openapi/9ae7b6ae3eb96839f275995c7eed98881da9f9ad0bb6e0b72224f6bc31e05967.jpg",
+      "uploadResult": {
+        "code": 0,
+        "msg": "success",
+        "errorMessages": null,
+        "data": {
+          "type": "image",
+          "download_url": "https://rh-images-switch-1252422369.cos.ap-guangzhou.myqcloud.com/input/openapi/9ae7b6ae3eb96839f275995c7eed98881da9f9ad0bb6e0b72224f6bc31e05967.jpg?q-sign-algorithm=sha1&q-ak=AKIDv56FISEJUsKsMeELk0gmbNCGKTYSaZ3N&q-sign-time=1772935924%3B1773022324&q-key-time=1772935924%3B1773022324&q-header-list=host&q-url-param-list=&q-signature=b7abd6c9269fadf7fd2c7f7b4db3812cf18d2e58",
+          "fileName": "openapi/9ae7b6ae3eb96839f275995c7eed98881da9f9ad0bb6e0b72224f6bc31e05967.jpg",
+          "size": "3165"
+        }
+      }
+    },
+    {
+      "localFile": "banana-reference-tv-wall.jpg",
+      "uploadedFileName": "openapi/3b4dc898d85ef72966bac0646dbeedf58ba8b64380c9b39b5a2178ee5cb52c33.jpg",
+      "uploadResult": {
+        "code": 0,
+        "msg": "success",
+        "errorMessages": null,
+        "data": {
+          "type": "image",
+          "download_url": "https://rh-images-switch-1252422369.cos.ap-guangzhou.myqcloud.com/input/openapi/3b4dc898d85ef72966bac0646dbeedf58ba8b64380c9b39b5a2178ee5cb52c33.jpg?q-sign-algorithm=sha1&q-ak=AKIDv56FISEJUsKsMeELk0gmbNCGKTYSaZ3N&q-sign-time=1772935924%3B1773022324&q-key-time=1772935924%3B1773022324&q-header-list=host&q-url-param-list=&q-signature=004b1f0862408158590652577b489d6ed9eb5c0c",
+          "fileName": "openapi/3b4dc898d85ef72966bac0646dbeedf58ba8b64380c9b39b5a2178ee5cb52c33.jpg",
+          "size": "6421"
+        }
+      }
+    },
+    {
+      "localFile": "banana-reference-window.jpg",
+      "uploadedFileName": "openapi/da104a8cdd8e40d486916e9467df1428ba07a8f7b4510cc47b501c77828954f8.jpg",
+      "uploadResult": {
+        "code": 0,
+        "msg": "success",
+        "errorMessages": null,
+        "data": {
+          "type": "image",
+          "download_url": "https://rh-images-switch-1252422369.cos.ap-guangzhou.myqcloud.com/input/openapi/da104a8cdd8e40d486916e9467df1428ba07a8f7b4510cc47b501c77828954f8.jpg?q-sign-algorithm=sha1&q-ak=AKIDv56FISEJUsKsMeELk0gmbNCGKTYSaZ3N&q-sign-time=1772935924%3B1773022324&q-key-time=1772935924%3B1773022324&q-header-list=host&q-url-param-list=&q-signature=46888a8e63e8bbf9dbddfa26ba48563521306f73",
+          "fileName": "openapi/da104a8cdd8e40d486916e9467df1428ba07a8f7b4510cc47b501c77828954f8.jpg",
+          "size": "3076"
+        }
+      }
+    },
+    {
+      "localFile": "banana-reference-floor.jpg",
+      "uploadedFileName": "openapi/50a9b22c75bfc7c9d2c8d77fca45ff76c01c2801dab5f766bfe1b0215ede3f62.jpg",
+      "uploadResult": {
+        "code": 0,
+        "msg": "success",
+        "errorMessages": null,
+        "data": {
+          "type": "image",
+          "download_url": "https://rh-images-switch-1252422369.cos.ap-guangzhou.myqcloud.com/input/openapi/50a9b22c75bfc7c9d2c8d77fca45ff76c01c2801dab5f766bfe1b0215ede3f62.jpg?q-sign-algorithm=sha1&q-ak=AKIDv56FISEJUsKsMeELk0gmbNCGKTYSaZ3N&q-sign-time=1772935924%3B1773022324&q-key-time=1772935924%3B1773022324&q-header-list=host&q-url-param-list=&q-signature=4e22a618b80100f916d905a0c104348e5c56dc1a",
+          "fileName": "openapi/50a9b22c75bfc7c9d2c8d77fca45ff76c01c2801dab5f766bfe1b0215ede3f62.jpg",
+          "size": "1974"
+        }
+      }
+    },
+    {
+      "localFile": "banana-reference-bg-wall.jpg",
+      "uploadedFileName": "openapi/6298811da20e3451c721536dba4f8b2b1a609d8ac1f1e4378d53f68cda33297a.jpg",
+      "uploadResult": {
+        "code": 0,
+        "msg": "success",
+        "errorMessages": null,
+        "data": {
+          "type": "image",
+          "download_url": "https://rh-images-switch-1252422369.cos.ap-guangzhou.myqcloud.com/input/openapi/6298811da20e3451c721536dba4f8b2b1a609d8ac1f1e4378d53f68cda33297a.jpg?q-sign-algorithm=sha1&q-ak=AKIDv56FISEJUsKsMeELk0gmbNCGKTYSaZ3N&q-sign-time=1772935925%3B1773022325&q-key-time=1772935925%3B1773022325&q-header-list=host&q-url-param-list=&q-signature=7565d597bb80b9014df8b9149e25dde02fbb21c8",
+          "fileName": "openapi/6298811da20e3451c721536dba4f8b2b1a609d8ac1f1e4378d53f68cda33297a.jpg",
+          "size": "4349"
+        }
+      }
+    },
+    {
+      "localFile": "banana-reference-plant.jpg",
+      "uploadedFileName": "openapi/e61db087190d1ee006a70b1d1079e26a3bd70c5e6dda1d1d64aca5a5ad80ee51.jpg",
+      "uploadResult": {
+        "code": 0,
+        "msg": "success",
+        "errorMessages": null,
+        "data": {
+          "type": "image",
+          "download_url": "https://rh-images-switch-1252422369.cos.ap-guangzhou.myqcloud.com/input/openapi/e61db087190d1ee006a70b1d1079e26a3bd70c5e6dda1d1d64aca5a5ad80ee51.jpg?q-sign-algorithm=sha1&q-ak=AKIDv56FISEJUsKsMeELk0gmbNCGKTYSaZ3N&q-sign-time=1772935925%3B1773022325&q-key-time=1772935925%3B1773022325&q-header-list=host&q-url-param-list=&q-signature=f30abc325536855639ab167c49903e1e3815b222",
+          "fileName": "openapi/e61db087190d1ee006a70b1d1079e26a3bd70c5e6dda1d1d64aca5a5ad80ee51.jpg",
+          "size": "5469"
+        }
+      }
+    }
+  ],
+  "result": {
+    "payload": {
+      "webappId": "2003678561775067138",
+      "apiKey": "<RUNNINGHUB_API_KEY>",
+      "nodeInfoList": [
+        {
+          "nodeId": "2",
+          "nodeName": "RH_Nano_Banana2_Image2Image",
+          "fieldName": "prompt",
+          "fieldValue": "根据第1张平面图生成客厅写实效果图，按红色箭头方向取景；第2张参考沙发组合，第3张参考吊顶，第4张参考吊灯，第5张参考电视背景墙，第6张参考窗户，第7张参考地板，第8张参考沙发背景墙，第9张参考绿植。整体为现代暖木色、奶油风、自然日光。",
+          "fieldData": "[\"STRING\", {\"multiline\": true}]",
+          "fieldType": "STRING",
+          "description": "prompt",
+          "descriptionCn": null,
+          "descriptionEn": "prompt"
+        },
+        {
+          "nodeId": "3",
+          "nodeName": "LoadImage",
+          "fieldName": "image",
+          "fieldValue": "openapi/57c297248211916a9a2da42a879c93f1aef9cd6cd4fd7b06a0e4a2052d4b6d03.jpg",
+          "fieldData": "[[\"bike.webp\", \"cannon.webp\", \"example.png\", \"keep_this_dic\", \"t_logo.png\"], {\"image_upload\": true}]",
+          "fieldType": "IMAGE",
+          "description": "image",
+          "descriptionCn": null,
+          "descriptionEn": "image"
+        },
+        {
+          "nodeId": "7",
+          "nodeName": "LoadImage",
+          "fieldName": "image",
+          "fieldValue": "openapi/17dedd31692c65c20d64377fb2ae159391ded71743470af34d5c19c7db38a349.jpg",
+          "fieldData": "[[\"bike.webp\", \"cannon.webp\", \"example.png\", \"keep_this_dic\", \"t_logo.png\"], {\"image_upload\": true}]",
+          "fieldType": "IMAGE",
+          "description": "image",
+          "descriptionCn": null,
+          "descriptionEn": "image"
+        },
+        {
+          "nodeId": "8",
+          "nodeName": "LoadImage",
+          "fieldName": "image",
+          "fieldValue": "openapi/a56cb4b80f7b6e48ad084416ce876375bfcb96fa0f2b20eff33589d2bafc1e10.jpg",
+          "fieldData": "[[\"bike.webp\", \"cannon.webp\", \"example.png\", \"keep_this_dic\", \"t_logo.png\"], {\"image_upload\": true}]",
+          "fieldType": "IMAGE",
+          "description": "image",
+          "descriptionCn": null,
+          "descriptionEn": "image"
+        },
+        {
+          "nodeId": "11",
+          "nodeName": "LoadImage",
+          "fieldName": "image",
+          "fieldValue": "openapi/9ae7b6ae3eb96839f275995c7eed98881da9f9ad0bb6e0b72224f6bc31e05967.jpg",
+          "fieldData": "[[\"bike.webp\", \"cannon.webp\", \"example.png\", \"keep_this_dic\", \"t_logo.png\"], {\"image_upload\": true}]",
+          "fieldType": "IMAGE",
+          "description": "image",
+          "descriptionCn": null,
+          "descriptionEn": "image"
+        },
+        {
+          "nodeId": "12",
+          "nodeName": "LoadImage",
+          "fieldName": "image",
+          "fieldValue": "openapi/3b4dc898d85ef72966bac0646dbeedf58ba8b64380c9b39b5a2178ee5cb52c33.jpg",
+          "fieldData": "[[\"bike.webp\", \"cannon.webp\", \"example.png\", \"keep_this_dic\", \"t_logo.png\"], {\"image_upload\": true}]",
+          "fieldType": "IMAGE",
+          "description": "image",
+          "descriptionCn": null,
+          "descriptionEn": "image"
+        },
+        {
+          "nodeId": "13",
+          "nodeName": "LoadImage",
+          "fieldName": "image",
+          "fieldValue": "openapi/da104a8cdd8e40d486916e9467df1428ba07a8f7b4510cc47b501c77828954f8.jpg",
+          "fieldData": "[[\"bike.webp\", \"cannon.webp\", \"example.png\", \"keep_this_dic\", \"t_logo.png\"], {\"image_upload\": true}]",
+          "fieldType": "IMAGE",
+          "description": "image",
+          "descriptionCn": null,
+          "descriptionEn": "image"
+        },
+        {
+          "nodeId": "14",
+          "nodeName": "LoadImage",
+          "fieldName": "image",
+          "fieldValue": "openapi/50a9b22c75bfc7c9d2c8d77fca45ff76c01c2801dab5f766bfe1b0215ede3f62.jpg",
+          "fieldData": "[[\"bike.webp\", \"cannon.webp\", \"example.png\", \"keep_this_dic\", \"t_logo.png\"], {\"image_upload\": true}]",
+          "fieldType": "IMAGE",
+          "description": "image",
+          "descriptionCn": null,
+          "descriptionEn": "image"
+        },
+        {
+          "nodeId": "15",
+          "nodeName": "LoadImage",
+          "fieldName": "image",
+          "fieldValue": "openapi/6298811da20e3451c721536dba4f8b2b1a609d8ac1f1e4378d53f68cda33297a.jpg",
+          "fieldData": "[[\"bike.webp\", \"cannon.webp\", \"example.png\", \"keep_this_dic\", \"t_logo.png\"], {\"image_upload\": true}]",
+          "fieldType": "IMAGE",
+          "description": "image",
+          "descriptionCn": null,
+          "descriptionEn": "image"
+        },
+        {
+          "nodeId": "18",
+          "nodeName": "LoadImage",
+          "fieldName": "image",
+          "fieldValue": "openapi/e61db087190d1ee006a70b1d1079e26a3bd70c5e6dda1d1d64aca5a5ad80ee51.jpg",
+          "fieldData": "[[\"bike.webp\", \"cannon.webp\", \"example.png\", \"keep_this_dic\", \"t_logo.png\"], {\"image_upload\": true}]",
+          "fieldType": "IMAGE",
+          "description": "image",
+          "descriptionCn": null,
+          "descriptionEn": "image"
+        }
+      ],
+      "demo": {
+        "code": 0,
+        "msg": "success",
+        "errorMessages": null,
+        "data": {
+          "descriptionEn": "<p>Check the price before running, use the cost query: <a href=\"https://www.runninghub.cn/call api thirdPartyCallFeeTitle\" target=\"_blank\">https://www.runninghub.cn/call api thirdPartyCallFeeTitle</a><br/>Platform runtime is charged per second (RH coins) Third-party API single call fee (wallet balance)<br/>Platform runs standard tasks (24G VRAM): consumes 0.2 RH coins per second, platform runs Plus tasks (48G VRAM): consumes 0.4 RH coins per second<br/>This application supports the arbitrary fusion of 9 images, currently offering 5 usage opportunities per day for experience. For specific prices, check the link above. Banana is not open-sourced at the moment, the price is relatively high but it is quite useful.</p><p>Benefit! Click the avatar and fill in my invitation code jyprlu70! You can get 500 points! The system also gives 100 points every day! Come and take advantage!</p>",
+          "curl": "curl --location --request POST 'https://www.runninghub.cn/task/openapi/ai-app/run' \\\n--header 'Host: www.runninghub.cn' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"webappId\": \"null\",\n    \"apiKey\": \"<RUNNINGHUB_API_KEY>\",\n    \"nodeInfoList\": [\n        {\n            \"nodeId\": \"2\",\n            \"fieldName\": \"prompt\",\n            \"fieldValue\": \"根据第一张平面图的平面布置生成一个效果图，按照红色箭头所指的方向生成，沙发参考图片二，吊顶参考图片3，电视和电视背景墙参考图片4，吊灯参考图片5，窗户参考图片6，地板参考图片7，沙发背景参考图片8，植物参考图片9\",\n            \"description\": \"prompt\"\n        },\n        {\n            \"nodeId\": \"3\",\n            \"fieldName\": \"image\",\n            \"fieldValue\": \"b5b95f09fefb6b612e78a7e170c3da8719bf9cd4436fd6beede80c6666af405e.png\",\n            \"description\": \"image\"\n        },\n        {\n            \"nodeId\": \"7\",\n            \"fieldName\": \"image\",\n            \"fieldValue\": \"573bfb866edb98f3b470b8cdd60344e82ead93d63f01c91a33155438bf7bc9bd.png\",\n            \"description\": \"image\"\n        },\n        {\n            \"nodeId\": \"8\",\n            \"fieldName\": \"image\",\n            \"fieldValue\": \"9d768b6e486a446147c012fdcc1acca2e72728b79e54c4cc6f77c60866163a24.png\",\n            \"description\": \"image\"\n        },\n        {\n            \"nodeId\": \"11\",\n            \"fieldName\": \"image\",\n            \"fieldValue\": \"a2fa8993009b6654257d6cc6bcaf40558f4d65e35718bab472b649cb15daf13c.png\",\n            \"description\": \"image\"\n        },\n        {\n            \"nodeId\": \"12\",\n            \"fieldName\": \"image\",\n            \"fieldValue\": \"93bd0c2ba49da3885639c4643588037f38652e5c8cb575ddbcc7f35fde055c1d.png\",\n            \"description\": \"image\"\n        },\n        {\n            \"nodeId\": \"13\",\n            \"fieldName\": \"image\",\n            \"fieldValue\": \"ad2f9bb327033839556ce9bc91f5d7087eef96829ecc42c85d0d9aa2d57cb1b8.png\",\n            \"description\": \"image\"\n        },\n        {\n            \"nodeId\": \"14\",\n            \"fieldName\": \"image\",\n            \"fieldValue\": \"0102772cc3cd1f48e77ff4932b6e9742fe950d797c76a1613a27abb716ee9456.png\",\n            \"description\": \"image\"\n        },\n        {\n            \"nodeId\": \"15\",\n            \"fieldName\": \"image\",\n            \"fieldValue\": \"44aebaa77c10fde818416cf463366cb6660fad59dab706a3b7feab3cb1ccb2c1.png\",\n            \"description\": \"image\"\n        },\n        {\n            \"nodeId\": \"18\",\n            \"fieldName\": \"image\",\n            \"fieldValue\": \"7a7a23f347863b87031b35f27a00a2356157479ee55b6ad88b0a5eac3953adf3.png\",\n            \"description\": \"image\"\n        }\n    ]\n}'",
+          "webappName": "🍌香蕉  2 & Pro9图任意融合",
+          "description": "<p>先看价格再运行，用费用查询：<a href=\"https://www.runninghub.cn/call-api#thirdPartyCallFeeTitle\" target=\"_blank\">https://www.runninghub.cn/call-api#thirdPartyCallFeeTitle</a><br/>平台运行时间按秒计费（RH币）+ 三方API 单次调用费用（钱包余额）<br/>平台运行标准任务（24G显存）：每秒消耗0.2个RH币，平台运行Plus任务 （48G显存）：每秒消耗0.4个RH币<br/>这个应用支持9张图任意融合，目前每天有5次适用机会，可以体验一下，具体价格关注上方链接，香蕉目前未开源，价格比较贵，但是比较好用</p><p>利福利！点击头像填写我的邀请码jyprlu70！可以送500积分哦！每天系统还会送100积分！薅羊毛来！</p>",
+          "statisticsInfo": {
+            "likeCount": "5",
+            "downloadCount": "0",
+            "useCount": "197",
+            "pv": "0",
+            "collectCount": "38"
+          },
+          "nodeInfoList": [
+            {
+              "nodeId": "2",
+              "nodeName": "RH_Nano_Banana2_Image2Image",
+              "fieldName": "prompt",
+              "fieldValue": "根据第一张平面图的平面布置生成一个效果图，按照红色箭头所指的方向生成，沙发参考图片二，吊顶参考图片3，电视和电视背景墙参考图片4，吊灯参考图片5，窗户参考图片6，地板参考图片7，沙发背景参考图片8，植物参考图片9",
+              "fieldData": "[\"STRING\", {\"multiline\": true}]",
+              "fieldType": "STRING",
+              "description": "prompt",
+              "descriptionCn": null,
+              "descriptionEn": "prompt"
+            },
+            {
+              "nodeId": "3",
+              "nodeName": "LoadImage",
+              "fieldName": "image",
+              "fieldValue": "b5b95f09fefb6b612e78a7e170c3da8719bf9cd4436fd6beede80c6666af405e.png",
+              "fieldData": "[[\"bike.webp\", \"cannon.webp\", \"example.png\", \"keep_this_dic\", \"t_logo.png\"], {\"image_upload\": true}]",
+              "fieldType": "IMAGE",
+              "description": "image",
+              "descriptionCn": null,
+              "descriptionEn": "image"
+            },
+            {
+              "nodeId": "7",
+              "nodeName": "LoadImage",
+              "fieldName": "image",
+              "fieldValue": "573bfb866edb98f3b470b8cdd60344e82ead93d63f01c91a33155438bf7bc9bd.png",
+              "fieldData": "[[\"bike.webp\", \"cannon.webp\", \"example.png\", \"keep_this_dic\", \"t_logo.png\"], {\"image_upload\": true}]",
+              "fieldType": "IMAGE",
+              "description": "image",
+              "descriptionCn": null,
+              "descriptionEn": "image"
+            },
+            {
+              "nodeId": "8",
+              "nodeName": "LoadImage",
+              "fieldName": "image",
+              "fieldValue": "9d768b6e486a446147c012fdcc1acca2e72728b79e54c4cc6f77c60866163a24.png",
+              "fieldData": "[[\"bike.webp\", \"cannon.webp\", \"example.png\", \"keep_this_dic\", \"t_logo.png\"], {\"image_upload\": true}]",
+              "fieldType": "IMAGE",
+              "description": "image",
+              "descriptionCn": null,
+              "descriptionEn": "image"
+            },
+            {
+              "nodeId": "11",
+              "nodeName": "LoadImage",
+              "fieldName": "image",
+              "fieldValue": "a2fa8993009b6654257d6cc6bcaf40558f4d65e35718bab472b649cb15daf13c.png",
+              "fieldData": "[[\"bike.webp\", \"cannon.webp\", \"example.png\", \"keep_this_dic\", \"t_logo.png\"], {\"image_upload\": true}]",
+              "fieldType": "IMAGE",
+              "description": "image",
+              "descriptionCn": null,
+              "descriptionEn": "image"
+            },
+            {
+              "nodeId": "12",
+              "nodeName": "LoadImage",
+              "fieldName": "image",
+              "fieldValue": "93bd0c2ba49da3885639c4643588037f38652e5c8cb575ddbcc7f35fde055c1d.png",
+              "fieldData": "[[\"bike.webp\", \"cannon.webp\", \"example.png\", \"keep_this_dic\", \"t_logo.png\"], {\"image_upload\": true}]",
+              "fieldType": "IMAGE",
+              "description": "image",
+              "descriptionCn": null,
+              "descriptionEn": "image"
+            },
+            {
+              "nodeId": "13",
+              "nodeName": "LoadImage",
+              "fieldName": "image",
+              "fieldValue": "ad2f9bb327033839556ce9bc91f5d7087eef96829ecc42c85d0d9aa2d57cb1b8.png",
+              "fieldData": "[[\"bike.webp\", \"cannon.webp\", \"example.png\", \"keep_this_dic\", \"t_logo.png\"], {\"image_upload\": true}]",
+              "fieldType": "IMAGE",
+              "description": "image",
+              "descriptionCn": null,
+              "descriptionEn": "image"
+            },
+            {
+              "nodeId": "14",
+              "nodeName": "LoadImage",
+              "fieldName": "image",
+              "fieldValue": "0102772cc3cd1f48e77ff4932b6e9742fe950d797c76a1613a27abb716ee9456.png",
+              "fieldData": "[[\"bike.webp\", \"cannon.webp\", \"example.png\", \"keep_this_dic\", \"t_logo.png\"], {\"image_upload\": true}]",
+              "fieldType": "IMAGE",
+              "description": "image",
+              "descriptionCn": null,
+              "descriptionEn": "image"
+            },
+            {
+              "nodeId": "15",
+              "nodeName": "LoadImage",
+              "fieldName": "image",
+              "fieldValue": "44aebaa77c10fde818416cf463366cb6660fad59dab706a3b7feab3cb1ccb2c1.png",
+              "fieldData": "[[\"bike.webp\", \"cannon.webp\", \"example.png\", \"keep_this_dic\", \"t_logo.png\"], {\"image_upload\": true}]",
+              "fieldType": "IMAGE",
+              "description": "image",
+              "descriptionCn": null,
+              "descriptionEn": "image"
+            },
+            {
+              "nodeId": "18",
+              "nodeName": "LoadImage",
+              "fieldName": "image",
+              "fieldValue": "7a7a23f347863b87031b35f27a00a2356157479ee55b6ad88b0a5eac3953adf3.png",
+              "fieldData": "[[\"bike.webp\", \"cannon.webp\", \"example.png\", \"keep_this_dic\", \"t_logo.png\"], {\"image_upload\": true}]",
+              "fieldType": "IMAGE",
+              "description": "image",
+              "descriptionCn": null,
+              "descriptionEn": "image"
+            }
+          ],
+          "covers": [
+            {
+              "id": "2003678565663186945",
+              "objName": "a052835e0508f253311899a0d7880d80/2025-12-24/ed75d9d3a82913377a416838c9a2df24.jpg",
+              "url": "https://rh-images.xiaoyaoyou.com/a052835e0508f253311899a0d7880d80/2025-12-24/ed75d9d3a82913377a416838c9a2df24.jpg",
+              "thumbnailUri": "https://rh-images.xiaoyaoyou.com/a052835e0508f253311899a0d7880d80/2025-12-24/ed75d9d3a82913377a416838c9a2df24.jpg?imageMogr2/format/jpeg/ignore-error/1",
+              "imageWidth": "1200",
+              "imageHeight": "896"
+            }
+          ],
+          "tags": [
+            {
+              "id": "1875941016195787306",
+              "name": "写实",
+              "nameEn": "Realistic",
+              "labels": null
+            },
+            {
+              "id": "1871151815242543198",
+              "name": "图生图",
+              "nameEn": "Image-to-Image",
+              "labels": null
+            },
+            {
+              "id": "1871151815242543240",
+              "name": "毛坯房一键改造",
+              "nameEn": "Room Makeover",
+              "labels": null
+            }
+          ]
+        }
+      }
+    },
+    "submit": {
+      "code": 0,
+      "msg": "success",
+      "errorMessages": null,
+      "data": {
+        "netWssUrl": "wss://www.runninghub.cn:443/ws/c_instance?c_host=10.132.12.12&c_port=10042&clientId=8c04f65015a49ecd4590d2b38e6a25e2&workflowId=2003667720614912001&Rh-Comfy-Auth=eyJ1c2VySWQiOiI3MmMxMzUwMWI3NDM5ZmY1MWYxNDdhNWJlZjgxZjI1OSIsInNpZ25FeHBpcmUiOjE3NzM1NDA3MjYxODcsInRzIjoxNzcyOTM1OTI2MTg3LCJzaWduIjoiMDNhMjY4ZGYzMTQ2ZWU0NzZjNDMwZTlkMzYyMGZmMzkifQ%3D%3D",
+        "taskId": "2030466557397835777",
+        "clientId": "8c04f65015a49ecd4590d2b38e6a25e2",
+        "taskStatus": "RUNNING",
+        "promptTips": "{\"result\": true, \"error\": null, \"outputs_to_execute\": [\"4\"], \"node_errors\": {}}"
+      }
+    },
+    "final": {
+      "taskId": "2030466557397835777",
+      "status": {
+        "code": 0,
+        "msg": "success",
+        "errorMessages": null,
+        "data": "SUCCESS"
+      },
+      "outputs": {
+        "code": 0,
+        "msg": "success",
+        "errorMessages": null,
+        "data": [
+          {
+            "fileUrl": "https://rh-images.xiaoyaoyou.com/72c13501b7439ff51f147a5bef81f259/output/ComfyUI_00001_oazlf_1772935962.png",
+            "fileType": "png",
+            "taskCostTime": "40",
+            "nodeId": "4",
+            "thirdPartyConsumeMoney": "0.000",
+            "consumeMoney": null,
+            "consumeCoins": "1"
+          }
+        ]
+      },
+      "finalState": "SUCCESS"
+    }
+  }
+}

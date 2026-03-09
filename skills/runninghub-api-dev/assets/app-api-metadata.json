@@ -1,0 +1,333 @@
+[
+  {
+    "appId": "1986819253754130433",
+    "webappName": "Missa_建筑景观_风格迁移_效果图专用",
+    "description": "<p>这是一款面向建筑可视化与景观表现的<strong>智能风格提取应用，</strong><br/>\n它能够从参考图中精准识别并提取 <strong>天空与植被的色调、光影氛围与整体视觉风格</strong>，<br/>\n用于生成具有一致环境调性的渲染、概念图或设计延展方案。</p><p>\n</p><p>该版本针对 <strong>效果图工作流</strong> 优化，<br/>\n仅保留 <strong>色彩、光感与氛围特征</strong> 的抽象捕捉，使模型能更稳定地迁移真实自然场景的情绪与光线特质。</p><p><font color=\"#c24f4a\">2026/02/09提高了出图分辨率</font></p>",
+    "descriptionEn": "<p>这是一款面向建筑可视化与景观表现的<strong>智能风格提取应用，</strong><br/>\n它能够从参考图中精准识别并提取 <strong>天空与植被的色调、光影氛围与整体视觉风格</strong>，<br/>\n用于生成具有一致环境调性的渲染、概念图或设计延展方案。</p><p>\n</p><p>该版本针对 <strong>效果图工作流</strong> 优化，<br/>\n仅保留 <strong>色彩、光感与氛围特征</strong> 的抽象捕捉，使模型能更稳定地迁移真实自然场景的情绪与光线特质。</p><p><font color=\"#c24f4a\">2026/02/09提高了出图分辨率</font></p>",
+    "coverUrls": [
+      "https://rh-images.xiaoyaoyou.com/3ddf9a97d6c852bee4660b883096ed34/2026-02-04/a95a11b24d4fad464cb414efc5cf28d1.png"
+    ],
+    "nodeInfoList": [
+      {
+        "nodeId": "1",
+        "nodeName": "LoadImage",
+        "fieldName": "image",
+        "fieldValue": "87782ae60c2d92db29a4ec6eab1a9105c446e1c1ceee08010b1233ab87341e16.jpg",
+        "fieldData": "[[\"example.png\", \"keep_this_dic\"], {\"image_upload\": true}]",
+        "fieldType": "IMAGE",
+        "description": "上传你的原始图像",
+        "descriptionCn": null,
+        "descriptionEn": "Upload your original image"
+      },
+      {
+        "nodeId": "403",
+        "nodeName": "LoadImage",
+        "fieldName": "image",
+        "fieldValue": "d30b2e194c455b92d6396c79c4ee8969643a5a7ab3431fad5ebd0fcb0f72265a.jpg",
+        "fieldData": "[[\"example.png\", \"keep_this_dic\"], {\"image_upload\": true}]",
+        "fieldType": "IMAGE",
+        "description": "上传你想要提取风格的意向图",
+        "descriptionCn": null,
+        "descriptionEn": "Upload the reference image of the style you want to extract."
+      }
+    ],
+    "imageNodeKeys": [
+      "1:image",
+      "403:image"
+    ],
+    "textNodeKeys": [],
+    "listNodeDefaults": {},
+    "demoCurl": "curl --location --request POST 'https://www.runninghub.cn/task/openapi/ai-app/run' \\\n--header 'Host: www.runninghub.cn' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"webappId\": \"null\",\n    \"apiKey\": \"<RUNNINGHUB_API_KEY>\",\n    \"nodeInfoList\": [\n        {\n            \"nodeId\": \"1\",\n            \"fieldName\": \"image\",\n            \"fieldValue\": \"87782ae60c2d92db29a4ec6eab1a9105c446e1c1ceee08010b1233ab87341e16.jpg\",\n            \"description\": \"上传你的原始图像\"\n        },\n        {\n            \"nodeId\": \"403\",\n            \"fieldName\": \"image\",\n            \"fieldValue\": \"d30b2e194c455b92d6396c79c4ee8969643a5a7ab3431fad5ebd0fcb0f72265a.jpg\",\n            \"description\": \"上传你想要提取风格的意向图\"\n        }\n    ]\n}'"
+  },
+  {
+    "appId": "1994388299756212225",
+    "webappName": "室内设计平面图填色-立体版",
+    "description": "<p>CAD平面白图填色变立体</p><p>保持图纸一致性</p>",
+    "descriptionEn": "<p>CAD plane white drawing coloring becomes three-dimensional</p><p>Maintain drawing consistency</p>",
+    "coverUrls": [
+      "https://rh-images.xiaoyaoyou.com/b5422beb678ad265e3fc0ccd30b4156e/2025-11-28/40eb6f91cb1c6fe26582f4714a6250f0.jpg",
+      "https://rh-images.xiaoyaoyou.com/b5422beb678ad265e3fc0ccd30b4156e/2025-11-28/037891511291229374760cec37a2a52b.jpg"
+    ],
+    "nodeInfoList": [
+      {
+        "nodeId": "257",
+        "nodeName": "LoadImage",
+        "fieldName": "image",
+        "fieldValue": "fc1c483ef460f315a334d378580c78f8e753b70a6ae05495be3205b9652e8eff.jpg",
+        "fieldData": "[[\"README.md\", \"dancing.jpg\", \"example.png\", \"keep_this_dic\", \"masked_dancing.png\"], {\"image_upload\": true}]",
+        "fieldType": "IMAGE",
+        "description": "上传平面白图",
+        "descriptionCn": null,
+        "descriptionEn": "Upload plain white image"
+      },
+      {
+        "nodeId": "253",
+        "nodeName": "CR Text",
+        "fieldName": "text",
+        "fieldValue": "Convert the 2D floor plan into a detailed 3D view with realistic lighting effects and natural shadows, including soft ambient light from ceiling lights, directional light from window sources, and warm spotlight from table lamps, while preserving the exact room layout, architectural elements, spatial arrangement, and furniture positions. Add accurate material reflectivity to surfaces such as glass, metal, and polished wood to enhance the photorealistic quality and visual depth of the scene.\n",
+        "fieldData": "[\"STRING\", {\"default\": \"\", \"multiline\": true}]",
+        "fieldType": "STRING",
+        "description": "提示词（可不修改，只能输入英文）",
+        "descriptionCn": null,
+        "descriptionEn": "Prompt words (can be unmodified, only English can be entered)"
+      },
+      {
+        "nodeId": "260",
+        "nodeName": "ImageResize+",
+        "fieldName": "width",
+        "fieldValue": "1600",
+        "fieldData": "[\"INT\", {\"max\": 16384, \"min\": 0, \"step\": 1, \"default\": 512}]",
+        "fieldType": "INT",
+        "description": "出图尺寸01（01和02要一致）",
+        "descriptionCn": null,
+        "descriptionEn": "Output size 01 (01 and 02 should be consistent)"
+      },
+      {
+        "nodeId": "260",
+        "nodeName": "ImageResize+",
+        "fieldName": "height",
+        "fieldValue": "1600",
+        "fieldData": "[\"INT\", {\"max\": 16384, \"min\": 0, \"step\": 1, \"default\": 512}]",
+        "fieldType": "INT",
+        "description": "出图尺寸02（01和02要一致）",
+        "descriptionCn": null,
+        "descriptionEn": "Output size 02 (01 and 02 must be consistent)"
+      }
+    ],
+    "imageNodeKeys": [
+      "257:image"
+    ],
+    "textNodeKeys": [
+      "253:text"
+    ],
+    "listNodeDefaults": {},
+    "demoCurl": "curl --location --request POST 'https://www.runninghub.cn/task/openapi/ai-app/run' \\\n--header 'Host: www.runninghub.cn' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"webappId\": \"null\",\n    \"apiKey\": \"<RUNNINGHUB_API_KEY>\",\n    \"nodeInfoList\": [\n        {\n            \"nodeId\": \"257\",\n            \"fieldName\": \"image\",\n            \"fieldValue\": \"fc1c483ef460f315a334d378580c78f8e753b70a6ae05495be3205b9652e8eff.jpg\",\n            \"description\": \"上传平面白图\"\n        },\n        {\n            \"nodeId\": \"253\",\n            \"fieldName\": \"text\",\n            \"fieldValue\": \"Convert the 2D floor plan into a detailed 3D view with realistic lighting effects and natural shadows, including soft ambient light from ceiling lights, directional light from window sources, and warm spotlight from table lamps, while preserving the exact room layout, architectural elements, spatial arrangement, and furniture positions. Add accurate material reflectivity to surfaces such as glass, metal, and polished wood to enhance the photorealistic quality and visual depth of the scene.\\n\",\n            \"description\": \"提示词（可不修改，只能输入英文）\"\n        },\n        {\n            \"nodeId\": \"260\",\n            \"fieldName\": \"width\",\n            \"fieldValue\": \"1600\",\n            \"description\": \"出图尺寸01（01和02要一致）\"\n        },\n        {\n            \"nodeId\": \"260\",\n            \"fieldName\": \"height\",\n            \"fieldValue\": \"1600\",\n            \"description\": \"出图尺寸02（01和02要一致）\"\n        }\n    ]\n}'"
+  },
+  {
+    "appId": "2003678561775067138",
+    "webappName": "🍌香蕉  2 & Pro9图任意融合",
+    "description": "<p>先看价格再运行，用费用查询：<a href=\"https://www.runninghub.cn/call-api#thirdPartyCallFeeTitle\" target=\"_blank\">https://www.runninghub.cn/call-api#thirdPartyCallFeeTitle</a><br/>平台运行时间按秒计费（RH币）+ 三方API 单次调用费用（钱包余额）<br/>平台运行标准任务（24G显存）：每秒消耗0.2个RH币，平台运行Plus任务 （48G显存）：每秒消耗0.4个RH币<br/>这个应用支持9张图任意融合，目前每天有5次适用机会，可以体验一下，具体价格关注上方链接，香蕉目前未开源，价格比较贵，但是比较好用</p><p>利福利！点击头像填写我的邀请码jyprlu70！可以送500积分哦！每天系统还会送100积分！薅羊毛来！</p>",
+    "descriptionEn": "<p>Check the price before running, use the cost query: <a href=\"https://www.runninghub.cn/call api thirdPartyCallFeeTitle\" target=\"_blank\">https://www.runninghub.cn/call api thirdPartyCallFeeTitle</a><br/>Platform runtime is charged per second (RH coins) Third-party API single call fee (wallet balance)<br/>Platform runs standard tasks (24G VRAM): consumes 0.2 RH coins per second, platform runs Plus tasks (48G VRAM): consumes 0.4 RH coins per second<br/>This application supports the arbitrary fusion of 9 images, currently offering 5 usage opportunities per day for experience. For specific prices, check the link above. Banana is not open-sourced at the moment, the price is relatively high but it is quite useful.</p><p>Benefit! Click the avatar and fill in my invitation code jyprlu70! You can get 500 points! The system also gives 100 points every day! Come and take advantage!</p>",
+    "coverUrls": [
+      "https://rh-images.xiaoyaoyou.com/a052835e0508f253311899a0d7880d80/2025-12-24/ed75d9d3a82913377a416838c9a2df24.jpg"
+    ],
+    "nodeInfoList": [
+      {
+        "nodeId": "2",
+        "nodeName": "RH_Nano_Banana2_Image2Image",
+        "fieldName": "prompt",
+        "fieldValue": "根据第一张平面图的平面布置生成一个效果图，按照红色箭头所指的方向生成，沙发参考图片二，吊顶参考图片3，电视和电视背景墙参考图片4，吊灯参考图片5，窗户参考图片6，地板参考图片7，沙发背景参考图片8，植物参考图片9",
+        "fieldData": "[\"STRING\", {\"multiline\": true}]",
+        "fieldType": "STRING",
+        "description": "prompt",
+        "descriptionCn": null,
+        "descriptionEn": "prompt"
+      },
+      {
+        "nodeId": "3",
+        "nodeName": "LoadImage",
+        "fieldName": "image",
+        "fieldValue": "b5b95f09fefb6b612e78a7e170c3da8719bf9cd4436fd6beede80c6666af405e.png",
+        "fieldData": "[[\"bike.webp\", \"cannon.webp\", \"example.png\", \"keep_this_dic\", \"t_logo.png\"], {\"image_upload\": true}]",
+        "fieldType": "IMAGE",
+        "description": "image",
+        "descriptionCn": null,
+        "descriptionEn": "image"
+      },
+      {
+        "nodeId": "7",
+        "nodeName": "LoadImage",
+        "fieldName": "image",
+        "fieldValue": "573bfb866edb98f3b470b8cdd60344e82ead93d63f01c91a33155438bf7bc9bd.png",
+        "fieldData": "[[\"bike.webp\", \"cannon.webp\", \"example.png\", \"keep_this_dic\", \"t_logo.png\"], {\"image_upload\": true}]",
+        "fieldType": "IMAGE",
+        "description": "image",
+        "descriptionCn": null,
+        "descriptionEn": "image"
+      },
+      {
+        "nodeId": "8",
+        "nodeName": "LoadImage",
+        "fieldName": "image",
+        "fieldValue": "9d768b6e486a446147c012fdcc1acca2e72728b79e54c4cc6f77c60866163a24.png",
+        "fieldData": "[[\"bike.webp\", \"cannon.webp\", \"example.png\", \"keep_this_dic\", \"t_logo.png\"], {\"image_upload\": true}]",
+        "fieldType": "IMAGE",
+        "description": "image",
+        "descriptionCn": null,
+        "descriptionEn": "image"
+      },
+      {
+        "nodeId": "11",
+        "nodeName": "LoadImage",
+        "fieldName": "image",
+        "fieldValue": "a2fa8993009b6654257d6cc6bcaf40558f4d65e35718bab472b649cb15daf13c.png",
+        "fieldData": "[[\"bike.webp\", \"cannon.webp\", \"example.png\", \"keep_this_dic\", \"t_logo.png\"], {\"image_upload\": true}]",
+        "fieldType": "IMAGE",
+        "description": "image",
+        "descriptionCn": null,
+        "descriptionEn": "image"
+      },
+      {
+        "nodeId": "12",
+        "nodeName": "LoadImage",
+        "fieldName": "image",
+        "fieldValue": "93bd0c2ba49da3885639c4643588037f38652e5c8cb575ddbcc7f35fde055c1d.png",
+        "fieldData": "[[\"bike.webp\", \"cannon.webp\", \"example.png\", \"keep_this_dic\", \"t_logo.png\"], {\"image_upload\": true}]",
+        "fieldType": "IMAGE",
+        "description": "image",
+        "descriptionCn": null,
+        "descriptionEn": "image"
+      },
+      {
+        "nodeId": "13",
+        "nodeName": "LoadImage",
+        "fieldName": "image",
+        "fieldValue": "ad2f9bb327033839556ce9bc91f5d7087eef96829ecc42c85d0d9aa2d57cb1b8.png",
+        "fieldData": "[[\"bike.webp\", \"cannon.webp\", \"example.png\", \"keep_this_dic\", \"t_logo.png\"], {\"image_upload\": true}]",
+        "fieldType": "IMAGE",
+        "description": "image",
+        "descriptionCn": null,
+        "descriptionEn": "image"
+      },
+      {
+        "nodeId": "14",
+        "nodeName": "LoadImage",
+        "fieldName": "image",
+        "fieldValue": "0102772cc3cd1f48e77ff4932b6e9742fe950d797c76a1613a27abb716ee9456.png",
+        "fieldData": "[[\"bike.webp\", \"cannon.webp\", \"example.png\", \"keep_this_dic\", \"t_logo.png\"], {\"image_upload\": true}]",
+        "fieldType": "IMAGE",
+        "description": "image",
+        "descriptionCn": null,
+        "descriptionEn": "image"
+      },
+      {
+        "nodeId": "15",
+        "nodeName": "LoadImage",
+        "fieldName": "image",
+        "fieldValue": "44aebaa77c10fde818416cf463366cb6660fad59dab706a3b7feab3cb1ccb2c1.png",
+        "fieldData": "[[\"bike.webp\", \"cannon.webp\", \"example.png\", \"keep_this_dic\", \"t_logo.png\"], {\"image_upload\": true}]",
+        "fieldType": "IMAGE",
+        "description": "image",
+        "descriptionCn": null,
+        "descriptionEn": "image"
+      },
+      {
+        "nodeId": "18",
+        "nodeName": "LoadImage",
+        "fieldName": "image",
+        "fieldValue": "7a7a23f347863b87031b35f27a00a2356157479ee55b6ad88b0a5eac3953adf3.png",
+        "fieldData": "[[\"bike.webp\", \"cannon.webp\", \"example.png\", \"keep_this_dic\", \"t_logo.png\"], {\"image_upload\": true}]",
+        "fieldType": "IMAGE",
+        "description": "image",
+        "descriptionCn": null,
+        "descriptionEn": "image"
+      }
+    ],
+    "imageNodeKeys": [
+      "3:image",
+      "7:image",
+      "8:image",
+      "11:image",
+      "12:image",
+      "13:image",
+      "14:image",
+      "15:image",
+      "18:image"
+    ],
+    "textNodeKeys": [
+      "2:prompt"
+    ],
+    "listNodeDefaults": {},
+    "demoCurl": "curl --location --request POST 'https://www.runninghub.cn/task/openapi/ai-app/run' \\\n--header 'Host: www.runninghub.cn' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"webappId\": \"null\",\n    \"apiKey\": \"<RUNNINGHUB_API_KEY>\",\n    \"nodeInfoList\": [\n        {\n            \"nodeId\": \"2\",\n            \"fieldName\": \"prompt\",\n            \"fieldValue\": \"根据第一张平面图的平面布置生成一个效果图，按照红色箭头所指的方向生成，沙发参考图片二，吊顶参考图片3，电视和电视背景墙参考图片4，吊灯参考图片5，窗户参考图片6，地板参考图片7，沙发背景参考图片8，植物参考图片9\",\n            \"description\": \"prompt\"\n        },\n        {\n            \"nodeId\": \"3\",\n            \"fieldName\": \"image\",\n            \"fieldValue\": \"b5b95f09fefb6b612e78a7e170c3da8719bf9cd4436fd6beede80c6666af405e.png\",\n            \"description\": \"image\"\n        },\n        {\n            \"nodeId\": \"7\",\n            \"fieldName\": \"image\",\n            \"fieldValue\": \"573bfb866edb98f3b470b8cdd60344e82ead93d63f01c91a33155438bf7bc9bd.png\",\n            \"description\": \"image\"\n        },\n        {\n            \"nodeId\": \"8\",\n            \"fieldName\": \"image\",\n            \"fieldValue\": \"9d768b6e486a446147c012fdcc1acca2e72728b79e54c4cc6f77c60866163a24.png\",\n            \"description\": \"image\"\n        },\n        {\n            \"nodeId\": \"11\",\n            \"fieldName\": \"image\",\n            \"fieldValue\": \"a2fa8993009b6654257d6cc6bcaf40558f4d65e35718bab472b649cb15daf13c.png\",\n            \"description\": \"image\"\n        },\n        {\n            \"nodeId\": \"12\",\n            \"fieldName\": \"image\",\n            \"fieldValue\": \"93bd0c2ba49da3885639c4643588037f38652e5c8cb575ddbcc7f35fde055c1d.png\",\n            \"description\": \"image\"\n        },\n        {\n            \"nodeId\": \"13\",\n            \"fieldName\": \"image\",\n            \"fieldValue\": \"ad2f9bb327033839556ce9bc91f5d7087eef96829ecc42c85d0d9aa2d57cb1b8.png\",\n            \"description\": \"image\"\n        },\n        {\n            \"nodeId\": \"14\",\n            \"fieldName\": \"image\",\n            \"fieldValue\": \"0102772cc3cd1f48e77ff4932b6e9742fe950d797c76a1613a27abb716ee9456.png\",\n            \"description\": \"image\"\n        },\n        {\n            \"nodeId\": \"15\",\n            \"fieldName\": \"image\",\n            \"fieldValue\": \"44aebaa77c10fde818416cf463366cb6660fad59dab706a3b7feab3cb1ccb2c1.png\",\n            \"description\": \"image\"\n        },\n        {\n            \"nodeId\": \"18\",\n            \"fieldName\": \"image\",\n            \"fieldValue\": \"7a7a23f347863b87031b35f27a00a2356157479ee55b6ad88b0a5eac3953adf3.png\",\n            \"description\": \"image\"\n        }\n    ]\n}'"
+  },
+  {
+    "appId": "2023563076041183233",
+    "webappName": "毛坯房出图-全能版",
+    "description": "<p>一键生成装修效果图</p>",
+    "descriptionEn": "<p>One-click generation of decoration renderings</p>",
+    "coverUrls": [
+      "https://rh-images.xiaoyaoyou.com/064a677842c55c3b0bc59eb437f7c4f6/2026-02-17/be06e4cdfb4f9ac79c610416358f7d60.jpg"
+    ],
+    "nodeInfoList": [
+      {
+        "nodeId": "541",
+        "nodeName": "LoadImage",
+        "fieldName": "image",
+        "fieldValue": "pasted/bedaafca67786e71afe1292b3067bd3f60d4979aa63bd1c7e28d2cfa5a081d28.png",
+        "fieldData": "[[\"example.png\", \"keep_this_dic\"], {\"image_upload\": true}]",
+        "fieldType": "IMAGE",
+        "description": "上传毛坯照片",
+        "descriptionCn": null,
+        "descriptionEn": "Upload raw photos"
+      },
+      {
+        "nodeId": "538",
+        "nodeName": "LoadImage",
+        "fieldName": "image",
+        "fieldValue": "1a292d797df9cd57ad34be74b7a84a997f7154957d9db7e084928967f6dbf2b3.jpeg",
+        "fieldData": "[[\"example.png\", \"keep_this_dic\"], {\"image_upload\": true}]",
+        "fieldType": "IMAGE",
+        "description": "上传风格参考",
+        "descriptionCn": null,
+        "descriptionEn": "Upload style reference"
+      },
+      {
+        "nodeId": "558",
+        "nodeName": "ttN text",
+        "fieldName": "text",
+        "fieldValue": "现代风格客厅，左侧是电视背景墙，右侧是沙发",
+        "fieldData": "[\"STRING\", {\"default\": \"\", \"multiline\": true, \"dynamicPrompts\": true}]",
+        "fieldType": "STRING",
+        "description": "提示词（描述装修风格及家具布局）",
+        "descriptionCn": null,
+        "descriptionEn": "Prompt words (describe decoration style and furniture layout)"
+      },
+      {
+        "nodeId": "605",
+        "nodeName": "RH_Nano_Banana2_Image2Image",
+        "fieldName": "aspectRatio",
+        "fieldValue": "auto",
+        "fieldData": "[{\"name\":\"auto\",\"index\":\"auto\",\"description\":\"自动\",\"fastIndex\":1.0,\"descriptionEn\":\"Automatic\"},{\"name\":\"1:1\",\"index\":\"1:1\",\"description\":\"\",\"fastIndex\":2.0},{\"name\":\"2:3\",\"index\":\"2:3\",\"description\":\"\",\"fastIndex\":3.0},{\"name\":\"3:2\",\"index\":\"3:2\",\"description\":\"\",\"fastIndex\":4.0},{\"name\":\"3:4\",\"index\":\"3:4\",\"description\":\"\",\"fastIndex\":5.0},{\"name\":\"4:3\",\"index\":\"4:3\",\"description\":\"\",\"fastIndex\":6.0},{\"name\":\"4:5\",\"index\":\"4:5\",\"description\":\"\",\"fastIndex\":7.0},{\"name\":\"5:4\",\"index\":\"5:4\",\"description\":\"\",\"fastIndex\":8.0},{\"name\":\"9:16\",\"index\":\"9:16\",\"description\":\"\",\"fastIndex\":9.0},{\"name\":\"16:9\",\"index\":\"16:9\",\"description\":\"\",\"fastIndex\":10.0},{\"name\":\"21:9\",\"index\":\"21:9\",\"description\":\"\",\"fastIndex\":11.0}]",
+        "fieldType": "LIST",
+        "description": "出图比例",
+        "descriptionCn": null,
+        "descriptionEn": "Output ratio"
+      },
+      {
+        "nodeId": "605",
+        "nodeName": "RH_Nano_Banana2_Image2Image",
+        "fieldName": "resolution",
+        "fieldValue": "2k",
+        "fieldData": "[{\"name\":\"1k\",\"index\":\"1k\",\"description\":\"\",\"fastIndex\":1.0},{\"name\":\"2k\",\"index\":\"2k\",\"description\":\"\",\"fastIndex\":2.0},{\"name\":\"4k\",\"index\":\"4k\",\"description\":\"\",\"fastIndex\":3.0},{\"name\":\"8k (Official only)\",\"index\":\"8k (Official only)\",\"description\":\"\",\"fastIndex\":4.0}]",
+        "fieldType": "LIST",
+        "description": "出图分辨率",
+        "descriptionCn": null,
+        "descriptionEn": "Output resolution"
+      },
+      {
+        "nodeId": "605",
+        "nodeName": "RH_Nano_Banana2_Image2Image",
+        "fieldName": "channel",
+        "fieldValue": "Third-party",
+        "fieldData": "[{\"name\":\"Third-party\",\"index\":\"Third-party\",\"description\":\"第三方（便宜）\",\"fastIndex\":1.0,\"descriptionEn\":\"Third party (cheap)\"},{\"name\":\"Official\",\"index\":\"Official\",\"description\":\"官方（贵）\",\"fastIndex\":2.0,\"descriptionEn\":\"Official (expensive)\"}]",
+        "fieldType": "LIST",
+        "description": "渠道选择",
+        "descriptionCn": null,
+        "descriptionEn": "Channel selection"
+      }
+    ],
+    "imageNodeKeys": [
+      "541:image",
+      "538:image"
+    ],
+    "textNodeKeys": [
+      "558:text"
+    ],
+    "listNodeDefaults": {
+      "605:aspectRatio": "auto",
+      "605:resolution": "2k",
+      "605:channel": "Third-party"
+    },
+    "demoCurl": "curl --location --request POST 'https://www.runninghub.cn/task/openapi/ai-app/run' \\\n--header 'Host: www.runninghub.cn' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"webappId\": \"null\",\n    \"apiKey\": \"<RUNNINGHUB_API_KEY>\",\n    \"nodeInfoList\": [\n        {\n            \"nodeId\": \"541\",\n            \"fieldName\": \"image\",\n            \"fieldValue\": \"pasted/bedaafca67786e71afe1292b3067bd3f60d4979aa63bd1c7e28d2cfa5a081d28.png\",\n            \"description\": \"上传毛坯照片\"\n        },\n        {\n            \"nodeId\": \"538\",\n            \"fieldName\": \"image\",\n            \"fieldValue\": \"1a292d797df9cd57ad34be74b7a84a997f7154957d9db7e084928967f6dbf2b3.jpeg\",\n            \"description\": \"上传风格参考\"\n        },\n        {\n            \"nodeId\": \"558\",\n            \"fieldName\": \"text\",\n            \"fieldValue\": \"现代风格客厅，左侧是电视背景墙，右侧是沙发\",\n            \"description\": \"提示词（描述装修风格及家具布局）\"\n        },\n        {\n            \"nodeId\": \"605\",\n            \"fieldName\": \"aspectRatio\",\n            \"fieldData\": \"[{\\\"name\\\":\\\"auto\\\",\\\"index\\\":\\\"auto\\\",\\\"description\\\":\\\"自动\\\",\\\"fastIndex\\\":1.0,\\\"descriptionEn\\\":\\\"Automatic\\\"},{\\\"name\\\":\\\"1:1\\\",\\\"index\\\":\\\"1:1\\\",\\\"description\\\":\\\"\\\",\\\"fastIndex\\\":2.0},{\\\"name\\\":\\\"2:3\\\",\\\"index\\\":\\\"2:3\\\",\\\"description\\\":\\\"\\\",\\\"fastIndex\\\":3.0},{\\\"name\\\":\\\"3:2\\\",\\\"index\\\":\\\"3:2\\\",\\\"description\\\":\\\"\\\",\\\"fastIndex\\\":4.0},{\\\"name\\\":\\\"3:4\\\",\\\"index\\\":\\\"3:4\\\",\\\"description\\\":\\\"\\\",\\\"fastIndex\\\":5.0},{\\\"name\\\":\\\"4:3\\\",\\\"index\\\":\\\"4:3\\\",\\\"description\\\":\\\"\\\",\\\"fastIndex\\\":6.0},{\\\"name\\\":\\\"4:5\\\",\\\"index\\\":\\\"4:5\\\",\\\"description\\\":\\\"\\\",\\\"fastIndex\\\":7.0},{\\\"name\\\":\\\"5:4\\\",\\\"index\\\":\\\"5:4\\\",\\\"description\\\":\\\"\\\",\\\"fastIndex\\\":8.0},{\\\"name\\\":\\\"9:16\\\",\\\"index\\\":\\\"9:16\\\",\\\"description\\\":\\\"\\\",\\\"fastIndex\\\":9.0},{\\\"name\\\":\\\"16:9\\\",\\\"index\\\":\\\"16:9\\\",\\\"description\\\":\\\"\\\",\\\"fastIndex\\\":10.0},{\\\"name\\\":\\\"21:9\\\",\\\"index\\\":\\\"21:9\\\",\\\"description\\\":\\\"\\\",\\\"fastIndex\\\":11.0}]\",\n            \"fieldValue\": \"auto\",\n            \"description\": \"出图比例\"\n        },\n        {\n            \"nodeId\": \"605\",\n            \"fieldName\": \"resolution\",\n            \"fieldData\": \"[{\\\"name\\\":\\\"1k\\\",\\\"index\\\":\\\"1k\\\",\\\"description\\\":\\\"\\\",\\\"fastIndex\\\":1.0},{\\\"name\\\":\\\"2k\\\",\\\"index\\\":\\\"2k\\\",\\\"description\\\":\\\"\\\",\\\"fastIndex\\\":2.0},{\\\"name\\\":\\\"4k\\\",\\\"index\\\":\\\"4k\\\",\\\"description\\\":\\\"\\\",\\\"fastIndex\\\":3.0},{\\\"name\\\":\\\"8k (Official only)\\\",\\\"index\\\":\\\"8k (Official only)\\\",\\\"description\\\":\\\"\\\",\\\"fastIndex\\\":4.0}]\",\n            \"fieldValue\": \"2k\",\n            \"description\": \"出图分辨率\"\n        },\n        {\n            \"nodeId\": \"605\",\n            \"fieldName\": \"channel\",\n            \"fieldData\": \"[{\\\"name\\\":\\\"Third-party\\\",\\\"index\\\":\\\"Third-party\\\",\\\"description\\\":\\\"第三方（便宜）\\\",\\\"fastIndex\\\":1.0,\\\"descriptionEn\\\":\\\"Third party (cheap)\\\"},{\\\"name\\\":\\\"Official\\\",\\\"index\\\":\\\"Official\\\",\\\"description\\\":\\\"官方（贵）\\\",\\\"fastIndex\\\":2.0,\\\"descriptionEn\\\":\\\"Official (expensive)\\\"}]\",\n            \"fieldValue\": \"Third-party\",\n            \"description\": \"渠道选择\"\n        }\n    ]\n}'"
+  }
+]

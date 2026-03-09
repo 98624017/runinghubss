@@ -1,0 +1,5 @@
+
+> server@0.1.0 db:migrate
+> tsx src/db/migrate.ts
+
+数据库迁移完成：/home/feng/project/runinghubs/app/server/src/db/migrations

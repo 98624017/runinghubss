@@ -1,0 +1,116 @@
+# 发起ComfyUI任务 Request 2
+
+- [官网明确] 页面类型：Schema
+- [官网明确] 官方地址：`https://www.runninghub.cn/runninghub-api-doc-cn/schema-155888523.md`
+- [官网明确] 页面编号：`155888523`
+- [官网明确] Schema 名称：`节点输入信息`
+
+## 字段摘要
+
+- [官网明确] `nodeId`：`string`
+- [官网明确] `fieldName`：`string`
+- [官网明确] `fieldValue`：`string`
+
+## 原始 Schema 归档
+
+```yaml
+openapi: 3.0.1
+info:
+  title: ''
+  description: ''
+  version: 1.0.0
+paths: {}
+components:
+  schemas:
+    节点输入信息:
+      type: object
+      properties:
+        nodeId:
+          type: string
+          description: ''
+          examples:
+            - '6'
+        fieldName:
+          type: string
+          description: ''
+          examples:
+            - text
+        fieldValue:
+          type: string
+          description: ''
+          examples:
+            - 1 girl in classroom
+      x-apifox-orders:
+        - nodeId
+        - fieldName
+        - fieldValue
+      x-apifox-folder: ''
+    发起ComfyUI任务 Request 2:
+      type: object
+      properties:
+        workflowId:
+          type: string
+          examples:
+            - '1904136902449209346'
+        apiKey:
+          type: string
+          description: ''
+          examples:
+            - '{{apiKey}}'
+        nodeInfoList:
+          type: array
+          items:
+            $ref: >-
+              #/components/schemas/%E8%8A%82%E7%82%B9%E8%BE%93%E5%85%A5%E4%BF%A1%E6%81%AF
+          description: ''
+        workflow:
+          type: string
+          description: 自定义完整工作流（JSON），如指定则忽略workflowId
+          examples:
+            - >-
+              {"3":{"class_type":"KSampler","inputs":{"scheduler":"karras","negative":["7",0],"denoise":1,"latent_image":["5",0],"seed":669816362794144,"cfg":8,"sampler_name":"dpmpp_2m","model":["4",0],"positive":["6",0],"steps":20},"_meta":{"title":"KSampler"}},"4":{"class_type":"CheckpointLoaderSimple","inputs":{"ckpt_name":"MR
+              3DQ _SDXL V0.2.safetensors"},"_meta":{"title":"Load
+              Checkpoint"}},"37":{"class_type":"VAEDecode","inputs":{"vae":["4",2],"samples":["3",0]},"_meta":{"title":"VAE
+              Decode"}},"5":{"class_type":"EmptyLatentImage","inputs":{"batch_size":1,"width":512,"height":512},"_meta":{"title":"Empty
+              Latent
+              Image"}},"6":{"class_type":"CLIPTextEncode","inputs":{"speak_and_recognation":{"__value__":[false,true]},"text":"DreamWork
+              3D Style, a cute panda holding a bamboo in hands at sunset, highly
+              detailed, ultra-high resolutions, 32K UHD, best quality,
+              masterpiece, ","clip":["4",1]},"_meta":{"title":"CLIP Text Encode
+              (Prompt)"}},"7":{"class_type":"CLIPTextEncode","inputs":{"speak_and_recognation":{"__value__":[false,true]},"text":"","clip":["4",1]},"_meta":{"title":"CLIP
+              Text Encode
+              (Prompt)"}},"9":{"class_type":"SaveImage","inputs":{"filename_prefix":"ComfyUI","images":["37",0]},"_meta":{"title":"Save
+              Image"}}}
+        addMetadata:
+          type: boolean
+          description: 是否在图片中写入元信息（如提示词）
+          default: true
+        webhookUrl:
+          type: string
+          description: 任务完成回调的URL，平台会主动向该地址发送任务结果
+        instanceType:
+          type: string
+          description: 发起任务指定示例类型
+        usePersonalQueue:
+          type: boolean
+          default: false
+          description: 独占类型任务是否入队
+      x-apifox-orders:
+        - apiKey
+        - workflowId
+        - nodeInfoList
+        - addMetadata
+        - webhookUrl
+        - workflow
+        - instanceType
+        - usePersonalQueue
+      required:
+        - workflowId
+        - apiKey
+      x-apifox-folder: ''
+  securitySchemes: {}
+servers:
+  - url: https://www.runninghub.cn
+    description: runninghub.cn
+security: []
+```

@@ -1,0 +1,24 @@
+{
+  "name": "runninghub-ai-console",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "npm-run-all --parallel dev:server dev:client",
+    "dev:client": "npm run dev --workspace client",
+    "dev:server": "npm run dev --workspace server",
+    "build": "npm run build --workspace server && npm run build --workspace client",
+    "start": "npm run start --workspace server",
+    "prod:start": "npm run db:migrate:dist --workspace server && npm run start --workspace server",
+    "test": "npm run test --workspace server && npm run test --workspace client",
+    "test:e2e": "npm run build && node e2e/runninghub-console.smoke.mjs",
+    "smoke:admin-site-upload": "node e2e/admin-site-upload.smoke.mjs"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "playwright-core": "^1.53.2"
+  }
+}

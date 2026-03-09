@@ -1,0 +1,89 @@
+# seedream-v4-图生图
+
+## OpenAPI Specification
+
+```yaml
+openapi: 3.0.1
+info:
+  title: ''
+  description: ''
+  version: 1.0.0
+paths:
+  /openapi/v2/seedream-v4/image-to-image:
+    post:
+      summary: seedream-v4-图生图
+      deprecated: false
+      description: ''
+      tags:
+        - 标准模型 API/图片生成/seedream
+      parameters:
+        - name: Authorization
+          in: header
+          description: ''
+          required: true
+          example: Bearer [Your API KEY]
+          schema:
+            type: string
+            default: Bearer [Your API KEY]
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                prompt:
+                  type: string
+                  title: 提示词
+                height:
+                  type: integer
+                  title: 高度
+                width:
+                  type: integer
+                  title: 宽度
+                imageUrls:
+                  type: array
+                  items:
+                    type: string
+                  title: 参考图
+                  maxItems: 10
+              x-apifox-orders:
+                - prompt
+                - height
+                - width
+                - imageUrls
+              required:
+                - prompt
+                - height
+                - width
+                - imageUrls
+            example:
+              prompt: >-
+                严格保留人物姿态、服装、光影和面部特征不变。将背景雨林替换为雪夜中的山间古道：地面覆雪，远处有微弱灯笼光，空中飘落细雪，地面升起薄雾。保留原图中湿润石径与落叶的质感，但转为雪地版本。整体光影保持冷色调、电影感，确保新背景与人物光照方向一致。
+              width: 2048
+              height: 2048
+              imageUrls:
+                - >-
+                  https://www.runninghub.cn/view?filename=bc4c0c410ef53a600fa3ea353c4ab909fe814d6c249543af0248cfaf19f2ff32.jpeg&type=input&subfolder=&Rh-Comfy-Auth=eyJ1c2VySWQiOiIzZjY1MTNlNWEwNjY1N2I4OGYyNjU5NTEzYmU3ZDM0YyIsInNpZ25FeHBpcmUiOjE3NjkwODU4NDgzMjUsInRzIjoxNzY4NDgxMDQ4MzI1LCJzaWduIjoiOWY0ZWU2NTg1NjQ3ZTBiMWY2NTFkMmNmYjNlYzljOWEifQ==&Rh-Identify=3f6513e5a06657b88f2659513be7d34c&rand=0.6440490186137648
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+          x-apifox-name: 成功
+      security: []
+      x-apifox-folder: 标准模型 API/图片生成/seedream
+      x-apifox-status: released
+      x-run-in-apifox: https://app.apifox.com/web/project/6103976/apis/api-408105799-run
+components:
+  schemas: {}
+  securitySchemes: {}
+servers:
+  - url: https://www.runninghub.cn
+    description: runninghub.cn
+security: []
+
+```

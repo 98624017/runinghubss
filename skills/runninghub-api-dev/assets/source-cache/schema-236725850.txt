@@ -1,0 +1,130 @@
+# 生成任务提交结果
+
+## OpenAPI Specification
+
+```yaml
+openapi: 3.0.1
+info:
+  title: ''
+  description: ''
+  version: 1.0.0
+paths: {}
+components:
+  schemas:
+    生成任务提交结果:
+      type: object
+      properties:
+        taskId:
+          type: string
+          title: 任务ID
+        status:
+          type: string
+          title: 状态
+          enum:
+            - QUEUED
+            - RUNNING
+            - FAILED
+            - SUCCESS
+          x-apifox-enum:
+            - value: QUEUED
+              name: 进入执行队列
+              description: ''
+            - value: RUNNING
+              name: 运行中
+              description: ''
+            - value: FAILED
+              name: 失败
+              description: ''
+            - value: SUCCESS
+              name: 成功
+              description: ''
+        errorCode:
+          type: string
+          title: 错误码
+          nullable: true
+        errorMessage:
+          type: string
+          title: 错误信息
+          nullable: true
+        results:
+          type: array
+          items:
+            type: object
+            properties:
+              url:
+                type: string
+                title: 结果链接
+              outputType:
+                type: string
+                title: 输出类型
+            x-apifox-orders:
+              - url
+              - outputType
+            required:
+              - url
+              - outputType
+          title: 结果
+        clientId:
+          type: string
+          nullable: true
+        promptTips:
+          type: string
+          nullable: true
+        failedReason:
+          type: string
+          description: comfyUI 相关的失败原因
+        usage:
+          type: object
+          properties:
+            thirdPartyConsumeMoney:
+              type: string
+              title: API消费金额
+            consumeMoney:
+              type: string
+              title: 运行时长消耗金额
+            consumeCoins:
+              type: string
+              title: 运行消耗的RH币
+            taskCostTime:
+              type: string
+              title: 运行耗时
+              description: 工作流相关
+          x-apifox-orders:
+            - thirdPartyConsumeMoney
+            - consumeMoney
+            - consumeCoins
+            - taskCostTime
+          description: 用量
+          required:
+            - thirdPartyConsumeMoney
+            - consumeMoney
+            - consumeCoins
+            - taskCostTime
+      required:
+        - taskId
+        - status
+        - errorMessage
+        - clientId
+        - promptTips
+        - errorCode
+        - results
+        - failedReason
+        - usage
+      x-apifox-orders:
+        - taskId
+        - status
+        - errorCode
+        - errorMessage
+        - results
+        - clientId
+        - promptTips
+        - failedReason
+        - usage
+      x-apifox-folder: ''
+  securitySchemes: {}
+servers:
+  - url: https://www.runninghub.cn
+    description: runninghub.cn
+security: []
+
+```
