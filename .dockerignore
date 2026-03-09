@@ -1,0 +1,7 @@
+node_modules
+.next
+.env.local
+*.md
+docs/
+skills/
+用户原始需求输入/

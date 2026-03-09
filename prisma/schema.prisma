@@ -1,0 +1,65 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model AiApp {
+  id          String       @id @default(cuid())
+  name        String
+  description String
+  icon        String       @default("sparkles")
+  rhAppId     String       @unique
+  category    String       @default("design")
+  sortOrder   Int          @default(0)
+  enabled     Boolean      @default(true)
+  multiplier  Float?
+  config      String       @default("{}")
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+  fields      AiAppField[]
+}
+
+model AiAppField {
+  id           String  @id @default(cuid())
+  appId        String
+  nodeId       String
+  fieldName    String
+  fieldType    String  // IMAGE, STRING, INT, LIST, BOOLEAN
+  label        String
+  description  String  @default("")
+  required     Boolean @default(true)
+  defaultValue String?
+  options      String? // JSON string for LIST type
+  sortOrder    Int     @default(0)
+  app          AiApp   @relation(fields: [appId], references: [id], onDelete: Cascade)
+
+  @@index([appId])
+}
+
+model KeyMultiplier {
+  id         String   @id @default(cuid())
+  apiKeyHash String   @unique
+  multiplier Float    @default(1.0)
+  note       String?
+  createdAt  DateTime @default(now())
+}
+
+model AdminUser {
+  id           String   @id @default(cuid())
+  username     String   @unique
+  passwordHash String
+  createdAt    DateTime @default(now())
+}
+
+model SystemConfig {
+  key       String   @id
+  value     String
+  updatedAt DateTime @updatedAt
+}
