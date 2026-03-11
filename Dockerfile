@@ -8,8 +8,7 @@ FROM base AS deps
 WORKDIR /app
 COPY package.json pnpm-lock.yaml ./
 COPY prisma ./prisma/
-RUN --mount=type=cache,id=pnpm,target=/root/.local/share/pnpm/store \
-    pnpm install --frozen-lockfile
+RUN pnpm install --frozen-lockfile
 
 FROM base AS builder
 WORKDIR /app
@@ -36,7 +35,9 @@ COPY --from=builder /app/prisma ./prisma
 COPY --from=builder /app/package.json ./package.json
 
 # 入口脚本需要 prisma CLI 执行 migrate + seed，seed 需要 tsx
+# seed 额外依赖 bcryptjs（standalone 未包含），从临时目录安装后复制
 RUN npm install -g prisma@6 tsx
+RUN cd /tmp && npm init -y && npm install bcryptjs && cp -r node_modules/bcryptjs /app/node_modules/bcryptjs && rm -rf /tmp/package* /tmp/node_modules
 
 # 确保数据目录存在且 nextjs 用户可写
 RUN mkdir -p /data && chown nextjs:nodejs /data && chmod 775 /data

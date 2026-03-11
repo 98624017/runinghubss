@@ -15,9 +15,9 @@ if (process.env.NODE_ENV !== "production") {
   globalForPrisma.prisma = prisma;
 }
 
-// SQLite WAL 模式优化并发性能（首次连接时执行）
+// SQLite WAL 模式优化并发性能（仅运行时执行，构建阶段跳过）
 const walInitialized = globalThis as unknown as { __walInit?: boolean };
-if (!walInitialized.__walInit) {
+if (!walInitialized.__walInit && process.env.DATABASE_URL) {
   walInitialized.__walInit = true;
   prisma.$queryRawUnsafe("PRAGMA journal_mode=WAL").catch(() => {
     // WAL 模式设置失败不阻塞启动
