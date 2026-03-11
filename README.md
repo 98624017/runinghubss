@@ -28,7 +28,7 @@ pnpm dev
 
 访问 http://localhost:3000
 
-### Docker 部署
+### Docker 部署（本地/测试）
 
 ```bash
 # 复制环境变量
@@ -40,18 +40,49 @@ cp .env.example .env
 docker compose up -d
 ```
 
+容器启动时会自动执行数据库迁移（`prisma migrate deploy`）和初始数据填充（`prisma db seed`）。
+迁移失败会中止启动，seed 失败仅记录日志不影响启动。
+
+### 生产部署（带 HTTPS）
+
+项目提供了 `deploy/` 目录用于生产环境部署，包含 Caddy 反向代理（自动 HTTPS）：
+
+```bash
+cd deploy
+
+# 复制并编辑环境变量
+cp env.production.example .env
+# 必须修改：DOMAIN、ADMIN_PASSWORD、JWT_SECRET
+
+# 启动
+docker compose -f docker-compose.prod.yml up -d
+```
+
+**持久化卷说明：**
+
+| 路径 | 用途 | 必须持久化 |
+|------|------|-----------|
+| `/data` | SQLite 数据库文件 | 是 |
+| `/app/public/images/covers` | 后台上传的应用封面图 | 建议 |
+
+> **Zeabur / 自托管平台**：设置环境变量后直接从 Dockerfile 构建即可。
+> 确保 `DATABASE_URL` 指向持久化存储路径（如 `file:/data/app.db`），
+> 并将 `/data` 目录挂载到持久卷。
+
 ## 环境变量
 
 | 变量 | 说明 | 默认值 |
 |------|------|--------|
 | `PORT` | 服务端口 | `3000` |
-| `DATABASE_URL` | SQLite 数据库路径 | `file:./prisma/app.db` |
+| `DATABASE_URL` | SQLite 数据库路径 | `file:./dev.db`（开发）/ `file:/data/app.db`（生产） |
 | `ADMIN_USERNAME` | 管理员用户名 | `admin` |
 | `ADMIN_PASSWORD` | 管理员密码 | `admin123` |
-| `JWT_SECRET` | JWT 签名密钥 | `change-me-in-production` |
+| `JWT_SECRET` | JWT 签名密钥（**生产环境必填，否则启动报错**） | 开发环境有内置默认值 |
 | `WEBHOOK_ENABLED` | 是否启用 Webhook | `false` |
 | `MAX_UPLOAD_SIZE` | 最大上传大小 (bytes) | `10485760` (10MB) |
 | `MAX_CONCURRENT_TASKS` | 最大并发任务数 | `30` |
+
+> 生成 JWT_SECRET：`openssl rand -hex 32`
 
 ## 后台管理
 
