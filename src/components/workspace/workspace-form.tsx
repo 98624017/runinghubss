@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback, useEffect, useMemo, useRef } from "react";
+import { useRouter } from "next/navigation";
 import { Loader2, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
@@ -45,6 +46,7 @@ export function WorkspaceForm({
   onTaskCreated,
   initialValues,
 }: WorkspaceFormProps) {
+  const router = useRouter();
   const [values, setValues] = useState<Record<string, string>>(() => {
     const initial: Record<string, string> = {};
     for (const field of fields) {
@@ -117,7 +119,8 @@ export function WorkspaceForm({
   const handleSubmit = async () => {
     // 校验 API Key
     if (!apiKey) {
-      toast.error("请先设置 API Key");
+      toast.error("请先设置 API Key，正在跳转到设置页...");
+      router.push("/settings");
       return;
     }
 
@@ -354,9 +357,12 @@ export function WorkspaceForm({
       </Button>
 
       {!apiKey && (
-        <p className="text-xs text-muted-foreground text-center">
-          请先在设置中配置 API Key
-        </p>
+        <button
+          onClick={() => router.push("/settings")}
+          className="text-xs text-primary hover:underline text-center cursor-pointer"
+        >
+          请先在设置中配置 API Key →
+        </button>
       )}
     </div>
   );
