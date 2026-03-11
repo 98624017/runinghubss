@@ -2,8 +2,11 @@ import { SignJWT, jwtVerify } from "jose";
 import { NextRequest, NextResponse } from "next/server";
 import { ApiResponse } from "./types";
 
-const JWT_SECRET_KEY = process.env.JWT_SECRET || "default-dev-secret-change-in-prod";
-const secret = new TextEncoder().encode(JWT_SECRET_KEY);
+const JWT_SECRET_KEY = process.env.JWT_SECRET;
+if (!JWT_SECRET_KEY && process.env.NODE_ENV === "production") {
+  throw new Error("JWT_SECRET environment variable is required in production");
+}
+const secret = new TextEncoder().encode(JWT_SECRET_KEY || "default-dev-secret-change-in-prod");
 
 export async function signToken(payload: { sub: string; username: string }): Promise<string> {
   return new SignJWT(payload)
