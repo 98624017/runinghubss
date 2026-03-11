@@ -9,6 +9,8 @@ services:
       - ADMIN_PASSWORD=${ADMIN_PASSWORD:-admin123}
       - JWT_SECRET=${JWT_SECRET:-change-me}
       - WEBHOOK_ENABLED=${WEBHOOK_ENABLED:-false}
+      - MAX_UPLOAD_SIZE=${MAX_UPLOAD_SIZE:-10485760}
+      - MAX_CONCURRENT_TASKS=${MAX_CONCURRENT_TASKS:-30}
     volumes:
       - app-data:/data
     restart: unless-stopped

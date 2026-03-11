@@ -1,0 +1,35 @@
+services:
+  caddy:
+    image: caddy:2
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      - DOMAIN=${DOMAIN}
+      - CADDY_EMAIL=${CADDY_EMAIL:-}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - ./caddy/data:/data
+      - ./caddy/config:/config
+    depends_on:
+      - app
+
+  app:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    environment:
+      - DATABASE_URL=file:/data/app.db
+      - ADMIN_USERNAME=${ADMIN_USERNAME}
+      - ADMIN_PASSWORD=${ADMIN_PASSWORD}
+      - JWT_SECRET=${JWT_SECRET}
+      - WEBHOOK_ENABLED=${WEBHOOK_ENABLED:-false}
+      - MAX_UPLOAD_SIZE=${MAX_UPLOAD_SIZE:-10485760}
+      - MAX_CONCURRENT_TASKS=${MAX_CONCURRENT_TASKS:-30}
+    volumes:
+      # SQLite 数据库（必须持久化）
+      - ./data:/data
+      # 后台封面图上传目录（建议持久化，避免升级丢图）
+      - ./covers:/app/public/images/covers
