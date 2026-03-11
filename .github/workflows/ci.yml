@@ -11,6 +11,8 @@ jobs:
     name: Lint & Type Check
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    env:
+      DATABASE_URL: file:./ci-test.db
 
     steps:
       - uses: actions/checkout@v4
@@ -45,4 +47,3 @@ jobs:
           ADMIN_USERNAME: ci
           ADMIN_PASSWORD: ci
           JWT_SECRET: ci-secret-not-real
-          DATABASE_URL: file:./ci-test.db

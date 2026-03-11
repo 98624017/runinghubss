@@ -75,11 +75,14 @@ function TaskElapsed({ startedAt, isActive }: { startedAt: number; isActive: boo
 /* ------------------------------------------------------------------ */
 
 export function TaskPanel() {
-  // 细粒度选择器：只提取序列化后的任务列表，避免 Map 引用变化导致重渲染
-  const taskList = useTaskStore((s) => {
-    const tasks = Array.from(s.activeTasks.values());
+  // 仅取稳定的 Map 引用，派生排序放到 useMemo 中
+  // 避免 selector 每次返回新数组导致 React 19 useSyncExternalStore 无限循环
+  const activeTasks = useTaskStore((s) => s.activeTasks);
+
+  const taskList = useMemo(() => {
+    const tasks = Array.from(activeTasks.values());
     return tasks.sort((a, b) => b.startedAt - a.startedAt);
-  });
+  }, [activeTasks]);
 
   // 进行中任务数量（QUEUED + RUNNING）
   const pendingCount = useMemo(
