@@ -12,13 +12,20 @@ import {
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
 } from "@/components/ui/select";
 import { Trash2, Eye } from "lucide-react";
 import { db } from "@/lib/db";
 import { toast } from "sonner";
 import type { TaskHistoryItem } from "@/lib/types";
 import type { TaskStatus } from "@/lib/constants";
+
+const STATUS_LABELS: Record<string, string> = {
+  all: "全部状态",
+  SUCCESS: "已完成",
+  FAILED: "失败",
+  RUNNING: "运行中",
+  QUEUED: "排队中",
+};
 
 export function TaskList() {
   const [tasks, setTasks] = useState<TaskHistoryItem[]>([]);
@@ -99,7 +106,7 @@ export function TaskList() {
       <div className="flex flex-wrap items-center gap-3">
         <Select value={filterApp} onValueChange={(v) => setFilterApp(v ?? "all")}>
           <SelectTrigger className="w-[180px]">
-            <SelectValue placeholder="全部应用" />
+            <span>{filterApp === "all" ? "全部应用" : filterApp}</span>
           </SelectTrigger>
           <SelectContent>
             <SelectItem value="all">全部应用</SelectItem>
@@ -113,7 +120,7 @@ export function TaskList() {
 
         <Select value={filterStatus} onValueChange={(v) => setFilterStatus(v ?? "all")}>
           <SelectTrigger className="w-[140px]">
-            <SelectValue placeholder="全部状态" />
+            <span>{STATUS_LABELS[filterStatus] ?? filterStatus}</span>
           </SelectTrigger>
           <SelectContent>
             <SelectItem value="all">全部状态</SelectItem>

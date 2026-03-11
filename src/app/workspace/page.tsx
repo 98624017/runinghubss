@@ -9,6 +9,7 @@ interface AppItem {
   name: string;
   description: string;
   icon: string;
+  coverImage?: string;
 }
 
 export default function WorkspacePage() {
@@ -33,13 +34,13 @@ export default function WorkspacePage() {
       </div>
 
       {loading ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 max-w-5xl">
           {Array.from({ length: 4 }).map((_, i) => (
-            <Skeleton key={i} className="h-48 rounded-lg" />
+            <Skeleton key={i} className="aspect-[3/4] rounded-2xl" />
           ))}
         </div>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 max-w-5xl">
           {apps.map((app) => (
             <AppCard key={app.id} {...app} />
           ))}

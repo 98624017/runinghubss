@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -9,8 +9,9 @@ import { Switch } from "@/components/ui/switch";
 import { FieldEditor, type FieldConfig } from "./field-editor";
 import { CurlParserDialog } from "./curl-parser-dialog";
 import { adminApiClient } from "@/lib/admin-api-client";
-import { Loader2, Import } from "lucide-react";
+import { Loader2, Import, Upload, Link as LinkIcon, X } from "lucide-react";
 import { toast } from "sonner";
+import Image from "next/image";
 
 interface AppFormData {
   name: string;
@@ -18,12 +19,13 @@ interface AppFormData {
   icon: string;
   rhAppId: string;
   category: string;
+  coverImage: string;
   sortOrder: number;
   enabled: boolean;
 }
 
 interface AppFormProps {
-  initialData?: AppFormData & { id?: string; fields?: FieldConfig[] };
+  initialData?: Partial<AppFormData> & { id?: string; fields?: FieldConfig[] };
   mode: "create" | "edit";
 }
 
@@ -31,6 +33,9 @@ export function AppForm({ initialData, mode }: AppFormProps) {
   const router = useRouter();
   const [saving, setSaving] = useState(false);
   const [curlOpen, setCurlOpen] = useState(false);
+  const [coverUploading, setCoverUploading] = useState(false);
+  const [coverUrl, setCoverUrl] = useState("");
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const [formData, setFormData] = useState<AppFormData>({
     name: initialData?.name ?? "",
@@ -38,6 +43,7 @@ export function AppForm({ initialData, mode }: AppFormProps) {
     icon: initialData?.icon ?? "🏠",
     rhAppId: initialData?.rhAppId ?? "",
     category: initialData?.category ?? "decoration",
+    coverImage: initialData?.coverImage ?? "",
     sortOrder: initialData?.sortOrder ?? 0,
     enabled: initialData?.enabled ?? true,
   });
@@ -56,6 +62,58 @@ export function AppForm({ initialData, mode }: AppFormProps) {
     toast.success(`导入 ${importedFields.length} 个字段`);
   };
 
+  /** 通过 URL 上传封面图 */
+  const handleCoverFromUrl = async () => {
+    if (!coverUrl.trim()) return;
+    setCoverUploading(true);
+    try {
+      const result = await adminApiClient<{ url: string }>("/api/admin/upload-cover", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ url: coverUrl.trim() }),
+      });
+      if (result.success && result.data) {
+        updateField("coverImage", result.data.url);
+        setCoverUrl("");
+        toast.success("封面图上传成功");
+      } else {
+        toast.error(result.error || "上传失败");
+      }
+    } catch {
+      toast.error("网络错误");
+    } finally {
+      setCoverUploading(false);
+    }
+  };
+
+  /** 通过文件上传封面图 */
+  const handleCoverFromFile = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    setCoverUploading(true);
+    try {
+      const body = new FormData();
+      body.append("file", file);
+      const result = await adminApiClient<{ url: string }>("/api/admin/upload-cover", {
+        method: "POST",
+        body,
+        // 不设 Content-Type，让 fetch 自动处理 multipart boundary
+        rawBody: true,
+      });
+      if (result.success && result.data) {
+        updateField("coverImage", result.data.url);
+        toast.success("封面图上传成功");
+      } else {
+        toast.error(result.error || "上传失败");
+      }
+    } catch {
+      toast.error("网络错误");
+    } finally {
+      setCoverUploading(false);
+      if (fileInputRef.current) fileInputRef.current.value = "";
+    }
+  };
+
   const handleSubmit = async () => {
     if (!formData.name || !formData.rhAppId) {
       toast.error("请填写应用名称和 RunningHub App ID");
@@ -66,10 +124,11 @@ export function AppForm({ initialData, mode }: AppFormProps) {
     try {
       const payload = {
         ...formData,
+        coverImage: formData.coverImage === "" ? null : formData.coverImage || undefined,
         fields: fields.map((f) => ({
           ...f,
-          defaultValue: f.defaultValue || null,
-          options: f.options || null,
+          defaultValue: f.defaultValue || undefined,
+          options: f.options || undefined,
         })),
       };
 
@@ -165,6 +224,88 @@ export function AppForm({ initialData, mode }: AppFormProps) {
             onCheckedChange={(v) => updateField("enabled", v)}
           />
           <label className="text-sm">启用</label>
+        </div>
+
+        {/* 封面图 */}
+        <div className="space-y-3">
+          <label className="text-sm text-muted-foreground">封面图</label>
+
+          {/* 预览区 */}
+          {formData.coverImage && (
+            <div className="relative inline-block">
+              <Image
+                src={formData.coverImage}
+                alt="封面预览"
+                width={200}
+                height={150}
+                className="rounded-lg border object-cover"
+              />
+              <button
+                type="button"
+                onClick={() => updateField("coverImage", "")}
+                className="absolute -top-2 -right-2 rounded-full bg-destructive text-destructive-foreground p-1 hover:bg-destructive/90 transition-colors"
+              >
+                <X className="h-3 w-3" />
+              </button>
+            </div>
+          )}
+
+          {/* URL 输入 */}
+          <div className="flex gap-2">
+            <div className="relative flex-1">
+              <LinkIcon className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+              <Input
+                placeholder="粘贴图片 URL"
+                value={coverUrl}
+                onChange={(e) => setCoverUrl(e.target.value)}
+                className="pl-9"
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    e.preventDefault();
+                    handleCoverFromUrl();
+                  }
+                }}
+              />
+            </div>
+            <Button
+              type="button"
+              variant="outline"
+              size="sm"
+              onClick={handleCoverFromUrl}
+              disabled={coverUploading || !coverUrl.trim()}
+            >
+              {coverUploading ? (
+                <Loader2 className="h-4 w-4 animate-spin" />
+              ) : (
+                "确认"
+              )}
+            </Button>
+          </div>
+
+          {/* 文件上传 */}
+          <div>
+            <input
+              ref={fileInputRef}
+              type="file"
+              accept="image/*"
+              className="hidden"
+              onChange={handleCoverFromFile}
+            />
+            <Button
+              type="button"
+              variant="outline"
+              size="sm"
+              onClick={() => fileInputRef.current?.click()}
+              disabled={coverUploading}
+            >
+              {coverUploading ? (
+                <Loader2 className="h-4 w-4 animate-spin mr-1" />
+              ) : (
+                <Upload className="h-4 w-4 mr-1" />
+              )}
+              上传图片
+            </Button>
+          </div>
         </div>
       </div>
 

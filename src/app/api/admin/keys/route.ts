@@ -3,6 +3,7 @@ import { prisma } from "@/lib/prisma";
 import { withAdminAuth } from "@/lib/auth";
 import { keyMultiplierSchema } from "@/lib/schemas/admin";
 import { hashApiKey, maskApiKey } from "@/lib/utils/crypto";
+import { invalidateVerifiedKeyCache } from "@/lib/middleware/api-key";
 
 export async function GET(req: NextRequest) {
   return withAdminAuth(req, async () => {
@@ -48,6 +49,9 @@ export async function POST(req: NextRequest) {
           note: note || maskApiKey(apiKey),
         },
       });
+
+      // 立即同步同进程缓存状态，避免短时间内“旧缓存”影响鉴权
+      invalidateVerifiedKeyCache(apiKeyHash);
 
       return NextResponse.json({ success: true, data: result });
     } catch (error) {

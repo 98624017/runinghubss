@@ -6,7 +6,15 @@ import { MAX_UPLOAD_SIZE, ACCEPTED_IMAGE_TYPES } from "@/lib/constants";
 export async function POST(req: NextRequest) {
   return withApiKey(req, async (_req, apiKey) => {
     try {
-      const formData = await req.formData();
+      let formData: FormData;
+      try {
+        formData = await req.formData();
+      } catch {
+        return NextResponse.json(
+          { success: false, error: "请上传文件（multipart/form-data）" },
+          { status: 400 }
+        );
+      }
       const file = formData.get("file") as File | null;
 
       if (!file) {

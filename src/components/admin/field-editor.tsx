@@ -82,7 +82,7 @@ export function FieldEditor({ fields, onChange }: FieldEditorProps) {
 
       {fields.length === 0 && (
         <p className="text-sm text-muted-foreground text-center py-8">
-          暂无字段，点击"添加字段"或使用"从 curl 导入"
+          暂无字段，点击&ldquo;添加字段&rdquo;或使用&ldquo;从 curl 导入&rdquo;
         </p>
       )}
 

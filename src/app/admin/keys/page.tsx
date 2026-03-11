@@ -1,9 +1,29 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { adminApiClient } from "@/lib/admin-api-client";
 import { Button } from "@/components/ui/button";
+import { Skeleton } from "@/components/ui/skeleton";
 import { KeyMultiplierForm } from "@/components/admin/key-multiplier-form";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
 import { Plus, Trash2 } from "lucide-react";
 import { toast } from "sonner";
 
@@ -20,30 +40,32 @@ export default function AdminKeysPage() {
   const [keys, setKeys] = useState<KeyItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [formOpen, setFormOpen] = useState(false);
+  const [tick, setTick] = useState(0);
 
-  const loadKeys = async () => {
-    const result = await adminApiClient<KeyItem[]>("/api/admin/keys");
-    if (result.success && result.data) {
-      setKeys(result.data);
-    }
-    setLoading(false);
-  };
+  const refresh = useCallback(() => setTick((t) => t + 1), []);
 
   useEffect(() => {
-    loadKeys();
-  }, []);
+    let cancelled = false;
+    async function fetchKeys() {
+      const result = await adminApiClient<KeyItem[]>("/api/admin/keys");
+      if (cancelled) return;
+      if (result.success && result.data) setKeys(result.data);
+      setLoading(false);
+    }
+    void fetchKeys();
+    return () => {
+      cancelled = true;
+    };
+  }, [tick]);
 
   const handleDelete = async (id: string) => {
-    const confirmed = window.confirm("确定删除该 Key 倍率配置？");
-    if (!confirmed) return;
-
     const result = await adminApiClient(`/api/admin/keys/${id}`, {
       method: "DELETE",
     });
 
     if (result.success) {
       toast.success("已删除");
-      loadKeys();
+      refresh();
     } else {
       toast.error(result.error || "删除失败");
     }
@@ -58,57 +80,123 @@ export default function AdminKeysPage() {
             为特定 API Key 设置计费倍率
           </p>
         </div>
-        <Button onClick={() => setFormOpen(true)}>
-          <Plus className="h-4 w-4 mr-2" />
+        <Button onClick={() => setFormOpen(true)} className="gap-2">
+          <Plus className="h-4 w-4" />
           添加倍率
         </Button>
       </div>
 
       {loading ? (
-        <p className="text-muted-foreground">加载中...</p>
+        <div className="rounded-lg border">
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead>API Key</TableHead>
+                <TableHead>倍率</TableHead>
+                <TableHead>备注</TableHead>
+                <TableHead>创建时间</TableHead>
+                <TableHead>操作</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {Array.from({ length: 3 }).map((_, i) => (
+                <TableRow key={i}>
+                  <TableCell>
+                    <Skeleton className="h-4 w-32" />
+                  </TableCell>
+                  <TableCell>
+                    <Skeleton className="h-4 w-10" />
+                  </TableCell>
+                  <TableCell>
+                    <Skeleton className="h-4 w-20" />
+                  </TableCell>
+                  <TableCell>
+                    <Skeleton className="h-4 w-20" />
+                  </TableCell>
+                  <TableCell>
+                    <Skeleton className="h-8 w-8" />
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </div>
       ) : keys.length === 0 ? (
         <p className="text-muted-foreground text-center py-12">
           暂无自定义倍率配置，所有 Key 使用全局默认倍率
         </p>
       ) : (
         <div className="rounded-lg border">
-          <div className="hidden sm:grid grid-cols-[1fr_auto_1fr_auto_auto] gap-4 px-4 py-2 border-b bg-muted/50 text-xs font-medium text-muted-foreground">
-            <span>API Key</span>
-            <span>倍率</span>
-            <span>备注</span>
-            <span>创建时间</span>
-            <span>操作</span>
-          </div>
-          {keys.map((key) => (
-            <div
-              key={key.id}
-              className="grid grid-cols-1 sm:grid-cols-[1fr_auto_1fr_auto_auto] gap-2 sm:gap-4 items-center px-4 py-3 border-b last:border-b-0 hover:bg-accent/50 transition-colors text-sm"
-            >
-              <span className="font-mono text-xs">{key.apiKeyMasked}</span>
-              <span className="font-medium">{key.multiplier}x</span>
-              <span className="text-muted-foreground text-xs">
-                {key.remark || "-"}
-              </span>
-              <span className="text-muted-foreground text-xs">
-                {new Date(key.createdAt).toLocaleDateString("zh-CN")}
-              </span>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="h-8 w-8 text-destructive"
-                onClick={() => handleDelete(key.id)}
-              >
-                <Trash2 className="h-4 w-4" />
-              </Button>
-            </div>
-          ))}
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead>API Key</TableHead>
+                <TableHead>倍率</TableHead>
+                <TableHead className="hidden sm:table-cell">备注</TableHead>
+                <TableHead className="hidden sm:table-cell">
+                  创建时间
+                </TableHead>
+                <TableHead>操作</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {keys.map((key) => (
+                <TableRow key={key.id}>
+                  <TableCell className="font-mono text-xs">
+                    {key.apiKeyMasked}
+                  </TableCell>
+                  <TableCell className="font-medium">
+                    {key.multiplier}x
+                  </TableCell>
+                  <TableCell className="hidden sm:table-cell text-muted-foreground text-xs">
+                    {key.remark || "-"}
+                  </TableCell>
+                  <TableCell className="hidden sm:table-cell text-muted-foreground text-xs">
+                    {new Date(key.createdAt).toLocaleDateString("zh-CN")}
+                  </TableCell>
+                  <TableCell>
+                    <AlertDialog>
+                      <AlertDialogTrigger
+                        render={
+                          <Button
+                            variant="ghost"
+                            size="icon"
+                            className="h-8 w-8 text-destructive"
+                          />
+                        }
+                      >
+                        <Trash2 className="h-4 w-4" />
+                      </AlertDialogTrigger>
+                      <AlertDialogContent>
+                        <AlertDialogHeader>
+                          <AlertDialogTitle>确认删除</AlertDialogTitle>
+                          <AlertDialogDescription>
+                            确定删除该 Key 倍率配置？此操作不可恢复。
+                          </AlertDialogDescription>
+                        </AlertDialogHeader>
+                        <AlertDialogFooter>
+                          <AlertDialogCancel>取消</AlertDialogCancel>
+                          <AlertDialogAction
+                            variant="destructive"
+                            onClick={() => handleDelete(key.id)}
+                          >
+                            删除
+                          </AlertDialogAction>
+                        </AlertDialogFooter>
+                      </AlertDialogContent>
+                    </AlertDialog>
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
         </div>
       )}
 
       <KeyMultiplierForm
         open={formOpen}
         onClose={() => setFormOpen(false)}
-        onSuccess={loadKeys}
+        onSuccess={refresh}
       />
     </div>
   );

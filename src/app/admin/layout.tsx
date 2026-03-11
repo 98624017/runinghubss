@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, startTransition } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { useAdminStore } from "@/lib/stores/admin-store";
 import { Button } from "@/components/ui/button";
@@ -32,7 +32,7 @@ export default function AdminLayout({
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
+    startTransition(() => setMounted(true));
   }, []);
 
   useEffect(() => {

@@ -17,6 +17,15 @@ interface Settings {
   maxConcurrentTasks: string;
 }
 
+const KNOWN_SETTINGS_KEYS: ReadonlySet<string> = new Set([
+  "siteName",
+  "defaultMultiplier",
+  "webhookEnabled",
+  "webhookUrl",
+  "maxUploadSize",
+  "maxConcurrentTasks",
+]);
+
 export default function AdminSettingsPage() {
   const [settings, setSettings] = useState<Settings>({
     siteName: "悦安居",
@@ -35,7 +44,10 @@ export default function AdminSettingsPage() {
         if (result.success && result.data) {
           const map: Record<string, string> = {};
           for (const item of result.data) {
-            map[item.key] = item.value;
+            // 只读取已知的 key，避免垃圾数据污染 state
+            if (KNOWN_SETTINGS_KEYS.has(item.key)) {
+              map[item.key] = item.value;
+            }
           }
           setSettings((prev) => ({ ...prev, ...map }));
         }

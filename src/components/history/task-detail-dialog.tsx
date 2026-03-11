@@ -7,8 +7,9 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { TaskStatusBadge } from "@/components/workspace/task-status-badge";
+import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { Download } from "lucide-react";
+import { Download, RotateCw } from "lucide-react";
 import type { TaskHistoryItem } from "@/lib/types";
 import type { TaskStatus } from "@/lib/constants";
 
@@ -19,6 +20,8 @@ interface TaskDetailDialogProps {
 }
 
 export function TaskDetailDialog({ task, open, onClose }: TaskDetailDialogProps) {
+  const router = useRouter();
+
   if (!task) return null;
 
   const outputs = task.outputs as { files?: Array<{ fileUrl: string; fileType: string }> } | null;
@@ -36,7 +39,7 @@ export function TaskDetailDialog({ task, open, onClose }: TaskDetailDialogProps)
 
   return (
     <Dialog open={open} onOpenChange={(v) => !v && onClose()}>
-      <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
+      <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto overflow-x-hidden">
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
             任务详情
@@ -71,10 +74,30 @@ export function TaskDetailDialog({ task, open, onClose }: TaskDetailDialogProps)
           {task.inputs && Object.keys(task.inputs).length > 0 && (
             <div>
               <h4 className="text-sm font-medium mb-2">输入参数</h4>
-              <div className="rounded-md bg-muted p-3 text-xs font-mono whitespace-pre-wrap">
+              <div className="rounded-md bg-muted p-3 text-xs font-mono whitespace-pre-wrap break-all overflow-hidden">
                 {JSON.stringify(task.inputs, null, 2)}
               </div>
             </div>
+          )}
+
+          {/* 复用按钮 */}
+          {task.inputs && Object.keys(task.inputs).length > 0 && (
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => {
+                // 将 inputs 存到 sessionStorage，工作区页面读取
+                sessionStorage.setItem(
+                  `yueanji-reuse-${task.appId}`,
+                  JSON.stringify(task.inputs)
+                );
+                router.push(`/workspace/${task.appId}`);
+                onClose();
+              }}
+            >
+              <RotateCw className="h-4 w-4 mr-2" />
+              复用此参数
+            </Button>
           )}
 
           {/* 结果 */}

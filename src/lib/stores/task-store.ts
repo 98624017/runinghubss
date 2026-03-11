@@ -4,6 +4,7 @@ import { addTaskRecord, updateTaskRecord } from "@/lib/db";
 import { hashApiKey } from "@/lib/utils/crypto";
 import { useApiKeyStore } from "./api-key-store";
 import { POLLING_INTERVALS } from "@/lib/constants";
+import { sendTaskNotification } from "@/lib/services/notification-service";
 
 export interface TaskInfo {
   taskId: string;
@@ -13,6 +14,7 @@ export interface TaskInfo {
   startedAt: number;
   outputs: Array<{ fileUrl: string; fileType: string }> | null;
   error?: string;
+  inputs?: Record<string, string>; // 输入参数快照，用于失败重试时恢复
 }
 
 interface TaskStoreState {
@@ -55,7 +57,7 @@ export const useTaskStore = create<TaskStoreState>((set, get) => ({
         appName: task.appName,
         taskId: task.taskId,
         status: "QUEUED",
-        inputs: {},
+        inputs: task.inputs || {},
         outputs: null,
         createdAt: new Date(),
         completedAt: null,
@@ -98,25 +100,30 @@ async function pollTask(taskId: string) {
   }
 
   try {
-    const result = await apiClient<{ taskStatus: string; taskId: string }>(
+    // 先查询状态，避免任务未完成时额外请求结果接口（更易触发限流/失败日志）
+    const statusResult = await apiClient<{ taskStatus: string; taskId: string }>(
       "/api/task/status",
       { method: "POST", body: JSON.stringify({ taskId }) }
     );
 
-    if (!result.success) {
+    if (!statusResult.success) {
       // 查询失败不立即终止，继续重试
       scheduleNextPoll(taskId);
       return;
     }
 
-    const status = result.data?.taskStatus;
+    const status = statusResult.data?.taskStatus;
 
     if (status === "SUCCESS") {
-      // 获取结果
       const resultData = await apiClient<Array<{ fileUrl: string; fileType: string }>>(
         "/api/task/result",
         { method: "POST", body: JSON.stringify({ taskId }) }
       );
+      if (!resultData.success) {
+        scheduleNextPoll(taskId);
+        return;
+      }
+
       updateTaskState(taskId, "SUCCESS", resultData.data || null);
       return;
     }
@@ -153,10 +160,18 @@ function updateTaskState(
   outputs: TaskInfo["outputs"],
   error?: string
 ) {
+  // 在 setState 内部捕获旧状态，避免竞态条件
+  let prevStatus: TaskInfo["status"] | undefined;
+  let taskAppName = "";
+  let taskAppId = "";
+
   useTaskStore.setState((state) => {
     const newMap = new Map(state.activeTasks);
     const task = newMap.get(taskId);
     if (task) {
+      prevStatus = task.status;
+      taskAppName = task.appName;
+      taskAppId = task.appId;
       newMap.set(taskId, { ...task, status, outputs, error });
     }
     return { activeTasks: newMap };
@@ -167,5 +182,21 @@ function updateTaskState(
     status,
     outputs: outputs ? { files: outputs } : null,
     completedAt: status === "SUCCESS" || status === "FAILED" ? new Date() : null,
-  });
+  }).catch(() => {});
+
+  // 任务首次变为终态时发送通知
+  const wasTerminal = prevStatus === "SUCCESS" || prevStatus === "FAILED";
+  if (!wasTerminal && (status === "SUCCESS" || status === "FAILED") && taskAppName) {
+    sendTaskNotification({
+      title: status === "SUCCESS" ? "生成完成" : "生成失败",
+      body:
+        status === "SUCCESS"
+          ? `「${taskAppName}」任务已完成，点击查看结果`
+          : `「${taskAppName}」任务失败：${error || "未知错误"}`,
+      onClick: () => {
+        // Next.js SPA 中 Notification onclick 无法使用 router，使用 location 跳转
+        window.location.href = `/workspace/${taskAppId}`;
+      },
+    });
+  }
 }

@@ -1,10 +1,16 @@
 "use client";
 
-import { useState, useCallback } from "react";
-import { Upload, X, Loader2, ImageIcon } from "lucide-react";
+import { useState, useCallback, useRef } from "react";
+import { Upload, X, Loader2, ImageIcon, Pencil } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import dynamic from "next/dynamic";
 import { apiClient } from "@/lib/api-client";
 import { toast } from "sonner";
+
+const ImageEditorDialog = dynamic(
+  () => import("@/components/workspace/image-editor").then((m) => ({ default: m.ImageEditorDialog })),
+  { ssr: false }
+);
 
 interface ImageUploaderProps {
   field: { id: string; label: string; description: string; required: boolean };
@@ -15,10 +21,14 @@ interface ImageUploaderProps {
 export function ImageUploader({ field, value, onChange }: ImageUploaderProps) {
   const [uploading, setUploading] = useState(false);
   const [preview, setPreview] = useState<string | null>(null);
+  const [editorOpen, setEditorOpen] = useState(false);
+  const [imageSize, setImageSize] = useState(0);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleUpload = useCallback(
     async (file: File) => {
       setUploading(true);
+      setImageSize(file.size);
       try {
         const formData = new FormData();
         formData.append("file", file);
@@ -70,7 +80,39 @@ export function ImageUploader({ field, value, onChange }: ImageUploaderProps) {
   const handleClear = () => {
     onChange("");
     setPreview(null);
+    setImageSize(0);
   };
+
+  // 编辑完成后重新上传
+  const handleEditorApply = useCallback(
+    async (processedBlob: Blob, previewUrl: string) => {
+      setEditorOpen(false);
+      setUploading(true);
+      try {
+        const formData = new FormData();
+        formData.append("file", processedBlob, "edited-image.webp");
+
+        const result = await apiClient<{ fileName: string }>("/api/upload", {
+          method: "POST",
+          body: formData,
+        });
+
+        if (result.success && result.data) {
+          setPreview(previewUrl);
+          setImageSize(processedBlob.size);
+          onChange(result.data.fileName);
+          toast.success("编辑后图片上传成功");
+        } else {
+          toast.error(result.error || "编辑后图片上传失败");
+        }
+      } catch {
+        toast.error("编辑后图片上传失败");
+      } finally {
+        setUploading(false);
+      }
+    },
+    [onChange]
+  );
 
   return (
     <div className="space-y-2">
@@ -101,22 +143,33 @@ export function ImageUploader({ field, value, onChange }: ImageUploaderProps) {
           >
             <X className="h-4 w-4" />
           </Button>
+          {preview && (
+            <Button
+              variant="secondary"
+              size="icon"
+              className="absolute bottom-2 right-2 h-7 w-7"
+              onClick={() => setEditorOpen(true)}
+            >
+              <Pencil className="h-4 w-4" />
+            </Button>
+          )}
         </div>
       ) : (
         <div
           className="border-2 border-dashed rounded-lg p-8 text-center cursor-pointer hover:border-primary/50 transition-colors"
           onDrop={handleDrop}
           onDragOver={(e) => e.preventDefault()}
+          onClick={() => fileInputRef.current?.click()}
         >
           <input
+            ref={fileInputRef}
             type="file"
             accept="image/jpeg,image/png,image/webp"
             className="hidden"
-            id={`upload-${field.id}`}
             onChange={handleFileSelect}
             disabled={uploading}
           />
-          <label htmlFor={`upload-${field.id}`} className="cursor-pointer">
+          <div>
             {uploading ? (
               <Loader2 className="h-8 w-8 mx-auto mb-2 animate-spin text-muted-foreground" />
             ) : (
@@ -128,8 +181,19 @@ export function ImageUploader({ field, value, onChange }: ImageUploaderProps) {
             <p className="text-xs text-muted-foreground mt-1">
               支持 JPG、PNG、WebP，最大 10MB
             </p>
-          </label>
+          </div>
         </div>
+      )}
+
+      {/* 图片编辑器 */}
+      {preview && (
+        <ImageEditorDialog
+          open={editorOpen}
+          onOpenChange={setEditorOpen}
+          imageSrc={preview}
+          imageSize={imageSize}
+          onApply={handleEditorApply}
+        />
       )}
     </div>
   );

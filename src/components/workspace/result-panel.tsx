@@ -1,18 +1,23 @@
 "use client";
 
-import { Download, RefreshCw, AlertTriangle, ImageIcon } from "lucide-react";
+import { useState } from "react";
+import { Download, RefreshCw, AlertTriangle, ImageIcon, SplitSquareVertical } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import { TaskStatusBadge } from "./task-status-badge";
+import { TaskProgress } from "./task-progress";
 import { RecentTasks } from "./recent-tasks";
+import { CompareView } from "./compare-view";
 import type { TaskInfo } from "@/lib/stores/task-store";
 import type { TaskHistoryItem } from "@/lib/types";
-import type { TaskStatus } from "@/lib/constants";
 
 interface ResultPanelProps {
   appId: string;
   currentTask: TaskInfo | null;
-  onRetry: () => void;
+  onRetry: (inputs?: Record<string, string>) => void;
   onSelectHistoryTask: (task: TaskHistoryItem) => void;
+  avgDuration?: number | null;
+  originalImageUrl?: string;
 }
 
 export function ResultPanel({
@@ -20,16 +25,22 @@ export function ResultPanel({
   currentTask,
   onRetry,
   onSelectHistoryTask,
+  avgDuration,
+  originalImageUrl,
 }: ResultPanelProps) {
-  const handleDownload = async (url: string, index: number) => {
+  const [compareIndex, setCompareIndex] = useState<number | null>(null);
+  const handleDownload = async (url: string, index: number, fileType?: string) => {
     try {
       const res = await fetch(url);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const blob = await res.blob();
+      const ext = fileType?.split("/")[1] || "png";
       const a = document.createElement("a");
       a.href = URL.createObjectURL(blob);
-      a.download = `result-${index + 1}.png`;
+      a.download = `result-${index + 1}.${ext}`;
       a.click();
-      URL.revokeObjectURL(a.href);
+      // 延迟回收，确保浏览器有时间开始下载
+      setTimeout(() => URL.revokeObjectURL(a.href), 1000);
     } catch {
       // 降级：直接打开链接
       window.open(url, "_blank");
@@ -51,23 +62,41 @@ export function ResultPanel({
             <div className="space-y-3">
               {currentTask.outputs.map((output, i) => (
                 <div key={i} className="space-y-2">
-                  <div className="relative rounded-lg border overflow-hidden bg-muted">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={output.fileUrl}
-                      alt={`生成结果 ${i + 1}`}
-                      className="w-full object-contain max-h-[500px]"
-                    />
+                  {compareIndex === i && originalImageUrl ? (
+                    <CompareView beforeImage={originalImageUrl} afterImage={output.fileUrl} />
+                  ) : (
+                    <div className="relative rounded-lg border overflow-hidden bg-muted">
+                      <Image
+                        src={output.fileUrl}
+                        alt={`生成结果 ${i + 1}`}
+                        width={800}
+                        height={500}
+                        className="w-full object-contain max-h-[500px]"
+                        unoptimized
+                      />
+                    </div>
+                  )}
+                  <div className="flex gap-2">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="flex-1"
+                      onClick={() => handleDownload(output.fileUrl, i, output.fileType)}
+                    >
+                      <Download className="h-4 w-4 mr-2" />
+                      下载结果 {currentTask.outputs!.length > 1 ? i + 1 : ""}
+                    </Button>
+                    {originalImageUrl && (
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={() => setCompareIndex(compareIndex === i ? null : i)}
+                      >
+                        <SplitSquareVertical className="h-4 w-4 mr-2" />
+                        {compareIndex === i ? "退出对比" : "对比原图"}
+                      </Button>
+                    )}
                   </div>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="w-full"
-                    onClick={() => handleDownload(output.fileUrl, i)}
-                  >
-                    <Download className="h-4 w-4 mr-2" />
-                    下载结果 {currentTask.outputs!.length > 1 ? i + 1 : ""}
-                  </Button>
                 </div>
               ))}
               <p className="text-xs text-muted-foreground flex items-center">
@@ -79,13 +108,7 @@ export function ResultPanel({
 
           {/* 运行中 */}
           {(currentTask.status === "RUNNING" || currentTask.status === "QUEUED") && (
-            <div className="flex flex-col items-center justify-center py-12 text-muted-foreground">
-              <div className="h-12 w-12 rounded-full border-2 border-primary border-t-transparent animate-spin mb-4" />
-              <p className="text-sm">
-                {currentTask.status === "QUEUED" ? "等待服务器处理..." : "AI 正在生成中..."}
-              </p>
-              <p className="text-xs mt-1">请耐心等待，通常需要 30-120 秒</p>
-            </div>
+            <TaskProgress task={currentTask} avgDuration={avgDuration ?? null} />
           )}
 
           {/* 失败 */}
@@ -94,7 +117,7 @@ export function ResultPanel({
               <AlertTriangle className="h-10 w-10 text-destructive mb-3" />
               <p className="text-sm text-destructive mb-1">生成失败</p>
               <p className="text-xs mb-4">{currentTask.error || "未知错误，请重试"}</p>
-              <Button variant="outline" size="sm" onClick={onRetry}>
+              <Button variant="outline" size="sm" onClick={() => onRetry(currentTask.inputs)}>
                 <RefreshCw className="h-4 w-4 mr-2" />
                 重新生成
               </Button>

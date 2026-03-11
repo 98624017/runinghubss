@@ -11,6 +11,7 @@ export const createAppSchema = z.object({
   icon: z.string().default("sparkles"),
   rhAppId: z.string().min(1, "RunningHub应用ID不能为空"),
   category: z.string().default("design"),
+  coverImage: z.string().nullable().optional(),
   sortOrder: z.number().default(0),
   enabled: z.boolean().default(true),
   fields: z.array(
@@ -21,8 +22,8 @@ export const createAppSchema = z.object({
       label: z.string().min(1),
       description: z.string().default(""),
       required: z.boolean().default(true),
-      defaultValue: z.string().optional(),
-      options: z.string().optional(),
+      defaultValue: z.string().nullable().optional(),
+      options: z.string().nullable().optional(),
       sortOrder: z.number().default(0),
     })
   ),

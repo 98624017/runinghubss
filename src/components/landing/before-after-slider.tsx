@@ -22,12 +22,12 @@ export function BeforeAfterSlider({
   const containerRef = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
-  const [hasAnimated, setHasAnimated] = useState(false);
+  const hasAnimatedRef = useRef(false);
 
   // 初始自动演示动画
   useEffect(() => {
-    if (hasAnimated) return;
-    setHasAnimated(true);
+    if (hasAnimatedRef.current) return;
+    hasAnimatedRef.current = true;
 
     const controls = animate(30, 70, {
       duration: 1.2,
@@ -43,7 +43,7 @@ export function BeforeAfterSlider({
     });
 
     return () => controls.stop();
-  }, [hasAnimated]);
+  }, []);
 
   const updatePosition = useCallback(
     (clientX: number) => {

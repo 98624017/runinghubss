@@ -13,6 +13,7 @@ interface AppDetail {
   icon: string;
   rhAppId: string;
   category: string;
+  coverImage?: string;
   sortOrder: number;
   enabled: boolean;
   fields: Array<{

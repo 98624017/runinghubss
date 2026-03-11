@@ -54,3 +54,13 @@ export interface ApiResponse<T = unknown> {
   data?: T;
   error?: string;
 }
+
+export interface Template {
+  id?: number;
+  name: string;
+  appId: string;
+  apiKeyHash: string;
+  values: Record<string, string>; // 不含 IMAGE 类型字段
+  createdAt: Date;
+  updatedAt: Date;
+}

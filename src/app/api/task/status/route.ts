@@ -17,7 +17,12 @@ export async function POST(req: NextRequest) {
       }
 
       const result = await getTaskStatus(apiKey, parsed.data.taskId);
-      return NextResponse.json({ success: true, data: result.data });
+      // V1 接口返回 {code: 0, data: "RUNNING"}，data 是字符串
+      // 前端 task-store 期望 {taskStatus: string} 格式
+      return NextResponse.json({
+        success: true,
+        data: { taskStatus: result.data, taskId: parsed.data.taskId },
+      });
     } catch (error) {
       const msg = error instanceof Error ? error.message : "查询失败";
       return NextResponse.json({ success: false, error: msg }, { status: 500 });

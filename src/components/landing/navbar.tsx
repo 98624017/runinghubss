@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Home, Menu } from "lucide-react";
+import Image from "next/image";
+import { Menu } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import {
   Sheet,
@@ -42,8 +43,8 @@ export function Navbar() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         {/* 品牌 */}
         <Link href="/" className="flex items-center gap-2">
-          <Home className="h-5 w-5 text-primary" />
-          <span className="text-lg font-bold text-foreground">悦安居</span>
+          <Image src="/images/logo.png" alt="悦安居" width={28} height={28} className="rounded" />
+          <span className={cn("text-lg font-bold", scrolled ? "text-foreground" : "text-white")}>悦安居</span>
         </Link>
 
         {/* 桌面端导航 */}
@@ -52,7 +53,12 @@ export function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className={cn(
+                "text-sm transition-colors",
+                scrolled
+                  ? "text-muted-foreground hover:text-foreground"
+                  : "text-white/80 hover:text-white"
+              )}
             >
               {link.label}
             </a>
@@ -77,7 +83,8 @@ export function Navbar() {
           <SheetTrigger
             className={cn(
               buttonVariants({ variant: "ghost", size: "icon" }),
-              "md:hidden"
+              "md:hidden",
+              !scrolled && "text-white hover:text-white/80"
             )}
           >
             <Menu className="h-5 w-5" />

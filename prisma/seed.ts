@@ -18,23 +18,23 @@ async function main() {
     },
   });
 
-  // 全局默认倍率
+  // 全局默认倍率 — key 使用 camelCase 与前端设置页保持一致
   await prisma.systemConfig.upsert({
-    where: { key: "global_multiplier" },
+    where: { key: "defaultMultiplier" },
     update: {},
-    create: { key: "global_multiplier", value: "1.5" },
+    create: { key: "defaultMultiplier", value: "1.5" },
   });
 
   await prisma.systemConfig.upsert({
-    where: { key: "webhook_enabled" },
+    where: { key: "webhookEnabled" },
     update: {},
-    create: { key: "webhook_enabled", value: "false" },
+    create: { key: "webhookEnabled", value: "false" },
   });
 
   await prisma.systemConfig.upsert({
-    where: { key: "site_name" },
+    where: { key: "siteName" },
     update: {},
-    create: { key: "site_name", value: "悦安居" },
+    create: { key: "siteName", value: "悦安居" },
   });
 
   // ============================================

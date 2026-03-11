@@ -50,3 +50,14 @@ next-env.d.ts
 # local reference materials
 /用户原始需求输入/
 /.spec-workflow/
+用户需求.md
+
+# test artifacts
+/test-screenshots/
+/.playwright-mcp/
+
+# temporary images & screenshots in root
+/wechat_*.png
+/微信图片_*.png
+/homepage-*.png
+/workspace-*.png

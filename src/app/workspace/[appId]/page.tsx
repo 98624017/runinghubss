@@ -6,6 +6,8 @@ import { WorkspaceForm } from "@/components/workspace/workspace-form";
 import { ResultPanel } from "@/components/workspace/result-panel";
 import { useTaskStore, type TaskInfo } from "@/lib/stores/task-store";
 import { Skeleton } from "@/components/ui/skeleton";
+import { iconMap } from "@/lib/icon-map";
+import { OnboardingGuide } from "@/components/workspace/onboarding-guide";
 import type { TaskHistoryItem } from "@/lib/types";
 
 interface AppDetail {
@@ -37,6 +39,7 @@ export default function WorkspaceAppPage() {
   const [error, setError] = useState<string | null>(null);
   const [currentTaskId, setCurrentTaskId] = useState<string | null>(null);
   const [historyResult, setHistoryResult] = useState<TaskHistoryItem | null>(null);
+  const [reuseValues, setReuseValues] = useState<Record<string, string> | undefined>(undefined);
 
   // 从 store 获取当前任务信息
   const currentTask = useTaskStore((s) =>
@@ -49,6 +52,15 @@ export default function WorkspaceAppPage() {
       .then((data) => {
         if (data.success) {
           setApp(data.data);
+          // 检查是否有复用参数
+          const reuseKey = `yueanji-reuse-${appId}`;
+          const saved = sessionStorage.getItem(reuseKey);
+          if (saved) {
+            try {
+              setReuseValues(JSON.parse(saved));
+              sessionStorage.removeItem(reuseKey);
+            } catch { /* ignore */ }
+          }
         } else {
           setError(data.error || "应用不存在");
         }
@@ -62,9 +74,12 @@ export default function WorkspaceAppPage() {
     setHistoryResult(null);
   }, []);
 
-  const handleRetry = useCallback(() => {
+  const handleRetry = useCallback((inputs?: Record<string, string>) => {
     setCurrentTaskId(null);
     setHistoryResult(null);
+    if (inputs && Object.keys(inputs).length > 0) {
+      setReuseValues(inputs);
+    }
   }, []);
 
   const handleSelectHistoryTask = useCallback((task: TaskHistoryItem) => {
@@ -92,14 +107,14 @@ export default function WorkspaceAppPage() {
 
   if (loading) {
     return (
-      <div className="p-6 grid grid-cols-1 lg:grid-cols-5 gap-6">
-        <div className="lg:col-span-2 space-y-4">
+      <div className="p-6 grid grid-cols-1 lg:grid-cols-10 gap-6">
+        <div className="lg:col-span-3 space-y-4">
           <Skeleton className="h-8 w-48" />
           <Skeleton className="h-32" />
           <Skeleton className="h-32" />
           <Skeleton className="h-12" />
         </div>
-        <div className="lg:col-span-3">
+        <div className="lg:col-span-7">
           <Skeleton className="h-96" />
         </div>
       </div>
@@ -114,12 +129,16 @@ export default function WorkspaceAppPage() {
     );
   }
 
+  const AppIcon = iconMap[app.icon] ?? iconMap.sparkles;
+
   return (
     <div className="p-6">
       {/* 应用标题 */}
       <div className="mb-6">
         <div className="flex items-center gap-3">
-          <span className="text-3xl">{app.icon}</span>
+          <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+            <AppIcon className="h-5 w-5 text-primary" />
+          </div>
           <div>
             <h1 className="text-xl font-bold">{app.name}</h1>
             <p className="text-sm text-muted-foreground">{app.description}</p>
@@ -128,21 +147,22 @@ export default function WorkspaceAppPage() {
       </div>
 
       {/* 左右分栏 */}
-      <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
-        {/* 左栏：输入表单 (40%) */}
-        <div className="lg:col-span-2">
+      <div className="grid grid-cols-1 lg:grid-cols-10 gap-6">
+        {/* 左栏：输入表单 (30%) */}
+        <div className="lg:col-span-3">
           <div className="rounded-lg border p-4">
             <WorkspaceForm
               appId={app.id}
               appName={app.name}
               fields={app.fields}
               onTaskCreated={handleTaskCreated}
+              initialValues={reuseValues}
             />
           </div>
         </div>
 
-        {/* 右栏：结果展示 (60%) */}
-        <div className="lg:col-span-3">
+        {/* 右栏：结果展示 (70%) */}
+        <div className="lg:col-span-7">
           <div className="rounded-lg border p-4">
             <ResultPanel
               appId={app.id}
@@ -153,6 +173,7 @@ export default function WorkspaceAppPage() {
           </div>
         </div>
       </div>
+      <OnboardingGuide />
     </div>
   );
 }

@@ -17,6 +17,7 @@ model AiApp {
   icon        String       @default("sparkles")
   rhAppId     String       @unique
   category    String       @default("design")
+  coverImage  String?
   sortOrder   Int          @default(0)
   enabled     Boolean      @default(true)
   multiplier  Float?

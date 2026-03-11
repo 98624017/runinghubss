@@ -37,8 +37,61 @@ async function rhFetch({ apiKey, endpoint, body, useHeaderAuth }: RHRequestOptio
 
   const data = await res.json();
 
-  if (data.code !== 0 && data.code !== 200) {
-    throw new Error(mapRunningHubError(data.code, data.msg));
+  // V2 接口（/openapi/v2/...）不使用 {code, msg, data} 信封，直接返回平铺数据
+  // V1 接口使用 {code: 0, msg: "success", data: ...} 格式
+  const isV2 = endpoint.startsWith("/openapi/v2/");
+
+  if (isV2) {
+    // V2 错误可能通过三种形态传递：
+    // 1) errorCode/errorMessage（平铺）
+    // 2) {code, msg, data}（例如 TOKEN_INVALID）
+    // 3) 成功时直接返回平铺数据（无信封）
+
+    // 1) errorCode/errorMessage
+    const errorCodeRaw = data?.errorCode;
+    const hasErrorCode =
+      errorCodeRaw !== undefined &&
+      errorCodeRaw !== null &&
+      String(errorCodeRaw) !== "";
+    if (hasErrorCode) {
+      const errorCodeNum = Number(errorCodeRaw);
+      const isOk = Number.isFinite(errorCodeNum) && errorCodeNum === 0;
+      if (!isOk) {
+        throw new Error(
+          mapRunningHubError(
+            Number.isFinite(errorCodeNum) ? errorCodeNum : 0,
+            typeof data?.errorMessage === "string" ? data.errorMessage : undefined
+          )
+        );
+      }
+    }
+
+    // 2) 兼容 {code, msg, data} 信封式响应：不要二次包装
+    const maybeEnvelope =
+      data &&
+      typeof data === "object" &&
+      "code" in data &&
+      typeof (data as { msg?: unknown }).msg === "string";
+    if (maybeEnvelope) {
+      const codeRaw = (data as { code?: unknown }).code;
+      const codeNum = typeof codeRaw === "number" ? codeRaw : Number(codeRaw);
+      if (Number.isFinite(codeNum) && codeNum !== 0 && codeNum !== 200) {
+        throw new Error(mapRunningHubError(codeNum, (data as { msg: string }).msg));
+      }
+      return data;
+    }
+
+    // 3) 平铺数据：包装为 V1 格式以保持内部一致性
+    return { code: 0, msg: "success", data };
+  }
+
+  // V1 信封格式检查
+  const codeRaw = data?.code;
+  const codeNum = typeof codeRaw === "number" ? codeRaw : Number(codeRaw);
+  if (!Number.isFinite(codeNum) || (codeNum !== 0 && codeNum !== 200)) {
+    throw new Error(
+      mapRunningHubError(Number.isFinite(codeNum) ? codeNum : 0, data?.msg)
+    );
   }
 
   return data;
@@ -106,11 +159,26 @@ export async function getTaskResult(apiKey: string, taskId: string) {
   });
 }
 
-// 查询账户余额
+// 查询账户余额 — 使用 V1 接口 /uc/openapi/accountStatus
+// 注意：此接口 body 中 key 字段名为 apikey（小写 k）
 export async function getAccountBalance(apiKey: string) {
-  return rhFetch({
-    apiKey,
-    endpoint: "/openapi/v2/user/balance",
-    useHeaderAuth: true,
+  const url = `${RH_API_BASE}/uc/openapi/accountStatus`;
+
+  const res = await fetch(url, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ apikey: apiKey }),
   });
+
+  if (!res.ok) {
+    throw new Error(mapRunningHubError(res.status));
+  }
+
+  const data = await res.json();
+
+  if (data.code !== 0) {
+    throw new Error(mapRunningHubError(data.code, data.msg));
+  }
+
+  return data;
 }
