@@ -1,4 +1,5 @@
-import "dotenv/config";
+// 本地开发加载 .env；Docker 中环境变量由容器注入，dotenv 可能不存在
+try { require("dotenv/config"); } catch {}
 import { PrismaClient } from "@prisma/client";
 import { hashSync } from "bcryptjs";
 

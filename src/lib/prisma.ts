@@ -19,7 +19,7 @@ if (process.env.NODE_ENV !== "production") {
 const walInitialized = globalThis as unknown as { __walInit?: boolean };
 if (!walInitialized.__walInit) {
   walInitialized.__walInit = true;
-  prisma.$executeRawUnsafe("PRAGMA journal_mode=WAL").catch(() => {
+  prisma.$queryRawUnsafe("PRAGMA journal_mode=WAL").catch(() => {
     // WAL 模式设置失败不阻塞启动
   });
 }
