@@ -12,6 +12,7 @@ node_modules
 *.md
 docs/
 skills/
+scripts/
 用户原始需求输入/
 .playwright-mcp/
 .claude/
