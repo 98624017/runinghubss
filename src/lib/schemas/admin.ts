@@ -36,7 +36,7 @@ export const updateAppSchema = createAppSchema.partial().extend({
 export const keyMultiplierSchema = z.object({
   apiKey: z.string().min(1, "API Key不能为空"),
   multiplier: z.number().min(0.1, "倍率最小为0.1").max(100, "倍率最大为100"),
-  note: z.string().optional(),
+  note: z.string().nullish(),
 });
 
 export const curlParseSchema = z.object({
